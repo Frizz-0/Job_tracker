@@ -1,0 +1,95 @@
+# --- Computer Vision, Embodied AI & Robotics (UK / EU) ---
+- name: Wayve
+  ats: greenhouse
+  slug: wayve
+- name: Oxa (Oxbotica)
+  ats: greenhouse
+  slug: oxa
+- name: V7 Labs
+  ats: ashby
+  slug: v7labs
+- name: Synthesia
+  ats: ashby
+  slug: synthesia
+- name: Tractable
+  ats: greenhouse
+  slug: tractable
+- name: CMR Surgical
+  ats: greenhouse
+  slug: cmrsurgical
+- name: SLAMcore
+  ats: lever
+  slug: slamcore
+- name: Latent Logic / Waymo UK
+  ats: greenhouse
+  slug: waymo
+- name: Dyson (Robotics & Vision)
+  ats: greenhouse
+  slug: dyson
+- name: Five AI (Bosch)
+  ats: greenhouse
+  slug: fiveai
+
+# --- Healthcare AI & Medical Imaging (UK / EU) ---
+- name: Kheiron Medical
+  ats: greenhouse
+  slug: kheironmedical
+- name: Optellum
+  ats: lever
+  slug: optellum
+- name: Ultromics
+  ats: greenhouse
+  slug: ultromics
+- name: Cydar Medical
+  ats: lever
+  slug: cydarmedical
+- name: BenevolentAI
+  ats: greenhouse
+  slug: benevolentai
+- name: Isomorphic Labs
+  ats: greenhouse
+  slug: isomorphiclabs
+- name: Relation Therapeutics
+  ats: ashby
+  slug: relationrx
+- name: Owkin
+  ats: lever
+  slug: owkin
+- name: Aival
+  ats: ashby
+  slug: aival
+- name: Quibim
+  ats: lever
+  slug: quibim
+
+# --- Multimodal, Foundation Models & AI Systems (UK / EU) ---
+- name: Google DeepMind
+  ats: greenhouse
+  slug: deepmind
+- name: Stability AI
+  ats: greenhouse
+  slug: stabilityai
+- name: ElevenLabs
+  ats: ashby
+  slug: elevenlabs
+- name: Secondmind
+  ats: greenhouse
+  slug: secondmind
+- name: Faculty AI
+  ats: greenhouse
+  slug: faculty
+- name: PolyAI
+  ats: greenhouse
+  slug: polyai
+- name: Graphcore
+  ats: greenhouse
+  slug: graphcore
+- name: Speechmatics
+  ats: greenhouse
+  slug: speechmatics
+- name: Mistral AI
+  ats: lever
+  slug: mistral
+- name: Hugging Face
+  ats: ashby
+  slug: huggingface
