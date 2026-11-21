@@ -18,8 +18,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code from main
         uses: actions/checkout@v7
+
+      - name: Restore state from data branch
+        run: |
+          git fetch origin data || true
+          git checkout origin/data -- jobs.db jobs.json JOBS.md 2>/dev/null || true
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v7
@@ -36,16 +41,17 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python -u tracker.py
 
-      - name: Persist SQLite state and dashboard files
+      - name: Push updated state to data branch
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git checkout -B data
           for f in jobs.db jobs.json JOBS.md; do
-            [ -f "$f" ] && git add "$f"
+            [ -f "$f" ] && git add -f "$f"
           done
           if ! git diff --staged --quiet; then
-            git commit -m "chore: update seen jobs state [skip ci]"
-            git push
+            git commit -m "chore: update job data"
+            git push -f origin data
           fi
 
       - name: Upload Pages artifact
