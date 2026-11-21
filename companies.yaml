@@ -1,95 +1,108 @@
-# --- Computer Vision, Embodied AI & Robotics (UK / EU) ---
-- name: Wayve
-  ats: greenhouse
-  slug: wayve
-- name: Oxa (Oxbotica)
-  ats: greenhouse
-  slug: oxa
-- name: V7 Labs
-  ats: ashby
-  slug: v7labs
+# --- Confirmed Active High-Volume AI / CV / Robotics Boards ---
 - name: Synthesia
   ats: ashby
   slug: synthesia
-- name: Tractable
-  ats: greenhouse
-  slug: tractable
-- name: CMR Surgical
-  ats: greenhouse
-  slug: cmrsurgical
-- name: SLAMcore
-  ats: lever
-  slug: slamcore
-- name: Latent Logic / Waymo UK
-  ats: greenhouse
-  slug: waymo
-- name: Dyson (Robotics & Vision)
-  ats: greenhouse
-  slug: dyson
-- name: Five AI (Bosch)
-  ats: greenhouse
-  slug: fiveai
-
-# --- Healthcare AI & Medical Imaging (UK / EU) ---
-- name: Kheiron Medical
-  ats: greenhouse
-  slug: kheironmedical
-- name: Optellum
-  ats: lever
-  slug: optellum
-- name: Ultromics
-  ats: greenhouse
-  slug: ultromics
-- name: Cydar Medical
-  ats: lever
-  slug: cydarmedical
-- name: BenevolentAI
-  ats: greenhouse
-  slug: benevolentai
-- name: Isomorphic Labs
-  ats: greenhouse
-  slug: isomorphiclabs
-- name: Relation Therapeutics
-  ats: ashby
-  slug: relationrx
-- name: Owkin
-  ats: lever
-  slug: owkin
-- name: Aival
-  ats: ashby
-  slug: aival
-- name: Quibim
-  ats: lever
-  slug: quibim
-
-# --- Multimodal, Foundation Models & AI Systems (UK / EU) ---
-- name: Google DeepMind
-  ats: greenhouse
-  slug: deepmind
-- name: Stability AI
-  ats: greenhouse
-  slug: stabilityai
 - name: ElevenLabs
   ats: ashby
   slug: elevenlabs
-- name: Secondmind
+- name: Isomorphic Labs
   ats: greenhouse
-  slug: secondmind
-- name: Faculty AI
+  slug: isomorphiclabs
+- name: Stability AI
   ats: greenhouse
-  slug: faculty
-- name: PolyAI
-  ats: greenhouse
-  slug: polyai
+  slug: stabilityai
 - name: Graphcore
   ats: greenhouse
   slug: graphcore
 - name: Speechmatics
   ats: greenhouse
   slug: speechmatics
-- name: Mistral AI
+- name: PolyAI
+  ats: greenhouse
+  slug: polyai
+- name: Waymo
+  ats: greenhouse
+  slug: waymo
+- name: Optellum
   ats: lever
-  slug: mistral
-- name: Hugging Face
+  slug: optellum
+- name: Owkin
+  ats: lever
+  slug: owkin
+- name: Relation Therapeutics
   ats: ashby
+  slug: relationrx
+
+# --- Expanded UK, EU & Global CV / Robotics / Healthcare AI ---
+- name: Hugging Face
+  ats: workable
   slug: huggingface
+- name: Mistral AI
+  ats: ashby
+  slug: mistral
+- name: PhysicsX
+  ats: greenhouse
+  slug: physicsx
+- name: InstaDeep
+  ats: greenhouse
+  slug: instadeep
+- name: Helsing
+  ats: greenhouse
+  slug: helsing
+- name: Scale AI
+  ats: greenhouse
+  slug: scaleai
+- name: Figure AI
+  ats: greenhouse
+  slug: figureai
+- name: Shield AI
+  ats: lever
+  slug: shieldai
+- name: Skydio
+  ats: greenhouse
+  slug: skydio
+- name: Wing (Alphabet)
+  ats: greenhouse
+  slug: wing
+- name: Nuro
+  ats: greenhouse
+  slug: nuro
+- name: Zoox
+  ats: lever
+  slug: zoox
+- name: Recursion Pharmaceuticals
+  ats: greenhouse
+  slug: recursionpharmaceuticals
+- name: Insitro
+  ats: greenhouse
+  slug: insitro
+- name: Tempus AI
+  ats: greenhouse
+  slug: tempus
+- name: HeartFlow
+  ats: lever
+  slug: heartflow
+- name: Viz.ai
+  ats: greenhouse
+  slug: vizai
+- name: Aidoc
+  ats: greenhouse
+  slug: aidoc
+- name: Cohere
+  ats: ashby
+  slug: cohere
+- name: Anthropic
+  ats: greenhouse
+  slug: anthropic
+- name: Perplexity AI
+  ats: ashby
+  slug: perplexityai
+- name: Runway
+  ats: greenhouse
+  slug: runwayml
+- name: Twelve Labs
+  ats: greenhouse
+  slug: twelvelabs
+- name: Roboflow
+  ats: ashby
+  slug: roboflow

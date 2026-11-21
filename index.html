@@ -1,134 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV & AI Job Radar</title>
-  <style>
-    :root {
-      --bg: #0b0f17;
-      --card: #131a26;
-      --border: #1f2937;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-      --high: #10b981;
-      --mid: #f59e0b;
-    }
-    * { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
-    body { margin: 0; background: var(--bg); color: var(--text); padding: 2rem 1rem; }
-    .container { max-width: 1050px; margin: 0 auto; }
-    header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-    h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.02em; }
-    .meta { color: var(--muted); font-size: 0.875rem; }
-    .controls { display: flex; flex-wrap: wrap; gap: 0.75rem; background: var(--card); padding: 1rem; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 1.25rem; align-items: center; }
-    input[type="text"] { flex: 1; min-width: 220px; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 0.55rem 0.75rem; border-radius: 6px; }
-    label { font-size: 0.875rem; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; }
-    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
-    th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.925rem; }
-    th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
-    tr:hover { background: rgba(255,255,255,0.02); }
-    tr.applied { opacity: 0.45; }
-    .badge { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem; font-family: monospace; }
-    .score-high { background: rgba(16, 185, 129, 0.15); color: var(--high); }
-    .score-mid { background: rgba(245, 158, 11, 0.15); color: var(--mid); }
-    a { color: var(--accent); text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-    input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div>
-        <h1>CV & AI Engineering Job Radar</h1>
-        <div class="meta" id="updated">Loading roles...</div>
-      </div>
-      <div class="meta" id="count"></div>
-    </header>
 
-    <div class="controls">
-      <input type="text" id="search" placeholder="Filter by role or company (e.g. Vision, Wayve, Medical)..." />
-      <label>Min Score: <strong id="scoreVal">70</strong>
-        <input type="range" id="minScore" min="50" max="95" value="70" />
-      </label>
-      <label><input type="checkbox" id="hideApplied" /> Hide Applied</label>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV & AI Career Intelligence Radar</title>
+    <style>
+        :root {
+            --bg: #080b12;
+            --surface: #0f1522;
+            --surface-2: #161f32;
+            --border: #1e293b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --green: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem;
+        }
+
+        /* Top Header */
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 1.55rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .brand .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 10px var(--green);
+        }
+
+        .brand p {
+            margin: 0.25rem 0 0;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #04101a;
+            border: none;
+            padding: 0.6rem 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-ghost {
+            background: var(--surface-2);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--accent);
+        }
+
+        /* KPI Grid */
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .kpi {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+        }
+
+        .kpi-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+        }
+
+        .kpi-val {
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-top: 0.25rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        }
+
+        /* Filter Toolbar */
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.25rem;
+            align-items: center;
+        }
+
+        input[type="text"],
+        select {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.55rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .region-pills {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .pill.active {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .slider-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        /* Table */
+        .table-wrap {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 0.9rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+            vertical-align: middle;
+        }
+
+        th {
+            background: var(--surface-2);
+            color: var(--muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        tr.job-row:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        tr.applied {
+            opacity: 0.45;
+        }
+
+        .score-pill {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.82rem;
+            font-family: monospace;
+        }
+
+        .s-high {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .s-mid {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .s-low {
+            background: rgba(148, 163, 184, 0.12);
+            color: var(--muted);
+        }
+
+        .reg-badge {
+            font-size: 0.75rem;
+            padding: 0.18rem 0.5rem;
+            border-radius: 4px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .role-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .role-link:hover {
+            color: var(--accent);
+        }
+
+        .sub-loc {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 0.15rem;
+        }
+
+        /* Expandable Fit Drawer */
+        tr.detail-row {
+            display: none;
+            background: #0b101b;
+        }
+
+        tr.detail-row.open {
+            display: table-row;
+        }
+
+        .fit-box {
+            padding: 1rem 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .fit-section h4 {
+            margin: 0 0 0.4rem;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.78rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 5px;
+            margin: 0.15rem 0.25rem 0.15rem 0;
+        }
+
+        .tag-green {
+            background: rgba(16, 185, 129, 0.14);
+            color: var(--green);
+        }
+
+        .tag-amber {
+            background: rgba(245, 158, 11, 0.14);
+            color: var(--amber);
+        }
+
+        .tag-red {
+            background: rgba(239, 68, 68, 0.14);
+            color: var(--red);
+        }
+
+        /* Modal */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            max-width: 680px;
+            width: 100%;
+            padding: 1.5rem;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        textarea,
+        input[type="password"] {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 8px;
+            padding: 0.65rem;
+            font-size: 0.875rem;
+            margin-top: 0.4rem;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .result-card {
+            margin-top: 1rem;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="brand">
+                <h1><span class="dot"></span> CV & AI Career Intelligence Radar</h1>
+                <p id="updated">Syncing live ATS feeds...</p>
+            </div>
+            <button class="btn-primary" onclick="openModal()">+ Check Custom JD Fit</button>
+        </div>
+
+        <div class="kpis">
+            <div class="kpi">
+                <div class="kpi-label">Active Tracked Roles</div>
+                <div class="kpi-val" id="kpiTotal">0</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Strong CV Fit (≥ 80)</div>
+                <div class="kpi-val" style="color:var(--green)" id="kpiHigh">0</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">UK & Remote Roles</div>
+                <div class="kpi-val" style="color:var(--accent)" id="kpiUk">0</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Applied</div>
+                <div class="kpi-val" style="color:var(--amber)" id="kpiApplied">0</div>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <input type="text" id="search"
+                placeholder="Search role, company, or skill (e.g. PyTorch, Robotics, Medical, Vision)..." />
+            <select id="companyFilter">
+                <option value="">All Companies</option>
+            </select>
+            <div class="region-pills" id="regionPills">
+                <button class="pill active" data-reg="ALL">All Regions</button>
+                <button class="pill" data-reg="UK">UK</button>
+                <button class="pill" data-reg="Remote">Remote</button>
+                <button class="pill" data-reg="EU">EU</button>
+                <button class="pill" data-reg="US">US</button>
+            </div>
+            <div class="slider-wrap">
+                <span>Min Fit: <strong id="scoreVal">65</strong></span>
+                <input type="range" id="minScore" min="50" max="95" value="65" />
+            </div>
+            <label style="font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.35rem;">
+                <input type="checkbox" id="hideApplied" /> Hide Applied
+            </label>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:75px;">Fit</th>
+                        <th style="width:85px;">Region</th>
+                        <th style="width:170px;">Company</th>
+                        <th>Role & Location</th>
+                        <th style="width:130px;">CV Audit</th>
+                        <th style="width:75px;text-align:center;">Applied</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
     </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th style="width: 75px;">Score</th>
-          <th style="width: 180px;">Company</th>
-          <th>Role</th>
-          <th style="width: 110px;">Seen</th>
-          <th style="width: 80px; text-align: center;">Applied</th>
-        </tr>
-      </thead>
-      <tbody id="tbody"></tbody>
-    </table>
-  </div>
+    <!-- Custom JD Fit Checker Modal -->
+    <div class="modal-backdrop" id="jdModal">
+        <div class="modal">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+                <h2>Instant CV-to-JD Fit Analyzer</h2>
+                <button class="btn-ghost" onclick="closeModal()">✕</button>
+            </div>
+            <p style="color:var(--muted);font-size:0.85rem;margin-top:0.25rem;">
+                Paste any external Job Description (LinkedIn, company site, recruiter email) to score it against your
+                MSc AI + 6-yr 3D/CV profile.
+            </p>
+            <label style="font-size:0.8rem;color:var(--muted);">Groq API Key (saved locally in your browser
+                only)</label>
+            <input type="password" id="groqKeyInput" placeholder="gsk_..." />
+            <label style="font-size:0.8rem;color:var(--muted);display:block;margin-top:0.75rem;">Paste Job
+                Description</label>
+            <textarea id="jdInput" placeholder="Paste full job title, location, and requirements here..."></textarea>
+            <div style="margin-top:0.85rem;display:flex;gap:0.6rem;justify-content:flex-end;">
+                <button class="btn-primary" id="analyzeBtn" onclick="analyzeCustomJD()">Run CV Fit Audit</button>
+            </div>
+            <div id="jdResult"></div>
+        </div>
+    </div>
 
-  <script>
-    let allJobs = [];
-    const appliedSet = new Set(JSON.parse(localStorage.getItem("applied_jobs") || "[]"));
+    <script>
+        let allJobs = [];
+        let activeRegion = "ALL";
+        const appliedSet = new Set(JSON.parse(localStorage.getItem("applied_jobs") || "[]"));
 
-    function saveApplied() {
-      localStorage.setItem("applied_jobs", JSON.stringify([...appliedSet]));
-    }
+        const PROFILE_SUMMARY = `Bharath Reddy Mohan: MSc Artificial Intelligence (Ulster University, Belfast, UK) + 6 years prior professional experience as 3D Generalist & Technical Artist (Unity, procedural environments, shaders, pipeline automation). AI/CV Stack: Python 3.12, PyTorch, OpenCV, ONNX/WASM edge inference, Grad-CAM XAI, LangGraph, FastAPI, Docker, PostgreSQL, AWS. Projects: Cutis Derm AI (multi-spectral skin lesion VLM/XAI app), ROS/Gazebo multi-robot hospital hazard detection, LedgerVi multi-agent auditing, OASIS Alzheimer's MRI detection.`;
 
-    function render() {
-      const q = document.getElementById("search").value.toLowerCase();
-      const min = Number(document.getElementById("minScore").value);
-      const hideApplied = document.getElementById("hideApplied").checked;
-      document.getElementById("scoreVal").textContent = min;
+        function saveApplied() { localStorage.setItem("applied_jobs", JSON.stringify([...appliedSet])); }
 
-      const filtered = allJobs.filter(j => {
-        if (j.score < min) return false;
-        if (hideApplied && appliedSet.has(j.id)) return false;
-        if (q && !(`${j.company} ${j.title}`.toLowerCase().includes(q))) return false;
-        return true;
-      });
+        function updateKPIs() {
+            document.getElementById("kpiTotal").textContent = allJobs.length;
+            document.getElementById("kpiHigh").textContent = allJobs.filter(j => j.score >= 80).length;
+            document.getElementById("kpiUk").textContent = allJobs.filter(j => j.region === "UK" || j.region === "Remote").length;
+            document.getElementById("kpiApplied").textContent = appliedSet.size;
+        }
 
-      document.getElementById("count").textContent = `${filtered.length} roles shown`;
-      const tbody = document.getElementById("tbody");
-      tbody.innerHTML = filtered.map(j => {
-        const isApplied = appliedSet.has(j.id);
-        const cls = j.score >= 80 ? "score-high" : "score-mid";
-        return `
-          <tr class="${isApplied ? "applied" : ""}">
-            <td><span class="badge ${cls}">${j.score}</span></td>
+        function populateCompanies() {
+            const sel = document.getElementById("companyFilter");
+            const companies = [...new Set(allJobs.map(j => j.company))].sort();
+            companies.forEach(c => {
+                const opt = document.createElement("option");
+                opt.value = c; opt.textContent = c;
+                sel.appendChild(opt);
+            });
+        }
+
+        function render() {
+            const q = document.getElementById("search").value.toLowerCase();
+            const comp = document.getElementById("companyFilter").value;
+            const min = Number(document.getElementById("minScore").value);
+            const hideApplied = document.getElementById("hideApplied").checked;
+            document.getElementById("scoreVal").textContent = min;
+
+            const filtered = allJobs.filter(j => {
+                if (j.score < min) return false;
+                if (comp && j.company !== comp) return false;
+                if (activeRegion !== "ALL" && j.region !== activeRegion) return false;
+                if (hideApplied && appliedSet.has(j.id)) return false;
+                if (q) {
+                    const hay = `${j.company} ${j.title} ${j.location} ${(j.matched_skills || []).join(" ")}`.toLowerCase();
+                    if (!hay.includes(q)) return false;
+                }
+                return true;
+            });
+
+            const tbody = document.getElementById("tbody");
+            tbody.innerHTML = filtered.map(j => {
+                const isApplied = appliedSet.has(j.id);
+                const sClass = j.score >= 80 ? "s-high" : (j.score >= 65 ? "s-mid" : "s-low");
+                const skillsHtml = (j.matched_skills || []).map(s => `<span class="tag tag-green">✓ ${s}</span>`).join("") || "<span style='color:var(--muted);font-size:0.8rem'>Re-run workflow to populate</span>";
+                const gapsHtml = (j.missing_gaps || []).map(g => `<span class="tag tag-amber">△ ${g}</span>`).join("") || "<span style='color:var(--muted);font-size:0.8rem'>No major gaps flagged</span>";
+                const flagsHtml = (j.red_flags || []).map(f => `<span class="tag tag-red">! ${f}</span>`).join("") || "<span style='color:var(--muted);font-size:0.8rem'>None</span>";
+
+                return `
+          <tr class="job-row ${isApplied ? "applied" : ""}">
+            <td><span class="score-pill ${sClass}">${j.score}%</span></td>
+            <td><span class="reg-badge">${j.region || "UK"}</span></td>
             <td><strong>${j.company}</strong></td>
-            <td><a href="${j.url}" target="_blank" rel="noopener">${j.title}</a></td>
-            <td style="color: var(--muted); font-size: 0.85rem;">${j.date}</td>
-            <td style="text-align: center;">
+            <td>
+              <a class="role-link" href="${j.url}" target="_blank" rel="noopener">${j.title} ↗</a>
+              <div class="sub-loc">📍 ${j.location || "Location listed on board"} · Seen ${j.date}</div>
+            </td>
+            <td><button class="btn-ghost" onclick="toggleDetail('${j.id}')">Inspect CV Fit</button></td>
+            <td style="text-align:center;">
               <input type="checkbox" ${isApplied ? "checked" : ""} onchange="toggleApplied('${j.id}')" />
             </td>
+          </tr>
+          <tr class="detail-row" id="det_${j.id}">
+            <td colspan="6">
+              <div class="fit-box">
+                <div class="fit-section">
+                  <h4>AI Fit Assessment</h4>
+                  <p style="margin:0;font-size:0.875rem;">${j.summary || "Run workflow once to populate detailed rationale."}</p>
+                </div>
+                <div class="fit-section">
+                  <h4>Matched Profile Strengths</h4>
+                  <div>${skillsHtml}</div>
+                </div>
+                <div class="fit-section">
+                  <h4>Gaps & Requirements to Prep</h4>
+                  <div>${gapsHtml} ${flagsHtml}</div>
+                </div>
+              </div>
+            </td>
           </tr>`;
-      }).join("");
-    }
+            }).join("");
+        }
 
-    function toggleApplied(id) {
-      if (appliedSet.has(id)) appliedSet.delete(id);
-      else appliedSet.add(id);
-      saveApplied();
-      render();
-    }
+        function toggleDetail(id) {
+            document.getElementById("det_" + id).classList.toggle("open");
+        }
 
-    ["search", "minScore", "hideApplied"].forEach(id =>
-      document.getElementById(id).addEventListener("input", render)
-    );
+        function toggleApplied(id) {
+            if (appliedSet.has(id)) appliedSet.delete(id); else appliedSet.add(id);
+            saveApplied(); updateKPIs(); render();
+        }
 
-    fetch("./jobs.json?t=" + Date.now())
-      .then(r => r.json())
-      .then(data => {
-        allJobs = data.jobs || [];
-        document.getElementById("updated").textContent = `Last synced: ${data.updated_at}`;
-        render();
-      })
-      .catch(() => {
-        document.getElementById("updated").textContent = "Run workflow once to generate jobs.json.";
-      });
-  </script>
+        document.querySelectorAll("#regionPills .pill").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll("#regionPills .pill").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                activeRegion = btn.dataset.reg;
+                render();
+            });
+        });
+
+        ["search", "companyFilter", "minScore", "hideApplied"].forEach(id =>
+            document.getElementById(id).addEventListener("input", render)
+        );
+
+        function openModal() {
+            document.getElementById("groqKeyInput").value = localStorage.getItem("groq_api_key") || "";
+            document.getElementById("jdModal").classList.add("open");
+        }
+        function closeModal() { document.getElementById("jdModal").classList.remove("open"); }
+
+        async function analyzeCustomJD() {
+            const key = document.getElementById("groqKeyInput").value.trim();
+            const jd = document.getElementById("jdInput").value.trim();
+            const resBox = document.getElementById("jdResult");
+            if (!key || !jd) { resBox.innerHTML = "<p style='color:var(--red)'>Enter both your Groq API key and a Job Description.</p>"; return; }
+            localStorage.setItem("groq_api_key", key);
+            const btn = document.getElementById("analyzeBtn");
+            btn.disabled = true; btn.textContent = "Analyzing CV Fit...";
+
+            try {
+                const resp = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+                    method: "POST",
+                    headers: { "Authorization": `Bearer ${key}`, "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        model: "meta-llama/llama-4-scout-17b-16e-instruct",
+                        response_format: { type: "json_object" },
+                        temperature: 0.1,
+                        messages: [{
+                            role: "user",
+                            content: `Evaluate candidate CV fit for this JD. Return JSON: {"fit_score": int(0-100), "verdict": str, "matched_strengths": [str], "gaps_to_address": [str], "tailored_cv_pitch": str (2 sentences positioning candidate's 3D/CV/MSc AI background for this specific role)}.\n\nCandidate:\n${PROFILE_SUMMARY}\n\nJD:\n${jd.slice(0, 4500)}`
+                        }]
+                    })
+                });
+                const data = await resp.json();
+                const parsed = JSON.parse(data.choices[0].message.content);
+                resBox.innerHTML = `
+          <div class="result-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+              <strong style="font-size:1.1rem;">CV Match Score: <span style="color:var(--green)">${parsed.fit_score}%</span></strong>
+              <span class="reg-badge">${parsed.verdict}</span>
+            </div>
+            <p style="font-size:0.875rem;margin:0.4rem 0;"><strong>Matched:</strong> ${(parsed.matched_strengths || []).join(" · ")}</p>
+            <p style="font-size:0.875rem;margin:0.4rem 0;color:var(--amber);"><strong>Gaps to Prep:</strong> ${(parsed.gaps_to_address || []).join(" · ") || "None"}</p>
+            <p style="font-size:0.85rem;margin:0.6rem 0 0;padding-top:0.6rem;border-top:1px solid var(--border);color:var(--accent);"><strong>Tailored Cover/Resume Pitch:</strong> ${parsed.tailored_cv_pitch}</p>
+          </div>`;
+            } catch (e) {
+                resBox.innerHTML = `<p style="color:var(--red)">Error: ${e.message}</p>`;
+            } finally {
+                btn.disabled = false; btn.textContent = "Run CV Fit Audit";
+            }
+        }
+
+        fetch("./jobs.json?t=" + Date.now())
+            .then(r => r.json())
+            .then(data => {
+                allJobs = data.jobs || [];
+                document.getElementById("updated").textContent = `Last synced: ${data.updated_at} · Automated ATS Radar`;
+                updateKPIs();
+                populateCompanies();
+                render();
+            })
+            .catch(() => {
+                document.getElementById("updated").textContent = "Run GitHub workflow once to populate jobs.json.";
+            });
+    </script>
 </body>
+
 </html>
