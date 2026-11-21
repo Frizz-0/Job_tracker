@@ -216,7 +216,10 @@ async def run_pipeline():
             except Exception as e:
                 print(f"[WARN] Scoring failed for {job.company} - {job.title}: {e}")
 
+        export_markdown(conn)
+        export_dashboard_json(conn)
         print(f"Run complete. New high-fit matches: {new_matches} (first_run={is_first_run}).")
+        
 
 def export_markdown(conn: sqlite3.Connection, md_path: str = "JOBS.md"):
     rows = conn.execute("""
@@ -264,6 +267,6 @@ def export_dashboard_json(conn: sqlite3.Connection, json_path: str = "jobs.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 
-        
+
 if __name__ == "__main__":
     asyncio.run(run_pipeline())
