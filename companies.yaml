@@ -1,108 +1,81 @@
-# --- Confirmed Active High-Volume AI / CV / Robotics Boards ---
+# --- UK-Anchored AI / CV / Robotics / Healthcare ---
 - name: Synthesia
   ats: ashby
   slug: synthesia
-- name: ElevenLabs
-  ats: ashby
-  slug: elevenlabs
 - name: Isomorphic Labs
   ats: greenhouse
   slug: isomorphiclabs
-- name: Stability AI
-  ats: greenhouse
-  slug: stabilityai
-- name: Graphcore
-  ats: greenhouse
-  slug: graphcore
-- name: Speechmatics
-  ats: greenhouse
-  slug: speechmatics
-- name: PolyAI
-  ats: greenhouse
-  slug: polyai
-- name: Waymo
-  ats: greenhouse
-  slug: waymo
-- name: Optellum
-  ats: lever
-  slug: optellum
-- name: Owkin
-  ats: lever
-  slug: owkin
-- name: Relation Therapeutics
-  ats: ashby
-  slug: relationrx
-
-# --- Expanded UK, EU & Global CV / Robotics / Healthcare AI ---
-- name: Hugging Face
-  ats: workable
-  slug: huggingface
-- name: Mistral AI
-  ats: ashby
-  slug: mistral
 - name: PhysicsX
   ats: greenhouse
   slug: physicsx
-- name: InstaDeep
+- name: PolyAI
   ats: greenhouse
-  slug: instadeep
+  slug: polyai
+- name: Speechmatics
+  ats: greenhouse
+  slug: speechmatics
+- name: Graphcore
+  ats: greenhouse
+  slug: graphcore
+- name: Stability AI
+  ats: greenhouse
+  slug: stabilityai
+- name: Relation Therapeutics
+  ats: ashby
+  slug: relationrx
+- name: ElevenLabs
+  ats: ashby
+  slug: elevenlabs
 - name: Helsing
   ats: greenhouse
   slug: helsing
-- name: Scale AI
+- name: Luminance
+  ats: workable
+  slug: luminance
+- name: Proximie
+  ats: workable
+  slug: proximie
+- name: Touchlight
+  ats: workable
+  slug: touchlight
+- name: Alchera
+  ats: workable
+  slug: alchera
+- name: Cydar Medical
+  ats: workable
+  slug: cydar
+
+# --- Global Robotics / 3D Simulation / Medical / Frontier AI ---
+- name: Waymo
   ats: greenhouse
-  slug: scaleai
+  slug: waymo
 - name: Figure AI
   ats: greenhouse
   slug: figureai
-- name: Shield AI
-  ats: lever
-  slug: shieldai
-- name: Skydio
-  ats: greenhouse
-  slug: skydio
-- name: Wing (Alphabet)
-  ats: greenhouse
-  slug: wing
 - name: Nuro
   ats: greenhouse
   slug: nuro
 - name: Zoox
   ats: lever
   slug: zoox
+- name: Wing (Alphabet)
+  ats: greenhouse
+  slug: wing
+- name: Shield AI
+  ats: lever
+  slug: shieldai
 - name: Recursion Pharmaceuticals
   ats: greenhouse
   slug: recursionpharmaceuticals
-- name: Insitro
+- name: Scale AI
   ats: greenhouse
-  slug: insitro
-- name: Tempus AI
-  ats: greenhouse
-  slug: tempus
-- name: HeartFlow
-  ats: lever
-  slug: heartflow
-- name: Viz.ai
-  ats: greenhouse
-  slug: vizai
-- name: Aidoc
-  ats: greenhouse
-  slug: aidoc
+  slug: scaleai
+- name: Roboflow
+  ats: ashby
+  slug: roboflow
 - name: Cohere
   ats: ashby
   slug: cohere
 - name: Anthropic
   ats: greenhouse
   slug: anthropic
-- name: Perplexity AI
-  ats: ashby
-  slug: perplexityai
-- name: Runway
-  ats: greenhouse
-  slug: runwayml
-- name: Twelve Labs
-  ats: greenhouse
-  slug: twelvelabs
-- name: Roboflow
-  ats: ashby
-  slug: roboflow

@@ -4,68 +4,126 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV & AI Career Intelligence Radar</title>
+    <title>CV & AI Career Intelligence Studio</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
     <style>
         :root {
-            --bg: #080b12;
-            --surface: #0f1522;
-            --surface-2: #161f32;
-            --border: #1e293b;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.15);
-            --green: #10b981;
-            --amber: #f59e0b;
-            --red: #ef4444;
+            --bg: #f4f7fb;
+            --surface: #ffffff;
+            --surface-soft: #f8fafc;
+            --border: #e2e8f0;
+            --text: #0f172a;
+            --muted: #64748b;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --primary-soft: #eef2ff;
+            --emerald: #059669;
+            --emerald-soft: #ecfdf5;
+            --amber: #d97706;
+            --amber-soft: #fffbeb;
+            --rose: #e11d48;
+            --rose-soft: #fff1f2;
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 12px 28px -6px rgba(79, 70, 229, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
         }
 
         * {
             box-sizing: border-box;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
         }
 
         body {
             margin: 0;
-            background: var(--bg);
+            background:
+                radial-gradient(circle at 12% 8%, rgba(79, 70, 229, 0.07) 0%, transparent 38%),
+                radial-gradient(circle at 88% 12%, rgba(16, 185, 129, 0.07) 0%, transparent 36%),
+                var(--bg);
             color: var(--text);
-            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        /* Keyframe Animations */
+        @keyframes pulseRing {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.65);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 9px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 2rem 1.25rem;
+            padding: 2.25rem 1.25rem 4rem;
         }
 
-        /* Top Header */
+        /* Header */
         .topbar {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 1.75rem;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+            animation: fadeSlideUp 0.45s ease-out;
         }
 
         .brand h1 {
             margin: 0;
-            font-size: 1.55rem;
-            font-weight: 700;
+            font-size: 1.45rem;
+            font-weight: 800;
             letter-spacing: -0.025em;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.65rem;
         }
 
-        .brand .dot {
-            width: 10px;
-            height: 10px;
+        .live-dot {
+            width: 11px;
+            height: 11px;
             border-radius: 50%;
-            background: var(--green);
-            box-shadow: 0 0 10px var(--green);
+            background: var(--emerald);
+            animation: pulseRing 2.2s infinite;
         }
 
         .brand p {
@@ -75,39 +133,48 @@
         }
 
         .btn-primary {
-            background: var(--accent);
-            color: #04101a;
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: #fff;
             border: none;
-            padding: 0.6rem 1.1rem;
-            border-radius: 8px;
+            padding: 0.7rem 1.25rem;
+            border-radius: 11px;
             font-weight: 600;
             font-size: 0.875rem;
             cursor: pointer;
-            transition: opacity 0.15s;
+            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+            transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s ease;
         }
 
         .btn-primary:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(79, 70, 229, 0.32);
         }
 
-        .btn-ghost {
-            background: var(--surface-2);
-            color: var(--text);
-            border: 1px solid var(--border);
-            padding: 0.4rem 0.75rem;
-            border-radius: 6px;
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-soft {
+            background: var(--primary-soft);
+            color: var(--primary);
+            border: 1px solid rgba(79, 70, 229, 0.16);
+            padding: 0.45rem 0.85rem;
+            border-radius: 9px;
+            font-weight: 600;
             font-size: 0.8rem;
             cursor: pointer;
+            transition: all 0.18s ease;
         }
 
-        .btn-ghost:hover {
-            border-color: var(--accent);
+        .btn-soft:hover {
+            background: var(--primary);
+            color: #fff;
         }
 
-        /* KPI Grid */
+        /* KPI Strip */
         .kpis {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
@@ -115,220 +182,321 @@
         .kpi {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            border-radius: 16px;
+            padding: 1.15rem 1.35rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+            animation: fadeSlideUp 0.5s ease-out backwards;
+        }
+
+        .kpi:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .kpi:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .kpi:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .kpi:nth-child(4) {
+            animation-delay: 0.2s;
+        }
+
+        .kpi:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
         }
 
         .kpi-label {
             font-size: 0.75rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--muted);
         }
 
         .kpi-val {
-            font-size: 1.65rem;
-            font-weight: 700;
-            margin-top: 0.25rem;
-            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 1.85rem;
+            font-weight: 800;
+            margin-top: 0.3rem;
+            letter-spacing: -0.03em;
         }
 
-        /* Filter Toolbar */
+        /* Filter Bar */
         .toolbar {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
             background: var(--surface);
             border: 1px solid var(--border);
-            padding: 1rem;
-            border-radius: 12px;
-            margin-bottom: 1.25rem;
+            padding: 1rem 1.2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.35rem;
             align-items: center;
+            animation: fadeSlideUp 0.55s ease-out backwards;
         }
 
         input[type="text"],
         select {
-            background: var(--bg);
+            background: var(--surface-soft);
             border: 1px solid var(--border);
             color: var(--text);
-            padding: 0.55rem 0.8rem;
-            border-radius: 8px;
+            padding: 0.6rem 0.85rem;
+            border-radius: 10px;
             font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
         }
 
         input[type="text"] {
             flex: 1;
-            min-width: 220px;
+            min-width: 230px;
         }
 
-        .region-pills {
+        .pills {
             display: flex;
             gap: 0.35rem;
             flex-wrap: wrap;
         }
 
         .pill {
-            background: var(--bg);
+            background: var(--surface-soft);
             border: 1px solid var(--border);
             color: var(--muted);
-            padding: 0.4rem 0.75rem;
+            padding: 0.42rem 0.85rem;
             border-radius: 999px;
             font-size: 0.8rem;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: 500;
+            transition: all 0.18s ease;
+        }
+
+        .pill:hover {
+            border-color: var(--primary);
+            color: var(--primary);
         }
 
         .pill.active {
-            background: var(--accent-glow);
-            border-color: var(--accent);
-            color: var(--accent);
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+            box-shadow: 0 3px 10px rgba(79, 70, 229, 0.25);
         }
 
-        .slider-wrap {
+        /* Job Cards List */
+        .job-list {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--muted);
+            flex-direction: column;
+            gap: 0.85rem;
         }
 
-        /* Table */
-        .table-wrap {
+        .job-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow-x: auto;
+            border-radius: 16px;
+            padding: 1.15rem 1.35rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, border-color 0.22s ease, opacity 0.2s;
+            animation: fadeSlideUp 0.45s ease-out backwards;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .job-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
         }
 
-        th,
-        td {
-            padding: 0.9rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.9rem;
-            vertical-align: middle;
+        .job-card.applied {
+            opacity: 0.52;
+            background: #f8fafc;
         }
 
-        th {
-            background: var(--surface-2);
-            color: var(--muted);
-            font-size: 0.75rem;
+        .card-main {
+            display: grid;
+            grid-template-columns: 74px 1fr auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (max-width: 720px) {
+            .card-main {
+                grid-template-columns: 64px 1fr;
+            }
+
+            .card-actions {
+                grid-column: 1 / -1;
+                justify-content: flex-end;
+            }
+        }
+
+        .score-ring {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .score-ring span {
+            font-size: 0.62rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-
-        tr.job-row:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        tr.applied {
-            opacity: 0.45;
-        }
-
-        .score-pill {
-            display: inline-block;
-            padding: 0.25rem 0.6rem;
-            border-radius: 6px;
             font-weight: 700;
-            font-size: 0.82rem;
-            font-family: monospace;
+            opacity: 0.8;
         }
 
-        .s-high {
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--green);
-            border: 1px solid rgba(16, 185, 129, 0.3);
+        .ring-high {
+            background: var(--emerald-soft);
+            color: var(--emerald);
+            border: 1px solid rgba(5, 150, 105, 0.25);
         }
 
-        .s-mid {
-            background: rgba(245, 158, 11, 0.15);
+        .ring-mid {
+            background: var(--amber-soft);
             color: var(--amber);
-            border: 1px solid rgba(245, 158, 11, 0.3);
+            border: 1px solid rgba(217, 119, 6, 0.25);
         }
 
-        .s-low {
-            background: rgba(148, 163, 184, 0.12);
+        .ring-low {
+            background: var(--surface-soft);
             color: var(--muted);
+            border: 1px solid var(--border);
         }
 
-        .reg-badge {
-            font-size: 0.75rem;
-            padding: 0.18rem 0.5rem;
-            border-radius: 4px;
-            background: var(--surface-2);
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .company-name {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--primary);
+        }
+
+        .reg-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.15rem 0.55rem;
+            border-radius: 6px;
+            background: var(--surface-soft);
             border: 1px solid var(--border);
             color: var(--text);
-            font-weight: 600;
         }
 
-        .role-link {
+        .role-title {
+            font-size: 1.05rem;
+            font-weight: 700;
             color: var(--text);
             text-decoration: none;
-            font-weight: 600;
+            display: inline-block;
+            transition: color 0.15s;
         }
 
-        .role-link:hover {
-            color: var(--accent);
+        .role-title:hover {
+            color: var(--primary);
         }
 
-        .sub-loc {
-            font-size: 0.8rem;
+        .loc-line {
+            font-size: 0.82rem;
             color: var(--muted);
-            margin-top: 0.15rem;
+            margin-top: 0.2rem;
         }
 
-        /* Expandable Fit Drawer */
-        tr.detail-row {
-            display: none;
-            background: #0b101b;
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
-        tr.detail-row.open {
-            display: table-row;
+        .check-label {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--muted);
+            cursor: pointer;
         }
 
-        .fit-box {
-            padding: 1rem 1.25rem;
+        .check-label input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--emerald);
+            cursor: pointer;
+        }
+
+        /* Smooth Expandable Drawer */
+        .drawer {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s cubic-bezier(0.22, 1, 0.36, 1), margin-top 0.3s ease;
+        }
+
+        .job-card.expanded .drawer {
+            grid-template-rows: 1fr;
+            margin-top: 1rem;
+        }
+
+        .drawer-inner {
+            overflow: hidden;
+        }
+
+        .drawer-content {
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
 
-        .fit-section h4 {
+        .audit-block h4 {
             margin: 0 0 0.4rem;
-            font-size: 0.78rem;
+            font-size: 0.74rem;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
             color: var(--muted);
         }
 
-        .tag {
+        .chip {
             display: inline-block;
             font-size: 0.78rem;
-            padding: 0.2rem 0.55rem;
-            border-radius: 5px;
+            font-weight: 600;
+            padding: 0.22rem 0.6rem;
+            border-radius: 7px;
             margin: 0.15rem 0.25rem 0.15rem 0;
         }
 
-        .tag-green {
-            background: rgba(16, 185, 129, 0.14);
-            color: var(--green);
+        .chip-green {
+            background: var(--emerald-soft);
+            color: var(--emerald);
         }
 
-        .tag-amber {
-            background: rgba(245, 158, 11, 0.14);
+        .chip-amber {
+            background: var(--amber-soft);
             color: var(--amber);
         }
 
-        .tag-red {
-            background: rgba(239, 68, 68, 0.14);
-            color: var(--red);
+        .chip-rose {
+            background: var(--rose-soft);
+            color: var(--rose);
         }
 
         /* Modal */
@@ -336,8 +504,8 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(4px);
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(6px);
             z-index: 50;
             align-items: center;
             justify-content: center;
@@ -351,42 +519,40 @@
         .modal {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            max-width: 680px;
+            border-radius: 20px;
+            max-width: 700px;
             width: 100%;
-            padding: 1.5rem;
+            padding: 1.65rem;
             max-height: 90vh;
             overflow-y: auto;
-        }
-
-        .modal h2 {
-            margin: 0 0 0.5rem;
-            font-size: 1.2rem;
+            box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
+            animation: modalPop 0.25s ease-out;
         }
 
         textarea,
         input[type="password"] {
             width: 100%;
-            background: var(--bg);
+            background: var(--surface-soft);
             border: 1px solid var(--border);
             color: var(--text);
-            border-radius: 8px;
-            padding: 0.65rem;
-            font-size: 0.875rem;
-            margin-top: 0.4rem;
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .result-card {
-            margin-top: 1rem;
-            background: var(--surface-2);
-            border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 1rem;
+            padding: 0.7rem;
+            font-size: 0.875rem;
+            margin-top: 0.35rem;
+            outline: none;
+        }
+
+        textarea:focus,
+        input[type="password"]:focus {
+            border-color: var(--primary);
+        }
+
+        .result-box {
+            margin-top: 1rem;
+            background: var(--primary-soft);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            border-radius: 12px;
+            padding: 1.1rem;
         }
     </style>
 </head>
@@ -395,88 +561,80 @@
     <div class="container">
         <div class="topbar">
             <div class="brand">
-                <h1><span class="dot"></span> CV & AI Career Intelligence Radar</h1>
+                <h1><span class="live-dot"></span> CV & AI Career Intelligence Studio</h1>
                 <p id="updated">Syncing live ATS feeds...</p>
             </div>
-            <button class="btn-primary" onclick="openModal()">+ Check Custom JD Fit</button>
+            <button class="btn-primary" onclick="openModal()">✨ Audit Custom JD Against My CV</button>
         </div>
 
         <div class="kpis">
             <div class="kpi">
                 <div class="kpi-label">Active Tracked Roles</div>
-                <div class="kpi-val" id="kpiTotal">0</div>
+                <div class="kpi-val" style="color:var(--text)" id="kpiTotal">0</div>
             </div>
             <div class="kpi">
-                <div class="kpi-label">Strong CV Fit (≥ 80)</div>
-                <div class="kpi-val" style="color:var(--green)" id="kpiHigh">0</div>
+                <div class="kpi-label">Strong CV Fit (≥ 80%)</div>
+                <div class="kpi-val" style="color:var(--emerald)" id="kpiHigh">0</div>
             </div>
             <div class="kpi">
                 <div class="kpi-label">UK & Remote Roles</div>
-                <div class="kpi-val" style="color:var(--accent)" id="kpiUk">0</div>
+                <div class="kpi-val" style="color:var(--primary)" id="kpiUk">0</div>
             </div>
             <div class="kpi">
-                <div class="kpi-label">Applied</div>
+                <div class="kpi-label">Applications Sent</div>
                 <div class="kpi-val" style="color:var(--amber)" id="kpiApplied">0</div>
             </div>
         </div>
 
         <div class="toolbar">
             <input type="text" id="search"
-                placeholder="Search role, company, or skill (e.g. PyTorch, Robotics, Medical, Vision)..." />
+                placeholder="Search role, company, or CV skill (e.g. PyTorch, Robotics, Medical, 3D)..." />
             <select id="companyFilter">
                 <option value="">All Companies</option>
             </select>
-            <div class="region-pills" id="regionPills">
-                <button class="pill active" data-reg="ALL">All Regions</button>
+            <div class="pills" id="regionPills">
+                <button class="pill active" data-reg="ALL">All</button>
                 <button class="pill" data-reg="UK">UK</button>
                 <button class="pill" data-reg="Remote">Remote</button>
                 <button class="pill" data-reg="EU">EU</button>
                 <button class="pill" data-reg="US">US</button>
             </div>
-            <div class="slider-wrap">
-                <span>Min Fit: <strong id="scoreVal">65</strong></span>
-                <input type="range" id="minScore" min="50" max="95" value="65" />
-            </div>
-            <label style="font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.35rem;">
-                <input type="checkbox" id="hideApplied" /> Hide Applied
+            <label
+                style="font-size:0.85rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:0.45rem;">
+                Min Fit: <strong style="color:var(--primary)" id="scoreVal">65%</strong>
+                <input type="range" id="minScore" min="50" max="95" value="65" style="accent-color:var(--primary)" />
             </label>
+            <label class="check-label"><input type="checkbox" id="hideApplied" /> Hide Applied</label>
         </div>
 
-        <div class="table-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width:75px;">Fit</th>
-                        <th style="width:85px;">Region</th>
-                        <th style="width:170px;">Company</th>
-                        <th>Role & Location</th>
-                        <th style="width:130px;">CV Audit</th>
-                        <th style="width:75px;text-align:center;">Applied</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody"></tbody>
-            </table>
-        </div>
+        <div class="job-list" id="jobList"></div>
     </div>
 
-    <!-- Custom JD Fit Checker Modal -->
+    <!-- Custom CV + JD Audit Modal -->
     <div class="modal-backdrop" id="jdModal">
         <div class="modal">
             <div style="display:flex;justify-content:space-between;align-items:center;">
-                <h2>Instant CV-to-JD Fit Analyzer</h2>
-                <button class="btn-ghost" onclick="closeModal()">✕</button>
+                <h2 style="margin:0;font-size:1.25rem;">Custom CV-to-JD Fit Auditor</h2>
+                <button class="btn-soft" onclick="closeModal()">✕ Close</button>
             </div>
-            <p style="color:var(--muted);font-size:0.85rem;margin-top:0.25rem;">
-                Paste any external Job Description (LinkedIn, company site, recruiter email) to score it against your
-                MSc AI + 6-yr 3D/CV profile.
+            <p style="color:var(--muted);font-size:0.85rem;margin:0.35rem 0 0.85rem;">
+                Paste your CV once (stored locally in your browser) and audit any LinkedIn or external job description
+                instantly.
             </p>
-            <label style="font-size:0.8rem;color:var(--muted);">Groq API Key (saved locally in your browser
-                only)</label>
+            <label style="font-size:0.78rem;font-weight:700;color:var(--muted);">GROQ API KEY (Browser LocalStorage
+                Only)</label>
             <input type="password" id="groqKeyInput" placeholder="gsk_..." />
-            <label style="font-size:0.8rem;color:var(--muted);display:block;margin-top:0.75rem;">Paste Job
-                Description</label>
-            <textarea id="jdInput" placeholder="Paste full job title, location, and requirements here..."></textarea>
-            <div style="margin-top:0.85rem;display:flex;gap:0.6rem;justify-content:flex-end;">
+
+            <label style="font-size:0.78rem;font-weight:700;color:var(--muted);display:block;margin-top:0.75rem;">YOUR
+                CV TEXT (Auto-saved in browser)</label>
+            <textarea id="cvInput" style="min-height:110px;" placeholder="Paste your CV text here once..."></textarea>
+
+            <label style="font-size:0.78rem;font-weight:700;color:var(--muted);display:block;margin-top:0.75rem;">TARGET
+                JOB DESCRIPTION</label>
+            <textarea id="jdInput" style="min-height:130px;"
+                placeholder="Paste full job title, location, and requirements..."></textarea>
+
+            <div style="margin-top:1rem;display:flex;justify-content:flex-end;">
                 <button class="btn-primary" id="analyzeBtn" onclick="analyzeCustomJD()">Run CV Fit Audit</button>
             </div>
             <div id="jdResult"></div>
@@ -488,21 +646,34 @@
         let activeRegion = "ALL";
         const appliedSet = new Set(JSON.parse(localStorage.getItem("applied_jobs") || "[]"));
 
-        const PROFILE_SUMMARY = `Bharath Reddy Mohan: MSc Artificial Intelligence (Ulster University, Belfast, UK) + 6 years prior professional experience as 3D Generalist & Technical Artist (Unity, procedural environments, shaders, pipeline automation). AI/CV Stack: Python 3.12, PyTorch, OpenCV, ONNX/WASM edge inference, Grad-CAM XAI, LangGraph, FastAPI, Docker, PostgreSQL, AWS. Projects: Cutis Derm AI (multi-spectral skin lesion VLM/XAI app), ROS/Gazebo multi-robot hospital hazard detection, LedgerVi multi-agent auditing, OASIS Alzheimer's MRI detection.`;
+        const DEFAULT_CV = `Bharath Reddy Mohan — Belfast, UK. MSc Artificial Intelligence (Ulster University, Jan 2026–May 2027) + 6 years professional experience as 3D Generalist & Technical Artist (Unity, procedural environments, shaders, pipeline automation). Stack: Python 3.12, PyTorch, OpenCV, ONNX/WASM edge inference, Grad-CAM XAI, LangGraph, FastAPI, Docker, PostgreSQL, AWS. Projects: Cutis Derm AI (multi-spectral skin lesion VLM/XAI app), ROS/Gazebo multi-robot hospital hazard detection, LedgerVi multi-agent auditing, OASIS Alzheimer's MRI research.`;
 
-        function saveApplied() { localStorage.setItem("applied_jobs", JSON.stringify([...appliedSet])); }
+        function animateCounter(el, target) {
+            let current = 0;
+            const step = Math.max(1, Math.ceil(target / 24));
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { el.textContent = target; clearInterval(timer); }
+                else { el.textContent = current; }
+            }, 22);
+        }
 
-        function updateKPIs() {
-            document.getElementById("kpiTotal").textContent = allJobs.length;
-            document.getElementById("kpiHigh").textContent = allJobs.filter(j => j.score >= 80).length;
-            document.getElementById("kpiUk").textContent = allJobs.filter(j => j.region === "UK" || j.region === "Remote").length;
-            document.getElementById("kpiApplied").textContent = appliedSet.size;
+        function updateKPIs(animate = false) {
+            const vals = [
+                ["kpiTotal", allJobs.length],
+                ["kpiHigh", allJobs.filter(j => j.score >= 80).length],
+                ["kpiUk", allJobs.filter(j => j.region === "UK" || j.region === "Remote").length],
+                ["kpiApplied", appliedSet.size]
+            ];
+            vals.forEach(([id, val]) => {
+                const el = document.getElementById(id);
+                if (animate) animateCounter(el, val); else el.textContent = val;
+            });
         }
 
         function populateCompanies() {
             const sel = document.getElementById("companyFilter");
-            const companies = [...new Set(allJobs.map(j => j.company))].sort();
-            companies.forEach(c => {
+            [...new Set(allJobs.map(j => j.company))].sort().forEach(c => {
                 const opt = document.createElement("option");
                 opt.value = c; opt.textContent = c;
                 sel.appendChild(opt);
@@ -514,7 +685,7 @@
             const comp = document.getElementById("companyFilter").value;
             const min = Number(document.getElementById("minScore").value);
             const hideApplied = document.getElementById("hideApplied").checked;
-            document.getElementById("scoreVal").textContent = min;
+            document.getElementById("scoreVal").textContent = min + "%";
 
             const filtered = allJobs.filter(j => {
                 if (j.score < min) return false;
@@ -528,56 +699,67 @@
                 return true;
             });
 
-            const tbody = document.getElementById("tbody");
-            tbody.innerHTML = filtered.map(j => {
+            const list = document.getElementById("jobList");
+            if (!filtered.length) {
+                list.innerHTML = `<div class="job-card" style="text-align:center;color:var(--muted);padding:2.5rem;">No roles match your current filter criteria. Try lowering the Min Fit slider or switching Region to All.</div>`;
+                return;
+            }
+
+            list.innerHTML = filtered.map((j, idx) => {
                 const isApplied = appliedSet.has(j.id);
-                const sClass = j.score >= 80 ? "s-high" : (j.score >= 65 ? "s-mid" : "s-low");
-                const skillsHtml = (j.matched_skills || []).map(s => `<span class="tag tag-green">✓ ${s}</span>`).join("") || "<span style='color:var(--muted);font-size:0.8rem'>Re-run workflow to populate</span>";
-                const gapsHtml = (j.missing_gaps || []).map(g => `<span class="tag tag-amber">△ ${g}</span>`).join("") || "<span style='color:var(--muted);font-size:0.8rem'>No major gaps flagged</span>";
-                const flagsHtml = (j.red_flags || []).map(f => `<span class="tag tag-red">! ${f}</span>`).join("") || "<span style='color:var(--muted);font-size:0.8rem'>None</span>";
+                const ringCls = j.score >= 80 ? "ring-high" : (j.score >= 65 ? "ring-mid" : "ring-low");
+                const skillsHtml = (j.matched_skills || []).map(s => `<span class="chip chip-green">✓ ${s}</span>`).join("") || "<span style='color:var(--muted);font-size:0.82rem'>Pending next scan</span>";
+                const gapsHtml = (j.missing_gaps || []).map(g => `<span class="chip chip-amber">△ ${g}</span>`).join("") || "<span style='color:var(--muted);font-size:0.82rem'>No major gaps</span>";
+                const flagsHtml = (j.red_flags || []).map(f => `<span class="chip chip-rose">! ${f}</span>`).join("");
 
                 return `
-          <tr class="job-row ${isApplied ? "applied" : ""}">
-            <td><span class="score-pill ${sClass}">${j.score}%</span></td>
-            <td><span class="reg-badge">${j.region || "UK"}</span></td>
-            <td><strong>${j.company}</strong></td>
-            <td>
-              <a class="role-link" href="${j.url}" target="_blank" rel="noopener">${j.title} ↗</a>
-              <div class="sub-loc">📍 ${j.location || "Location listed on board"} · Seen ${j.date}</div>
-            </td>
-            <td><button class="btn-ghost" onclick="toggleDetail('${j.id}')">Inspect CV Fit</button></td>
-            <td style="text-align:center;">
-              <input type="checkbox" ${isApplied ? "checked" : ""} onchange="toggleApplied('${j.id}')" />
-            </td>
-          </tr>
-          <tr class="detail-row" id="det_${j.id}">
-            <td colspan="6">
-              <div class="fit-box">
-                <div class="fit-section">
-                  <h4>AI Fit Assessment</h4>
-                  <p style="margin:0;font-size:0.875rem;">${j.summary || "Run workflow once to populate detailed rationale."}</p>
+          <div class="job-card ${isApplied ? "applied" : ""}" id="card_${j.id}" style="animation-delay:${Math.min(idx * 0.035, 0.4)}s">
+            <div class="card-main">
+              <div class="score-ring ${ringCls}">${j.score}%<span>FIT</span></div>
+              <div>
+                <div class="meta-row">
+                  <span class="company-name">${j.company}</span>
+                  <span class="reg-tag">${j.region || "UK"}</span>
                 </div>
-                <div class="fit-section">
-                  <h4>Matched Profile Strengths</h4>
-                  <div>${skillsHtml}</div>
-                </div>
-                <div class="fit-section">
-                  <h4>Gaps & Requirements to Prep</h4>
-                  <div>${gapsHtml} ${flagsHtml}</div>
+                <a class="role-title" href="${j.url}" target="_blank" rel="noopener">${j.title} ↗</a>
+                <div class="loc-line">📍 ${j.location || "See posting"} · Added ${j.date}</div>
+              </div>
+              <div class="card-actions">
+                <button class="btn-soft" onclick="toggleCard('${j.id}')">Inspect CV Fit</button>
+                <label class="check-label">
+                  <input type="checkbox" ${isApplied ? "checked" : ""} onchange="toggleApplied('${j.id}')" /> Applied
+                </label>
+              </div>
+            </div>
+            <div class="drawer">
+              <div class="drawer-inner">
+                <div class="drawer-content">
+                  <div class="audit-block">
+                    <h4>CV Fit Rationale</h4>
+                    <p style="margin:0;font-size:0.86rem;line-height:1.55;">${j.summary || "Run workflow once to populate CV rationale."}</p>
+                  </div>
+                  <div class="audit-block">
+                    <h4>Matched CV Strengths</h4>
+                    <div>${skillsHtml}</div>
+                  </div>
+                  <div class="audit-block">
+                    <h4>Gaps & Flags</h4>
+                    <div>${gapsHtml} ${flagsHtml}</div>
+                  </div>
                 </div>
               </div>
-            </td>
-          </tr>`;
+            </div>
+          </div>`;
             }).join("");
         }
 
-        function toggleDetail(id) {
-            document.getElementById("det_" + id).classList.toggle("open");
-        }
+        function toggleCard(id) { document.getElementById("card_" + id).classList.toggle("expanded"); }
 
         function toggleApplied(id) {
             if (appliedSet.has(id)) appliedSet.delete(id); else appliedSet.add(id);
-            saveApplied(); updateKPIs(); render();
+            localStorage.setItem("applied_jobs", JSON.stringify([...appliedSet]));
+            updateKPIs(false);
+            render();
         }
 
         document.querySelectorAll("#regionPills .pill").forEach(btn => {
@@ -595,47 +777,51 @@
 
         function openModal() {
             document.getElementById("groqKeyInput").value = localStorage.getItem("groq_api_key") || "";
+            document.getElementById("cvInput").value = localStorage.getItem("custom_cv_text") || DEFAULT_CV;
             document.getElementById("jdModal").classList.add("open");
         }
         function closeModal() { document.getElementById("jdModal").classList.remove("open"); }
 
         async function analyzeCustomJD() {
             const key = document.getElementById("groqKeyInput").value.trim();
+            const cv = document.getElementById("cvInput").value.trim();
             const jd = document.getElementById("jdInput").value.trim();
             const resBox = document.getElementById("jdResult");
-            if (!key || !jd) { resBox.innerHTML = "<p style='color:var(--red)'>Enter both your Groq API key and a Job Description.</p>"; return; }
+            if (!key || !jd) { resBox.innerHTML = "<p style='color:var(--rose);font-weight:600'>Please provide both your Groq API key and a Job Description.</p>"; return; }
             localStorage.setItem("groq_api_key", key);
+            if (cv) localStorage.setItem("custom_cv_text", cv);
+
             const btn = document.getElementById("analyzeBtn");
-            btn.disabled = true; btn.textContent = "Analyzing CV Fit...";
+            btn.disabled = true; btn.textContent = "Auditing CV Fit...";
 
             try {
                 const resp = await fetch("https://api.groq.com/openai/v1/chat/completions", {
                     method: "POST",
                     headers: { "Authorization": `Bearer ${key}`, "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        model: "meta-llama/llama-4-scout-17b-16e-instruct",
+                        model: "openai/gpt-oss-20b",
                         response_format: { type: "json_object" },
                         temperature: 0.1,
                         messages: [{
                             role: "user",
-                            content: `Evaluate candidate CV fit for this JD. Return JSON: {"fit_score": int(0-100), "verdict": str, "matched_strengths": [str], "gaps_to_address": [str], "tailored_cv_pitch": str (2 sentences positioning candidate's 3D/CV/MSc AI background for this specific role)}.\n\nCandidate:\n${PROFILE_SUMMARY}\n\nJD:\n${jd.slice(0, 4500)}`
+                            content: `Audit candidate CV fit for this JD. Return JSON: {"fit_score": int(0-100), "verdict": str, "matched_strengths": [str], "gaps_to_address": [str], "tailored_cv_pitch": str (2 sentences positioning candidate's CV for this role)}.\n\nCandidate CV:\n${(cv || DEFAULT_CV).slice(0, 4000)}\n\nJD:\n${jd.slice(0, 4000)}`
                         }]
                     })
                 });
                 const data = await resp.json();
                 const parsed = JSON.parse(data.choices[0].message.content);
                 resBox.innerHTML = `
-          <div class="result-card">
+          <div class="result-box">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
-              <strong style="font-size:1.1rem;">CV Match Score: <span style="color:var(--green)">${parsed.fit_score}%</span></strong>
-              <span class="reg-badge">${parsed.verdict}</span>
+              <strong style="font-size:1.1rem;">CV Fit Score: <span style="color:var(--emerald)">${parsed.fit_score}%</span></strong>
+              <span class="reg-tag">${parsed.verdict}</span>
             </div>
-            <p style="font-size:0.875rem;margin:0.4rem 0;"><strong>Matched:</strong> ${(parsed.matched_strengths || []).join(" · ")}</p>
-            <p style="font-size:0.875rem;margin:0.4rem 0;color:var(--amber);"><strong>Gaps to Prep:</strong> ${(parsed.gaps_to_address || []).join(" · ") || "None"}</p>
-            <p style="font-size:0.85rem;margin:0.6rem 0 0;padding-top:0.6rem;border-top:1px solid var(--border);color:var(--accent);"><strong>Tailored Cover/Resume Pitch:</strong> ${parsed.tailored_cv_pitch}</p>
+            <p style="font-size:0.86rem;margin:0.35rem 0;"><strong>Matched CV Strengths:</strong> ${(parsed.matched_strengths || []).join(" · ")}</p>
+            <p style="font-size:0.86rem;margin:0.35rem 0;color:var(--amber);"><strong>Gaps to Prep:</strong> ${(parsed.gaps_to_address || []).join(" · ") || "None"}</p>
+            <p style="font-size:0.86rem;margin:0.65rem 0 0;padding-top:0.65rem;border-top:1px solid rgba(79,70,229,0.18);color:var(--primary);"><strong>Tailored Cover/Resume Pitch:</strong> ${parsed.tailored_cv_pitch}</p>
           </div>`;
             } catch (e) {
-                resBox.innerHTML = `<p style="color:var(--red)">Error: ${e.message}</p>`;
+                resBox.innerHTML = `<p style="color:var(--rose)">Error: ${e.message}</p>`;
             } finally {
                 btn.disabled = false; btn.textContent = "Run CV Fit Audit";
             }
@@ -645,8 +831,8 @@
             .then(r => r.json())
             .then(data => {
                 allJobs = data.jobs || [];
-                document.getElementById("updated").textContent = `Last synced: ${data.updated_at} · Automated ATS Radar`;
-                updateKPIs();
+                document.getElementById("updated").textContent = `Last synced: ${data.updated_at} · Automated ATS & CV Radar`;
+                updateKPIs(true);
                 populateCompanies();
                 render();
             })

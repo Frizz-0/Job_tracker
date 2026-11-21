@@ -11,9 +11,14 @@ import yaml
 from groq import AsyncGroq
 from pydantic import BaseModel
 
+try:
+    from pypdf import PdfReader
+except ImportError:
+    PdfReader = None
+
 DB_PATH = "jobs.db"
-GROQ_MODEL = "openai/gpt-oss-20b"  # Single lightweight model to preserve free-tier quota
-MAX_SCORES_PER_RUN = 15            # Hard cap per run (~20k tokens max); remaining queue for next run
+GROQ_MODEL = "openai/gpt-oss-20b"
+MAX_SCORES_PER_RUN = 20
 
 class CompanyTarget(BaseModel):
     name: str
@@ -35,6 +40,30 @@ class JobEvaluation(BaseModel):
     matched_skills: list[str]
     missing_gaps: list[str]
     red_flags: list[str]
+
+FALLBACK_CV = """
+Bharath Reddy Mohan — Belfast, UK (Open to UK hybrid/relocation & Global/Remote).
+Education: MSc Artificial Intelligence, Ulster University (Jan 2026 – May 2027).
+Experience: 6 years professional experience as 3D Generalist & Technical Artist (Unity, procedural 3D environments, shaders, synthetic datasets, pipeline automation).
+Stack: Python 3.12, PyTorch, NumPy, Scikit-learn, OpenCV, ONNX/WASM edge inference, Grad-CAM XAI, LangGraph, LangChain, FastAPI, Docker, PostgreSQL, AWS (EC2, Lambda, DynamoDB, RDS).
+Projects: Cutis Derm AI (multi-spectral skin lesion VLM/XAI diagnostic app), Multi-Robot Hospital Hazard Detection (ROS & Gazebo Bug2 state machine), LedgerVi (LangGraph multi-agent auditing), Parasite Egg Detection & OASIS Alzheimer's MRI research.
+"""
+
+def load_candidate_cv() -> str:
+    if Path("cv.txt").exists():
+        text = Path("cv.txt").read_text(encoding="utf-8").strip()
+        if text:
+            print("Loaded candidate CV from cv.txt")
+            return text[:4500]
+    if Path("cv.pdf").exists() and PdfReader is not None:
+        reader = PdfReader("cv.pdf")
+        pages = [p.extract_text() or "" for p in reader.pages]
+        text = "\n".join(pages).strip()
+        if text:
+            print("Loaded candidate CV from cv.pdf")
+            return text[:4500]
+    print("Using built-in candidate CV profile (add cv.pdf or cv.txt to customize).")
+    return FALLBACK_CV
 
 def init_db(db_path: str = DB_PATH) -> tuple[sqlite3.Connection, bool]:
     is_first_run = not Path(db_path).exists()
@@ -201,40 +230,28 @@ TITLE_EXCLUDE = re.compile(
 def passes_title_filter(title: str) -> bool:
     return bool(TITLE_INCLUDE.search(title)) and not bool(TITLE_EXCLUDE.search(title))
 
-CANDIDATE_CV = """
-- Name & Location: Bharath Reddy Mohan (Belfast, UK — open to UK, EU, US, and Remote roles).
-- Education: MSc in Artificial Intelligence, Ulster University (Jan 2026 – May 2027).
-- Prior Experience: 6 years professional experience as a 3D Generalist & Technical Artist (3D environments, procedural generation, Unity, shaders, simulation assets, pipeline automation) prior to transitioning into AI/CV Engineering.
-- Core AI/CV Stack: Python 3.12, PyTorch, NumPy, Scikit-learn, OpenCV, ONNX Runtime / WASM edge inference, Grad-CAM explainability, LangGraph, LangChain, FastAPI, Docker, PostgreSQL, AWS (EC2, Lambda, DynamoDB, RDS).
-- Flagship Projects:
-  1. Cutis Derm AI: Multi-spectral dermatology & skin lesion VLM/XAI diagnostic web app (ONNX/WASM, Grad-CAM heatmaps, FastAPI, Groq VLM).
-  2. Multi-Robot Hospital Hazard Detection (ROS & Gazebo): Autonomous Bug2 navigation state machine, central GoalManager node, SDF simulation.
-  3. LedgerVi & AI Investigator: Stateful multi-agent auditing & RAG workflows (LangGraph, PostgreSQL/pgvector, SearXNG).
-  4. Alzheimer's Longitudinal MRI/Clinical Detection (OASIS dataset) & Custom CNN from scratch in NumPy.
-- Target Roles: Computer Vision Engineer, Applied AI / ML Engineer, Robotics Perception / Simulation Engineer, Medical Imaging AI Engineer, Multimodal/VLM Engineer.
-"""
-
-async def score_job(groq_client: AsyncGroq, job: JobPosting) -> JobEvaluation:
+async def score_job(groq_client: AsyncGroq, cv_text: str, job: JobPosting) -> JobEvaluation:
     prompt = f"""
-Audit how well the candidate's CV fits this job posting across ALL locations globally (do NOT penalize non-UK locations).
+Audit how well this candidate's actual CV fits the job posting. Include both UK and global roles, giving a +7 priority boost for UK or UK-friendly Remote roles since the candidate is based in Belfast, UK.
+
 Return ONLY valid JSON matching:
 {{
   "score": int (0-100),
   "region": "UK" | "EU" | "US" | "Remote" | "Global/Other",
-  "match_summary": "1-2 concise sentences on why the candidate fits or lacks fit",
-  "matched_skills": ["3 to 5 specific matching skills/projects from candidate CV"],
+  "match_summary": "1-2 concise sentences citing specific CV projects/experience vs JD requirements",
+  "matched_skills": ["3 to 5 specific matching skills/projects from the candidate's CV"],
   "missing_gaps": ["1 to 3 missing skills/requirements from JD, or empty list"],
   "red_flags": ["e.g. 'PhD required', '8+ YoE', 'US Security Clearance', or empty list"]
 }}
 
 Scoring rubric:
-- 85-100: Strong match for Computer Vision, Medical Imaging, Robotics Perception, 3D/Simulation AI, or Applied VLM/Agentic Engineer matching PyTorch/OpenCV/3D/FastAPI stack.
-- 70-84: Solid Junior/Mid ML or AI Engineer match where MSc AI + 6 yrs technical 3D/engineering background transfers strongly.
-- 50-69: Partial fit (e.g., adjacent software/data role or asks for some tools candidate lacks like heavy C++/CUDA/Kubernetes).
-- <50: Unrelated domain or hard senior/staff/PhD barrier.
+- 85-100: Strong match for Computer Vision, Medical Imaging, Robotics Perception, 3D/Simulation AI, or Applied VLM/Agentic Engineer matching the CV's PyTorch/OpenCV/3D/FastAPI stack (plus +7 boost if UK/Remote).
+- 70-84: Solid Junior/Mid ML or AI Engineer role where MSc AI + 6 yrs technical 3D/engineering background transfers strongly.
+- 50-69: Partial fit (adjacent role or asks for tools missing from CV like heavy C++/CUDA/Kubernetes).
+- <50: Unrelated domain or hard senior/PhD barrier.
 
 Candidate CV:
-{CANDIDATE_CV}
+{cv_text}
 
 Job Title: {job.title}
 Company: {job.company}
@@ -253,24 +270,19 @@ Description:
 
 async def send_discord_alert(client: httpx.AsyncClient, webhook_url: str, job: JobPosting, eval_res: JobEvaluation):
     if not webhook_url:
-        print("[WARN] DISCORD_WEBHOOK_URL is empty or not set in GitHub Secrets.")
         return
-
     flags = ", ".join(eval_res.red_flags) if eval_res.red_flags else "None"
     skills = ", ".join(eval_res.matched_skills[:4])
     msg = (
         f"**[{eval_res.score}/100] [{eval_res.region}] {job.company} — {job.title}**\n"
         f"📍 `{job.location}` | 🔗 {job.url}\n"
-        f"✅ **Fit:** {skills}\n"
+        f"✅ **CV Fit:** {skills}\n"
         f"💡 {eval_res.match_summary}\n"
         f"⚠️ **Flags:** {flags}"
     )[:1900]
-
     resp = await client.post(webhook_url, json={"content": msg})
     if resp.status_code not in (200, 204):
         print(f"[DISCORD ERROR] HTTP {resp.status_code}: {resp.text}")
-    else:
-        print(f"[DISCORD SENT] {job.company} — {job.title}")
     await asyncio.sleep(1.0)
 
 def export_markdown(conn: sqlite3.Connection, md_path: str = "JOBS.md"):
@@ -328,6 +340,7 @@ def export_dashboard_json(conn: sqlite3.Connection, json_path: str = "jobs.json"
 
 async def run_pipeline():
     conn, is_first_run = init_db()
+    cv_text = load_candidate_cv()
     groq_client = AsyncGroq(api_key=os.environ["GROQ_API_KEY"])
     webhook_url = os.getenv("DISCORD_WEBHOOK_URL", "")
 
@@ -339,7 +352,6 @@ async def run_pipeline():
         all_jobs = [job for company_jobs in results for job in company_jobs]
         print(f"Fetched {len(all_jobs)} total jobs across {len(targets)} companies.")
 
-        # Mark closed jobs inactive so your dashboard stays fresh
         live_ids = {j.id for j in all_jobs}
         if live_ids:
             db_ids = {r[0] for r in conn.execute("SELECT job_id FROM seen_jobs WHERE is_active = 1").fetchall()}
@@ -358,10 +370,10 @@ async def run_pipeline():
                 conn.execute("UPDATE seen_jobs SET is_active = 1 WHERE job_id = ?", (job.id,))
                 continue
             if scored_this_run >= MAX_SCORES_PER_RUN:
-                continue  # Preserve daily quota; remaining unseen jobs get scored on next run
+                continue
 
             try:
-                eval_res = await score_job(groq_client, job)
+                eval_res = await score_job(groq_client, cv_text, job)
                 save_job_eval(conn, job, eval_res)
                 scored_this_run += 1
 
@@ -380,7 +392,7 @@ async def run_pipeline():
         conn.commit()
         export_markdown(conn)
         export_dashboard_json(conn)
-        print(f"Run complete. Scored: {scored_this_run}/{MAX_SCORES_PER_RUN} | High-fit matches: {new_matches} (first_run={is_first_run}).")
+        print(f"Run complete. Scored: {scored_this_run}/{MAX_SCORES_PER_RUN} | High-fit matches: {new_matches}.")
 
 if __name__ == "__main__":
     asyncio.run(run_pipeline())
