@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV & AI Job Radar</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #131a26;
+      --border: #1f2937;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --high: #10b981;
+      --mid: #f59e0b;
+    }
+    * { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--text); padding: 2rem 1rem; }
+    .container { max-width: 1050px; margin: 0 auto; }
+    header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+    h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.02em; }
+    .meta { color: var(--muted); font-size: 0.875rem; }
+    .controls { display: flex; flex-wrap: wrap; gap: 0.75rem; background: var(--card); padding: 1rem; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 1.25rem; align-items: center; }
+    input[type="text"] { flex: 1; min-width: 220px; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 0.55rem 0.75rem; border-radius: 6px; }
+    label { font-size: 0.875rem; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.925rem; }
+    th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    tr:hover { background: rgba(255,255,255,0.02); }
+    tr.applied { opacity: 0.45; }
+    .badge { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem; font-family: monospace; }
+    .score-high { background: rgba(16, 185, 129, 0.15); color: var(--high); }
+    .score-mid { background: rgba(245, 158, 11, 0.15); color: var(--mid); }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+    input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>CV & AI Engineering Job Radar</h1>
+        <div class="meta" id="updated">Loading roles...</div>
+      </div>
+      <div class="meta" id="count"></div>
+    </header>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Filter by role or company (e.g. Vision, Wayve, Medical)..." />
+      <label>Min Score: <strong id="scoreVal">70</strong>
+        <input type="range" id="minScore" min="50" max="95" value="70" />
+      </label>
+      <label><input type="checkbox" id="hideApplied" /> Hide Applied</label>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 75px;">Score</th>
+          <th style="width: 180px;">Company</th>
+          <th>Role</th>
+          <th style="width: 110px;">Seen</th>
+          <th style="width: 80px; text-align: center;">Applied</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let allJobs = [];
+    const appliedSet = new Set(JSON.parse(localStorage.getItem("applied_jobs") || "[]"));
+
+    function saveApplied() {
+      localStorage.setItem("applied_jobs", JSON.stringify([...appliedSet]));
+    }
+
+    function render() {
+      const q = document.getElementById("search").value.toLowerCase();
+      const min = Number(document.getElementById("minScore").value);
+      const hideApplied = document.getElementById("hideApplied").checked;
+      document.getElementById("scoreVal").textContent = min;
+
+      const filtered = allJobs.filter(j => {
+        if (j.score < min) return false;
+        if (hideApplied && appliedSet.has(j.id)) return false;
+        if (q && !(`${j.company} ${j.title}`.toLowerCase().includes(q))) return false;
+        return true;
+      });
+
+      document.getElementById("count").textContent = `${filtered.length} roles shown`;
+      const tbody = document.getElementById("tbody");
+      tbody.innerHTML = filtered.map(j => {
+        const isApplied = appliedSet.has(j.id);
+        const cls = j.score >= 80 ? "score-high" : "score-mid";
+        return `
+          <tr class="${isApplied ? "applied" : ""}">
+            <td><span class="badge ${cls}">${j.score}</span></td>
+            <td><strong>${j.company}</strong></td>
+            <td><a href="${j.url}" target="_blank" rel="noopener">${j.title}</a></td>
+            <td style="color: var(--muted); font-size: 0.85rem;">${j.date}</td>
+            <td style="text-align: center;">
+              <input type="checkbox" ${isApplied ? "checked" : ""} onchange="toggleApplied('${j.id}')" />
+            </td>
+          </tr>`;
+      }).join("");
+    }
+
+    function toggleApplied(id) {
+      if (appliedSet.has(id)) appliedSet.delete(id);
+      else appliedSet.add(id);
+      saveApplied();
+      render();
+    }
+
+    ["search", "minScore", "hideApplied"].forEach(id =>
+      document.getElementById(id).addEventListener("input", render)
+    );
+
+    fetch("./jobs.json?t=" + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        allJobs = data.jobs || [];
+        document.getElementById("updated").textContent = `Last synced: ${data.updated_at}`;
+        render();
+      })
+      .catch(() => {
+        document.getElementById("updated").textContent = "Run workflow once to generate jobs.json.";
+      });
+  </script>
+</body>
+</html>

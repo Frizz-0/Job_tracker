@@ -9,6 +9,7 @@ import httpx
 import yaml
 from groq import AsyncGroq
 from pydantic import BaseModel
+from datetime import datetime, timezone
 
 DB_PATH = "jobs.db"
 
@@ -75,7 +76,7 @@ async def fetch_company_jobs(client: httpx.AsyncClient, target: CompanyTarget) -
                     title=item["title"],
                     location=item.get("location", {}).get("name", "Unknown"),
                     url=item["absolute_url"],
-                    description=item.get("content", "")[:6000],
+                    description=item.get("content", "")[:2800],
                 ))
 
         elif target.ats == "lever":
@@ -155,7 +156,7 @@ Description:
 {job.description}
 """
     resp = await groq_client.chat.completions.create(
-        model="openai/gpt-oss-120b",
+        model="meta-llama/llama-4-scout-17b-16e-instruct",
         messages=[{"role": "user", "content": prompt}],
         response_format={"type": "json_object"},
         temperature=0.1,
@@ -217,5 +218,52 @@ async def run_pipeline():
 
         print(f"Run complete. New high-fit matches: {new_matches} (first_run={is_first_run}).")
 
+def export_markdown(conn: sqlite3.Connection, md_path: str = "JOBS.md"):
+    rows = conn.execute("""
+        SELECT score, company, title, url, created_at
+        FROM seen_jobs
+        WHERE score >= 60 AND uk_ok = 1
+        ORDER BY score DESC, created_at DESC
+    """).fetchall()
+
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    lines = [
+        "# CV & AI Engineering Job Board",
+        f"*Last updated: {now} | Showing {len(rows)} UK/Remote matches (Score ≥ 60)*\n",
+        "| Score | Company | Role | First Seen |",
+        "| :---: | :--- | :--- | :--- |",
+    ]
+    for score, company, title, url, created_at in rows:
+        lines.append(f"| **{score}** | {company} | [{title}]({url}) | {created_at[:10]} |")
+
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+def export_dashboard_json(conn: sqlite3.Connection, json_path: str = "jobs.json"):
+    rows = conn.execute("""
+        SELECT job_id, score, company, title, url, created_at
+        FROM seen_jobs
+        WHERE score >= 50 AND uk_ok = 1
+        ORDER BY score DESC, created_at DESC
+    """).fetchall()
+
+    payload = {
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "jobs": [
+            {
+                "id": r[0],
+                "score": r[1],
+                "company": r[2],
+                "title": r[3],
+                "url": r[4],
+                "date": r[5][:10] if r[5] else "",
+            }
+            for r in rows
+        ],
+    }
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+
+        
 if __name__ == "__main__":
     asyncio.run(run_pipeline())
