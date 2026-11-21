@@ -2,12 +2,11 @@ name: CV & AI Job Radar
 
 on:
   schedule:
-    # Runs every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
     - cron: '0 */6 * * *'
-  workflow_dispatch: # Allows manual "Run workflow" button in GitHub UI
+  workflow_dispatch:
 
 permissions:
-  contents: write # Required to commit updated jobs.db state back to the repo
+  contents: write
 
 jobs:
   track-jobs:
@@ -15,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: 'pip'
