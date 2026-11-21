@@ -12,6 +12,8 @@ from groq import AsyncGroq
 from pydantic import BaseModel
 
 DB_PATH = "jobs.db"
+GROQ_MODEL = "openai/gpt-oss-20b"  # Single lightweight model to preserve free-tier quota
+MAX_SCORES_PER_RUN = 15            # Hard cap per run (~20k tokens max); remaining queue for next run
 
 class CompanyTarget(BaseModel):
     name: str
@@ -55,7 +57,6 @@ def init_db(db_path: str = DB_PATH) -> tuple[sqlite3.Connection, bool]:
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
-    # Safely migrate existing DB columns if upgrading from v1
     existing_cols = {row[1] for row in conn.execute("PRAGMA table_info(seen_jobs)").fetchall()}
     migrations = {
         "location": "TEXT DEFAULT 'Unknown'",
@@ -78,7 +79,6 @@ def needs_scoring(conn: sqlite3.Connection, job_id: str) -> bool:
     ).fetchone()
     if row is None:
         return True
-    # Re-evaluate previously filtered/unexplained jobs now that non-UK roles are included
     return row[0] > 0 and not row[1]
 
 def save_job_eval(conn: sqlite3.Connection, job: JobPosting, eval_res: JobEvaluation):
@@ -193,7 +193,8 @@ TITLE_INCLUDE = re.compile(
     re.IGNORECASE,
 )
 TITLE_EXCLUDE = re.compile(
-    r"(director|vp\b|vice president|head of|intern\b|recruiter|sales|account|legal|clinical specialist|people partner)",
+    r"(director|vp\b|vice president|head of|intern\b|recruiter|sales|account|legal|clinical specialist|"
+    r"people partner|designer|product manager|marketing|staff\b|principal\b|tech lead|manager)",
     re.IGNORECASE,
 )
 
@@ -212,8 +213,6 @@ CANDIDATE_CV = """
   4. Alzheimer's Longitudinal MRI/Clinical Detection (OASIS dataset) & Custom CNN from scratch in NumPy.
 - Target Roles: Computer Vision Engineer, Applied AI / ML Engineer, Robotics Perception / Simulation Engineer, Medical Imaging AI Engineer, Multimodal/VLM Engineer.
 """
-
-SCORING_MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
 
 async def score_job(groq_client: AsyncGroq, job: JobPosting) -> JobEvaluation:
     prompt = f"""
@@ -243,23 +242,14 @@ Location: {job.location}
 Description:
 {job.description}
 """
-    last_err = None
-    for model_name in SCORING_MODELS:
-        try:
-            resp = await groq_client.chat.completions.create(
-                model=model_name,
-                messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
-                temperature=0.1,
-            )
-            data = json.loads(resp.choices[0].message.content)
-            return JobEvaluation(**data)
-        except Exception as e:
-            last_err = e
-            if "model_not_found" in str(e) or "429" in str(e):
-                continue
-            raise
-    raise last_err
+    resp = await groq_client.chat.completions.create(
+        model=GROQ_MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        response_format={"type": "json_object"},
+        temperature=0.1,
+    )
+    data = json.loads(resp.choices[0].message.content)
+    return JobEvaluation(**data)
 
 async def send_discord_alert(client: httpx.AsyncClient, webhook_url: str, job: JobPosting, eval_res: JobEvaluation):
     if not webhook_url:
@@ -274,7 +264,7 @@ async def send_discord_alert(client: httpx.AsyncClient, webhook_url: str, job: J
         f"✅ **Fit:** {skills}\n"
         f"💡 {eval_res.match_summary}\n"
         f"⚠️ **Flags:** {flags}"
-    )[:1900]  # Enforce Discord's 2000-char limit
+    )[:1900]
 
     resp = await client.post(webhook_url, json={"content": msg})
     if resp.status_code not in (200, 204):
@@ -359,6 +349,7 @@ async def run_pipeline():
                 conn.commit()
 
         new_matches = 0
+        scored_this_run = 0
         for job in all_jobs:
             if not passes_title_filter(job.title):
                 mark_irrelevant(conn, job)
@@ -366,26 +357,30 @@ async def run_pipeline():
             if not needs_scoring(conn, job.id):
                 conn.execute("UPDATE seen_jobs SET is_active = 1 WHERE job_id = ?", (job.id,))
                 continue
+            if scored_this_run >= MAX_SCORES_PER_RUN:
+                continue  # Preserve daily quota; remaining unseen jobs get scored on next run
 
             try:
                 eval_res = await score_job(groq_client, job)
                 save_job_eval(conn, job, eval_res)
+                scored_this_run += 1
 
                 if eval_res.score >= 78:
                     new_matches += 1
-                    if not is_first_run:
-                        await send_discord_alert(client, webhook_url, job, eval_res)
-                    else:
-                        print(f"[MATCH {eval_res.score}] [{eval_res.region}] {job.company} — {job.title}")
+                    print(f"[MATCH {eval_res.score}] [{eval_res.region}] {job.company} — {job.title}")
+                    await send_discord_alert(client, webhook_url, job, eval_res)
 
-                await asyncio.sleep(0.35)
+                await asyncio.sleep(0.5)
             except Exception as e:
                 print(f"[WARN] Scoring failed for {job.company} - {job.title}: {e}")
+                if "429" in str(e) or "rate_limit" in str(e).lower():
+                    print("[STOP] Rate limit reached — halting scoring until next run.")
+                    break
 
         conn.commit()
         export_markdown(conn)
         export_dashboard_json(conn)
-        print(f"Run complete. New high-fit matches: {new_matches} (first_run={is_first_run}).")
+        print(f"Run complete. Scored: {scored_this_run}/{MAX_SCORES_PER_RUN} | High-fit matches: {new_matches} (first_run={is_first_run}).")
 
 if __name__ == "__main__":
     asyncio.run(run_pipeline())
