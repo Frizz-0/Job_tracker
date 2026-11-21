@@ -213,6 +213,8 @@ CANDIDATE_CV = """
 - Target Roles: Computer Vision Engineer, Applied AI / ML Engineer, Robotics Perception / Simulation Engineer, Medical Imaging AI Engineer, Multimodal/VLM Engineer.
 """
 
+SCORING_MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
+
 async def score_job(groq_client: AsyncGroq, job: JobPosting) -> JobEvaluation:
     prompt = f"""
 Audit how well the candidate's CV fits this job posting across ALL locations globally (do NOT penalize non-UK locations).
@@ -241,14 +243,23 @@ Location: {job.location}
 Description:
 {job.description}
 """
-    resp = await groq_client.chat.completions.create(
-        model="meta-llama/llama-4-scout-17b-16e-instruct",
-        messages=[{"role": "user", "content": prompt}],
-        response_format={"type": "json_object"},
-        temperature=0.1,
-    )
-    data = json.loads(resp.choices[0].message.content)
-    return JobEvaluation(**data)
+    last_err = None
+    for model_name in SCORING_MODELS:
+        try:
+            resp = await groq_client.chat.completions.create(
+                model=model_name,
+                messages=[{"role": "user", "content": prompt}],
+                response_format={"type": "json_object"},
+                temperature=0.1,
+            )
+            data = json.loads(resp.choices[0].message.content)
+            return JobEvaluation(**data)
+        except Exception as e:
+            last_err = e
+            if "model_not_found" in str(e) or "429" in str(e):
+                continue
+            raise
+    raise last_err
 
 async def send_discord_alert(client: httpx.AsyncClient, webhook_url: str, job: JobPosting, eval_res: JobEvaluation):
     if not webhook_url:
