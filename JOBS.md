@@ -1,5 +1,5 @@
 # CV & AI Engineering Job Board
-*Last updated: 2026-11-21 11:28 UTC | Showing 26 UK/Remote matches (Score ≥ 60)*
+*Last updated: 2026-11-21 12:03 UTC | Showing 26 UK/Remote matches (Score ≥ 60)*
 
 | Score | Company | Role | First Seen |
 | :---: | :--- | :--- | :--- |
