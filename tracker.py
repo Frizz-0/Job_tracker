@@ -274,10 +274,10 @@ async def send_discord_alert(client: httpx.AsyncClient, webhook_url: str, job: J
     flags = ", ".join(eval_res.red_flags) if eval_res.red_flags else "None"
     skills = ", ".join(eval_res.matched_skills[:4])
     msg = (
-        f"**[{eval_res.score}/100]  [{eval_res.region}] {job.company} — {job.title}**\n"
-        f"⛩️ `{job.location}` | 🔗 {job.url}\n"
-        f"**CV Fit:** {skills}\n"
-        f"🍥 {eval_res.match_summary}\n"
+        f"**[{eval_res.score}/100] [{eval_res.region}] {job.company} — {job.title}**\n"
+        f"📍 `{job.location}` | 🔗 {job.url}\n"
+        f"✅ **CV Fit:** {skills}\n"
+        f"💡 {eval_res.match_summary}\n"
         f"⚠️ **Flags:** {flags}"
     )[:1900]
     resp = await client.post(webhook_url, json={"content": msg})
@@ -347,7 +347,7 @@ async def run_pipeline():
     with open("companies.yaml", "r") as f:
         targets = [CompanyTarget(**c) for c in yaml.safe_load(f)]
 
-    async with httpx.AsyncClient(timeout=30.0) as client:
+    async with httpx.AsyncClient(timeout=15.0) as client:
         results = await asyncio.gather(*(fetch_company_jobs(client, t) for t in targets))
         all_jobs = [job for company_jobs in results for job in company_jobs]
         print(f"Fetched {len(all_jobs)} total jobs across {len(targets)} companies.")

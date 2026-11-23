@@ -13,9 +13,6 @@ permissions:
 jobs:
   track-jobs:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout code from main
@@ -35,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
 
-      - name: Run ATS poller & Groq relevance scorer
+      - name: Run ATS poller & Groq CV auditor
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -52,7 +49,7 @@ jobs:
           if ! git diff --staged --quiet; then
             git commit -m "chore: update job data"
             git push -f origin data
-          fi  
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -62,16 +59,16 @@ jobs:
         with:
           path: '.'
 
-    deploy:
-      needs: track-jobs
-      runs-on: ubuntu-latest
-      permissions:
-        pages: write
-        id-token: write
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      steps:
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+  deploy:
+    needs: track-jobs
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
