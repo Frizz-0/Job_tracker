@@ -16,7 +16,6 @@
             --text: #0f172a;
             --muted: #64748b;
             --primary: #4f46e5;
-            --primary-hover: #4338ca;
             --primary-soft: #eef2ff;
             --emerald: #059669;
             --emerald-soft: #ecfdf5;
@@ -96,7 +95,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
-            background: rgba(255, 255, 255, 0.82);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             border: 1px solid var(--border);
             border-radius: 18px;
@@ -140,16 +139,12 @@
             font-size: 0.875rem;
             cursor: pointer;
             box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
-            transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s ease;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 22px rgba(79, 70, 229, 0.32);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
         }
 
         .btn-soft {
@@ -169,6 +164,24 @@
             color: #fff;
         }
 
+        .btn-dismiss {
+            background: transparent;
+            color: var(--muted);
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.62rem;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .btn-dismiss:hover {
+            background: var(--rose-soft);
+            color: var(--rose);
+            border-color: rgba(225, 29, 72, 0.3);
+        }
+
         .kpis {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -184,22 +197,6 @@
             box-shadow: var(--shadow-sm);
             transition: transform 0.22s ease, box-shadow 0.22s ease;
             animation: fadeSlideUp 0.5s ease-out backwards;
-        }
-
-        .kpi:nth-child(1) {
-            animation-delay: 0.05s;
-        }
-
-        .kpi:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-
-        .kpi:nth-child(3) {
-            animation-delay: 0.15s;
-        }
-
-        .kpi:nth-child(4) {
-            animation-delay: 0.2s;
         }
 
         .kpi:hover {
@@ -222,6 +219,39 @@
             letter-spacing: -0.03em;
         }
 
+        /* Mode Tabs */
+        .mode-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tab-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .mode-tab {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 0.55rem 1rem;
+            border-radius: 11px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .mode-tab.active {
+            background: var(--text);
+            color: #fff;
+            border-color: var(--text);
+        }
+
         .toolbar {
             display: flex;
             flex-wrap: wrap;
@@ -233,7 +263,6 @@
             box-shadow: var(--shadow-sm);
             margin-bottom: 1.35rem;
             align-items: center;
-            animation: fadeSlideUp 0.55s ease-out backwards;
         }
 
         input[type="text"],
@@ -245,7 +274,6 @@
             border-radius: 10px;
             font-size: 0.875rem;
             outline: none;
-            transition: border-color 0.15s, box-shadow 0.15s;
         }
 
         input[type="text"]:focus,
@@ -256,7 +284,7 @@
 
         input[type="text"] {
             flex: 1;
-            min-width: 230px;
+            min-width: 220px;
         }
 
         .pills {
@@ -286,7 +314,6 @@
             background: var(--primary);
             border-color: var(--primary);
             color: #fff;
-            box-shadow: 0 3px 10px rgba(79, 70, 229, 0.25);
         }
 
         .job-list {
@@ -301,8 +328,8 @@
             border-radius: 16px;
             padding: 1.15rem 1.35rem;
             box-shadow: var(--shadow-sm);
-            transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, border-color 0.22s ease, opacity 0.2s;
-            animation: fadeSlideUp 0.45s ease-out backwards;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            animation: fadeSlideUp 0.4s ease-out backwards;
         }
 
         .job-card:hover {
@@ -312,8 +339,7 @@
         }
 
         .job-card.applied {
-            opacity: 0.52;
-            background: #f8fafc;
+            border-left: 4px solid var(--emerald);
         }
 
         .card-main {
@@ -402,7 +428,6 @@
             color: var(--text);
             text-decoration: none;
             display: inline-block;
-            transition: color 0.15s;
         }
 
         .role-title:hover {
@@ -418,7 +443,7 @@
         .card-actions {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.65rem;
         }
 
         .check-label {
@@ -441,7 +466,7 @@
         .drawer {
             display: grid;
             grid-template-rows: 0fr;
-            transition: grid-template-rows 0.3s cubic-bezier(0.22, 1, 0.36, 1), margin-top 0.3s ease;
+            transition: grid-template-rows 0.3s ease, margin-top 0.3s ease;
         }
 
         .job-card.expanded .drawer {
@@ -535,11 +560,6 @@
             outline: none;
         }
 
-        textarea:focus,
-        input[type="password"]:focus {
-            border-color: var(--primary);
-        }
-
         .result-box {
             margin-top: 1rem;
             background: var(--primary-soft);
@@ -562,7 +582,7 @@
 
         <div class="kpis">
             <div class="kpi">
-                <div class="kpi-label">Active Tracked Roles</div>
+                <div class="kpi-label">Fresh Radar Roles (≤14d)</div>
                 <div class="kpi-val" style="color:var(--text)" id="kpiTotal">0</div>
             </div>
             <div class="kpi">
@@ -574,14 +594,23 @@
                 <div class="kpi-val" style="color:var(--primary)" id="kpiUk">0</div>
             </div>
             <div class="kpi">
-                <div class="kpi-label">Applications Sent</div>
+                <div class="kpi-label">Saved Applied Log</div>
                 <div class="kpi-val" style="color:var(--amber)" id="kpiApplied">0</div>
             </div>
         </div>
 
+        <div class="mode-tabs">
+            <div class="tab-group">
+                <button class="mode-tab active" id="tabFeed" onclick="switchView('feed')">📡 Fresh Radar Feed</button>
+                <button class="mode-tab" id="tabApplied" onclick="switchView('applied')">✅ Applied Vault (<span
+                        id="vaultCount">0</span>)</button>
+            </div>
+            <button class="btn-dismiss" id="resetDismissedBtn" onclick="resetDismissed()" style="display:none;">Restore
+                Dismissed Roles</button>
+        </div>
+
         <div class="toolbar">
-            <input type="text" id="search"
-                placeholder="Search role, company, or CV skill (e.g. PyTorch, Robotics, Medical, 3D)..." />
+            <input type="text" id="search" placeholder="Search role, company, location, or CV skill..." />
             <select id="companyFilter">
                 <option value="">All Companies</option>
             </select>
@@ -597,7 +626,6 @@
                 Min Fit: <strong style="color:var(--primary)" id="scoreVal">65%</strong>
                 <input type="range" id="minScore" min="50" max="95" value="65" style="accent-color:var(--primary)" />
             </label>
-            <label class="check-label"><input type="checkbox" id="hideApplied" /> Hide Applied</label>
         </div>
 
         <div class="job-list" id="jobList"></div>
@@ -637,31 +665,40 @@
     <script>
         let allJobs = [];
         let activeRegion = "ALL";
-        const appliedSet = new Set(JSON.parse(localStorage.getItem("applied_jobs") || "[]"));
+        let currentView = "feed"; // 'feed' | 'applied'
+
+        // Persistent Vault for Applied Jobs (survives even after feed refreshes or company closes role)
+        let appliedVault = JSON.parse(localStorage.getItem("applied_vault") || "{}");
+        let dismissedSet = new Set(JSON.parse(localStorage.getItem("dismissed_jobs") || "[]"));
 
         const DEFAULT_CV = `Bharath Reddy Mohan — Belfast, UK. MSc Artificial Intelligence (Ulster University, Jan 2026–May 2027) + 6 years professional experience as 3D Generalist & Technical Artist (Unity, procedural environments, shaders, pipeline automation). Stack: Python 3.12, PyTorch, OpenCV, ONNX/WASM edge inference, Grad-CAM XAI, LangGraph, FastAPI, Docker, PostgreSQL, AWS. Projects: Cutis Derm AI (multi-spectral skin lesion VLM/XAI app), ROS/Gazebo multi-robot hospital hazard detection, LedgerVi multi-agent auditing, OASIS Alzheimer's MRI research.`;
 
-        function animateCounter(el, target) {
-            let current = 0;
-            const step = Math.max(1, Math.ceil(target / 24));
-            const timer = setInterval(() => {
-                current += step;
-                if (current >= target) { el.textContent = target; clearInterval(timer); }
-                else { el.textContent = current; }
-            }, 22);
+        // Client-side location guard so US/California roles never misclassify as UK
+        const US_REGEX = /\b(united states|usa|u\.s\.|california|san francisco|mountain view|palo alto|sunnyvale|menlo park|new york|nyc|seattle|austin|boston|chicago|los angeles|texas|massachusetts|,\s*(ca|ny|wa|tx|ma|il|co))\b/i;
+        const UK_REGEX = /\b(united kingdom|uk\b|u\.k\.|london|belfast|cambridge|oxford|edinburgh|manchester|bristol|england|scotland|wales|northern ireland)\b/i;
+
+        function getTrueRegion(job) {
+            const loc = job.location || "";
+            if (US_REGEX.test(loc) && !UK_REGEX.test(loc)) return "US";
+            if (UK_REGEX.test(loc) && !US_REGEX.test(loc)) return "UK";
+            if (/remote/i.test(loc) && !US_REGEX.test(loc)) return "Remote";
+            return job.region || "Other";
         }
 
-        function updateKPIs(animate = false) {
-            const vals = [
-                ["kpiTotal", allJobs.length],
-                ["kpiHigh", allJobs.filter(j => j.score >= 80).length],
-                ["kpiUk", allJobs.filter(j => j.region === "UK" || j.region === "Remote").length],
-                ["kpiApplied", appliedSet.size]
-            ];
-            vals.forEach(([id, val]) => {
-                const el = document.getElementById(id);
-                if (animate) animateCounter(el, val); else el.textContent = val;
-            });
+        function saveStorage() {
+            localStorage.setItem("applied_vault", JSON.stringify(appliedVault));
+            localStorage.setItem("dismissed_jobs", JSON.stringify([...dismissedSet]));
+        }
+
+        function updateKPIs() {
+            const visibleFeed = allJobs.filter(j => !dismissedSet.has(j.id));
+            const appliedCount = Object.keys(appliedVault).length;
+            document.getElementById("kpiTotal").textContent = visibleFeed.length;
+            document.getElementById("kpiHigh").textContent = visibleFeed.filter(j => j.score >= 80).length;
+            document.getElementById("kpiUk").textContent = visibleFeed.filter(j => ["UK", "Remote"].includes(getTrueRegion(j))).length;
+            document.getElementById("kpiApplied").textContent = appliedCount;
+            document.getElementById("vaultCount").textContent = appliedCount;
+            document.getElementById("resetDismissedBtn").style.display = dismissedSet.size > 0 ? "inline-block" : "none";
         }
 
         function populateCompanies() {
@@ -673,18 +710,28 @@
             });
         }
 
+        function switchView(view) {
+            currentView = view;
+            document.getElementById("tabFeed").classList.toggle("active", view === "feed");
+            document.getElementById("tabApplied").classList.toggle("active", view === "applied");
+            render();
+        }
+
         function render() {
             const q = document.getElementById("search").value.toLowerCase();
             const comp = document.getElementById("companyFilter").value;
             const min = Number(document.getElementById("minScore").value);
-            const hideApplied = document.getElementById("hideApplied").checked;
             document.getElementById("scoreVal").textContent = min + "%";
 
-            const filtered = allJobs.filter(j => {
-                if (j.score < min) return false;
+            const sourceList = currentView === "applied"
+                ? Object.values(appliedVault)
+                : allJobs.filter(j => !dismissedSet.has(j.id) && !appliedVault[j.id]);
+
+            const filtered = sourceList.filter(j => {
+                const trueReg = getTrueRegion(j);
+                if (currentView === "feed" && j.score < min) return false;
                 if (comp && j.company !== comp) return false;
-                if (activeRegion !== "ALL" && j.region !== activeRegion) return false;
-                if (hideApplied && appliedSet.has(j.id)) return false;
+                if (activeRegion !== "ALL" && trueReg !== activeRegion) return false;
                 if (q) {
                     const hay = `${j.company} ${j.title} ${j.location} ${(j.matched_skills || []).join(" ")}`.toLowerCase();
                     if (!hay.includes(q)) return false;
@@ -694,34 +741,40 @@
 
             const list = document.getElementById("jobList");
             if (!filtered.length) {
-                list.innerHTML = `<div class="job-card" style="text-align:center;color:var(--muted);padding:2.5rem;">No roles match your current filter criteria. Try lowering the Min Fit slider or switching Region to All.</div>`;
+                list.innerHTML = `<div class="job-card" style="text-align:center;color:var(--muted);padding:2.5rem;">${currentView === "applied"
+                        ? "No saved applications match this filter yet. Tick 'Applied' on any role in the Fresh Radar Feed to archive it here permanently."
+                        : "No fresh roles match your current filter criteria. Try lowering the Min Fit slider or selecting 'All' regions."
+                    }</div>`;
                 return;
             }
 
             list.innerHTML = filtered.map((j, idx) => {
-                const isApplied = appliedSet.has(j.id);
+                const isApplied = Boolean(appliedVault[j.id]);
+                const trueReg = getTrueRegion(j);
                 const ringCls = j.score >= 80 ? "ring-high" : (j.score >= 65 ? "ring-mid" : "ring-low");
                 const skillsHtml = (j.matched_skills || []).map(s => `<span class="chip chip-green">✓ ${s}</span>`).join("") || "<span style='color:var(--muted);font-size:0.82rem'>Pending next scan</span>";
                 const gapsHtml = (j.missing_gaps || []).map(g => `<span class="chip chip-amber">△ ${g}</span>`).join("") || "<span style='color:var(--muted);font-size:0.82rem'>No major gaps</span>";
                 const flagsHtml = (j.red_flags || []).map(f => `<span class="chip chip-rose">! ${f}</span>`).join("");
 
                 return `
-          <div class="job-card ${isApplied ? "applied" : ""}" id="card_${j.id}" style="animation-delay:${Math.min(idx * 0.035, 0.4)}s">
+          <div class="job-card ${isApplied ? "applied" : ""}" id="card_${j.id}" style="animation-delay:${Math.min(idx * 0.03, 0.35)}s">
             <div class="card-main">
               <div class="score-ring ${ringCls}">${j.score}%<span>FIT</span></div>
               <div>
                 <div class="meta-row">
                   <span class="company-name">${j.company}</span>
-                  <span class="reg-tag">${j.region || "UK"}</span>
+                  <span class="reg-tag">${trueReg}</span>
+                  ${isApplied && j.applied_at ? `<span class="chip chip-green" style="margin:0;padding:0.1rem 0.5rem;">Applied ${j.applied_at}</span>` : ""}
                 </div>
                 <a class="role-title" href="${j.url}" target="_blank" rel="noopener">${j.title} ↗</a>
-                <div class="loc-line">📍 ${j.location || "See posting"} · Added ${j.date}</div>
+                <div class="loc-line">📍 ${j.location || "See posting"} · Seen ${j.date}</div>
               </div>
               <div class="card-actions">
                 <button class="btn-soft" onclick="toggleCard('${j.id}')">Inspect CV Fit</button>
                 <label class="check-label">
                   <input type="checkbox" ${isApplied ? "checked" : ""} onchange="toggleApplied('${j.id}')" /> Applied
                 </label>
+                ${!isApplied ? `<button class="btn-dismiss" title="Not interested — hide role" onclick="dismissJob('${j.id}')">✕</button>` : ""}
               </div>
             </div>
             <div class="drawer">
@@ -749,9 +802,30 @@
         function toggleCard(id) { document.getElementById("card_" + id).classList.toggle("expanded"); }
 
         function toggleApplied(id) {
-            if (appliedSet.has(id)) appliedSet.delete(id); else appliedSet.add(id);
-            localStorage.setItem("applied_jobs", JSON.stringify([...appliedSet]));
-            updateKPIs(false);
+            if (appliedVault[id]) {
+                delete appliedVault[id];
+            } else {
+                const job = allJobs.find(j => j.id === id);
+                if (job) {
+                    appliedVault[id] = { ...job, applied_at: new Date().toISOString().slice(0, 10) };
+                }
+            }
+            saveStorage();
+            updateKPIs();
+            render();
+        }
+
+        function dismissJob(id) {
+            dismissedSet.add(id);
+            saveStorage();
+            updateKPIs();
+            render();
+        }
+
+        function resetDismissed() {
+            dismissedSet.clear();
+            saveStorage();
+            updateKPIs();
             render();
         }
 
@@ -764,7 +838,7 @@
             });
         });
 
-        ["search", "companyFilter", "minScore", "hideApplied"].forEach(id =>
+        ["search", "companyFilter", "minScore"].forEach(id =>
             document.getElementById(id).addEventListener("input", render)
         );
 
@@ -824,8 +898,8 @@
             .then(r => r.json())
             .then(data => {
                 allJobs = data.jobs || [];
-                document.getElementById("updated").textContent = `Last synced: ${data.updated_at} · Automated ATS & CV Radar`;
-                updateKPIs(true);
+                document.getElementById("updated").textContent = `Last synced: ${data.updated_at} · Auto-prunes unapplied roles > 14 days`;
+                updateKPIs();
                 populateCompanies();
                 render();
             })

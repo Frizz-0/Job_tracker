@@ -110,8 +110,31 @@ def needs_scoring(conn: sqlite3.Connection, job_id: str) -> bool:
         return True
     return row[0] > 0 and not row[1]
 
+US_LOC_RE = re.compile(
+    r"\b(united states|usa|u\.s\.|california|san francisco|mountain view|palo alto|sunnyvale|"
+    r"menlo park|new york|nyc|seattle|austin|boston|chicago|los angeles|texas|massachusetts|"
+    r"washington, dc|,\s*(ca|ny|wa|tx|ma|il|co|ga|va|nc|pa|nj))\b",
+    re.IGNORECASE,
+)
+UK_LOC_RE = re.compile(
+    r"\b(united kingdom|uk\b|u\.k\.|london|belfast|cambridge|oxford|edinburgh|manchester|"
+    r"bristol|england|scotland|wales|northern ireland)\b",
+    re.IGNORECASE,
+)
+
+def normalize_region(location: str, llm_region: str) -> str:
+    loc = location or ""
+    if US_LOC_RE.search(loc) and not UK_LOC_RE.search(loc):
+        return "US"
+    if UK_LOC_RE.search(loc) and not US_LOC_RE.search(loc):
+        return "UK"
+    if "remote" in loc.lower() and not US_LOC_RE.search(loc):
+        return "Remote"
+    return llm_region
+
 def save_job_eval(conn: sqlite3.Connection, job: JobPosting, eval_res: JobEvaluation):
-    uk_ok = 1 if eval_res.region in ("UK", "Remote") else 0
+    true_region = normalize_region(job.location, eval_res.region)
+    uk_ok = 1 if true_region in ("UK", "Remote") else 0
     conn.execute("""
         INSERT INTO seen_jobs (
             job_id, company, title, location, region, score, uk_ok,
@@ -129,7 +152,7 @@ def save_job_eval(conn: sqlite3.Connection, job: JobPosting, eval_res: JobEvalua
             is_active=1,
             url=excluded.url
     """, (
-        job.id, job.company, job.title, job.location, eval_res.region,
+        job.id, job.company, job.title, job.location, true_region,
         eval_res.score, uk_ok, eval_res.match_summary,
         json.dumps(eval_res.matched_skills),
         json.dumps(eval_res.missing_gaps),
@@ -307,11 +330,14 @@ def export_markdown(conn: sqlite3.Connection, md_path: str = "JOBS.md"):
         f.write("\n".join(lines) + "\n")
 
 def export_dashboard_json(conn: sqlite3.Connection, json_path: str = "jobs.json"):
+    # Only export active roles seen within the last 14 days so stale unapplied roles auto-prune
     rows = conn.execute("""
         SELECT job_id, score, region, company, title, location, match_summary,
                matched_skills, missing_gaps, red_flags, url, created_at
         FROM seen_jobs
-        WHERE score >= 50 AND is_active = 1
+        WHERE score >= 50
+          AND is_active = 1
+          AND datetime(created_at) >= datetime('now', '-14 days')
         ORDER BY score DESC, created_at DESC
     """).fetchall()
 
@@ -321,7 +347,7 @@ def export_dashboard_json(conn: sqlite3.Connection, json_path: str = "jobs.json"
             {
                 "id": r[0],
                 "score": r[1],
-                "region": r[2] or "Other",
+                "region": normalize_region(r[5], r[2] or "Other"),
                 "company": r[3],
                 "title": r[4],
                 "location": r[5] or "Unknown",
