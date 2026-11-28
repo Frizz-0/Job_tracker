@@ -1,0 +1,3242 @@
+{
+  "updated_at": "2026-11-28 06:51 UTC",
+  "jobs": [
+    {
+      "id": "gh_8212440",
+      "score": 97,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer - Gen SWE",
+      "location": "Mountain View, CA",
+      "summary": "The candidate\u2019s 6 years of robotics simulation with ROS & Gazebo, combined with PyTorch and OpenCV-based ML pipelines and FastAPI-driven distributed services, align closely with Waymo\u2019s need for ML model training, deployment, and fallback system design across vehicle and cloud stacks.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "FastAPI",
+        "ONNX/WASM edge inference"
+      ],
+      "missing_gaps": [
+        "Autonomous driving domain experience",
+        "Vehicle occupancy detection expertise"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8212440",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_4751149005",
+      "score": 92,
+      "region": "Global/Other",
+      "company": "Scale AI",
+      "title": "Senior Applied AI Engineer",
+      "location": "Kuwait City, Kuwait",
+      "summary": "Candidate built a multi\u2011agent compliance pipeline (LedgerVi) using LangGraph, Llama\u202f3.3, FastAPI and PostgreSQL, demonstrating end\u2011to\u2011end AI behaviour ownership, guardrails and evaluation design, matching Scale\u202fAI\u2019s production\u2011agent and evaluation requirements. Skin Disease Prediction project showcases model deployment, interpretability (Grad\u2011CAM) and handling of regulated medical data.",
+      "matched_skills": [
+        "LedgerVi multi\u2011agent pipeline (LangGraph, Llama\u202f3.3, FastAPI)",
+        "Skin Disease Prediction (PyTorch, EfficientNet, Grad\u2011CAM, FastAPI)",
+        "Parasite Egg Classification (YOLOv8, OpenCV, PyTorch)",
+        "Backend engineering with FastAPI, PostgreSQL, Docker, MLOps",
+        "Evaluation design with risk\u2011graded medical circuit breaker"
+      ],
+      "missing_gaps": [
+        "Sovereign/on\u2011premise deployment experience",
+        "Direct client\u2011facing communication experience"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4751149005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_9e0751cd-f651-4cc7-bea7-f21663f082c0",
+      "score": 92,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Senior AI Developer Productivity Engineer",
+      "location": "Foster City, CA",
+      "summary": "Candidate\u2019s LedgerVi multi\u2011agent LLM pipeline and Skin Disease Prediction with PyTorch/Grad\u2011CAM showcase strong LLM and full\u2011stack expertise, while 3D pipeline, ROS, and Docker/AWS skills align with autonomous vehicle simulation and production needs.",
+      "matched_skills": [
+        "LangGraph & Llama 3.3 LLM pipeline (LedgerVi)",
+        "FastAPI full\u2011stack development",
+        "PyTorch computer vision (Skin Disease Prediction)",
+        "ROS robotics experience",
+        "Docker & AWS MLOps"
+      ],
+      "missing_gaps": [
+        "Direct autonomous vehicle software development experience",
+        "Large\u2011scale distributed system design experience"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/9e0751cd-f651-4cc7-bea7-f21663f082c0",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_2347453a-f11f-4dc2-ad14-572bc1f6247f",
+      "score": 92,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Machine Learning Engineer - 3D Sensor Simulation",
+      "location": "Foster City, CA",
+      "summary": "The CV demonstrates strong 3D pipeline and digital twin experience, ROS robotics knowledge, and proven computer\u2011vision work with PyTorch and OpenCV\u2014directly matching Zoox\u2019s 3D sensor simulation and perception needs.",
+      "matched_skills": [
+        "3D pipeline & digital twin development",
+        "PyTorch & OpenCV computer vision",
+        "ROS & robotics",
+        "FastAPI & MLOps",
+        "Python automation"
+      ],
+      "missing_gaps": [],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/2347453a-f11f-4dc2-ad14-572bc1f6247f",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8122990",
+      "score": 92,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Software Engineer, Applied AI Infrastructure",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate\u2019s PyTorch, FastAPI, and OpenCV work on a medical imaging classifier and a multi\u2011agent ledger system aligns with Nuro\u2019s need for robust AI infrastructure and evaluation pipelines.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "OpenCV",
+        "MLOps",
+        "Multi\u2011agent system (LangGraph)"
+      ],
+      "missing_gaps": [
+        "Kubernetes",
+        "Real\u2011time inference",
+        "Autonomous driving domain experience"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=8122990",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4345915006",
+      "score": 92,
+      "region": "US",
+      "company": "Figure AI",
+      "title": "Helix AI Engineer, Data Infrastructure ",
+      "location": "San Jose, CA",
+      "summary": "Candidate has built Python\u2011based data pipelines with FastAPI and PostgreSQL, managed AWS infrastructure, and led 3D pipeline automation\u2014directly matching Figure\u2019s need for robust data infrastructure for autonomous robots.",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "AWS",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "Kubernetes/SLURM job scheduling",
+        "Configuration management tools (Ansible/Terraform)",
+        "Data annotation and dataset management tools"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/figureai/jobs/4345915006",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4953562101",
+      "score": 92,
+      "region": "US",
+      "company": "Helsing",
+      "title": "Machine Learning Engineer, Detection and Tracking",
+      "location": "Washington, DC",
+      "summary": "Candidate\u2019s extensive CV experience with PyTorch, OpenCV, and ROS/Gazebo, exemplified by the Cutis Derm AI skin\u2011lesion detection app and the Multi\u2011Robot Hospital Hazard Detection system, aligns closely with Helsing\u2019s need for detection and tracking model development and edge deployment.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "ONNX/WASM edge inference",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "Parasite Egg Detection"
+      ],
+      "missing_gaps": [
+        "YOLO, DETR, Faster R\u2011CNN experience not explicitly mentioned",
+        "Large\u2011scale annotation pipeline experience",
+        "Real\u2011time tracking system experience"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4953562101?gh_jid=4953562101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8902106002",
+      "score": 92,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Senior Software Engineer (ML QA)",
+      "location": "Bristol, UK",
+      "summary": "Candidate\u2019s 6\u2011year background in Python, PyTorch, OpenCV and 3D simulation (Cutis Derm AI, Multi\u2011Robot Hospital Hazard Detection) directly supports Graphcore\u2019s ML stack validation and test\u2011infrastructure needs.",
+      "matched_skills": [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "C/C++ familiarity",
+        "CI/CD pipeline experience",
+        "Automated testing systems"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_5035958101",
+      "score": 92,
+      "region": "UK",
+      "company": "PhysicsX",
+      "title": "AI Engineer: Evals",
+      "location": "London",
+      "summary": "Candidate has built a multi\u2011agent auditing framework (LedgerVi) with LangGraph and ROS/Gazebo simulation for hazard detection, matching PhysicsX\u2019s need for agent evaluation, cross\u2011product benchmarks and production\u2011ready pipelines.",
+      "matched_skills": [
+        "LangGraph multi\u2011agent auditing (LedgerVi)",
+        "ROS & Gazebo simulation (Multi\u2011Robot Hospital Hazard Detection)",
+        "PyTorch & OpenCV (Cutis Derm AI)",
+        "FastAPI & Docker (API pipelines)",
+        "Synthetic dataset generation (procedural 3D environments)"
+      ],
+      "missing_gaps": [
+        "Production telemetry integration",
+        "Domain\u2011specific physics simulation expertise",
+        "Cross\u2011product scorecard design"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/5035958101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4631848005",
+      "score": 90,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Machine Learning Engineer, Public Sector",
+      "location": "Denver, CO; Honolulu, HI; Washington, DC",
+      "summary": "Candidate\u2019s LedgerVi multi\u2011agent LLM pipeline and FastAPI integration align with Scale\u2019s agentic AI and production API needs, while their EfficientNet skin disease classifier and YOLOv8 parasite detection demonstrate strong computer vision expertise.",
+      "matched_skills": [
+        "LangGraph + Llama 3.3 multi\u2011agent pipeline",
+        "EfficientNet skin disease classifier with Grad\u2011CAM",
+        "YOLOv8 parasite egg detection",
+        "FastAPI production API"
+      ],
+      "missing_gaps": [
+        "Reinforcement learning for agentic LLMs",
+        "Large\u2011scale fine\u2011tuning pipelines for vision foundation models"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4631848005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_06f146c2-25f6-40fd-8393-4f92ce518929",
+      "score": 90,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Machine Learning Engineer - Vision Foundation Models",
+      "location": "Foster City, CA",
+      "summary": "Candidate\u2019s 5+ years of 3D pipeline and robotics experience, combined with PyTorch/OpenCV vision projects (EfficientNet skin disease classifier, YOLOv8 parasite detection) and ROS/MLOps skills, align closely with Zoox\u2019s vision foundation model and autonomous perception requirements.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "YOLOv8",
+        "ROS",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "Experience with autonomous vehicle perception datasets (e.g., KITTI, nuScenes)",
+        "Large\u2011scale GPU training for vision foundation models"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/06f146c2-25f6-40fd-8393-4f92ce518929",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "lv_48a6b2ac-0dcb-4481-ab26-386ce62decab",
+      "score": 90,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Lead AI Engineer \u2013 Enterprise, Data & AI",
+      "location": "Foster City, CA",
+      "summary": "The candidate\u2019s LedgerVi project demonstrates expertise in building multi\u2011agent LLM workflows with LangGraph, Llama\u202f3.3, FastAPI and PostgreSQL\u2014directly aligning with Zoox\u2019s Enterprise Gen AI and agentic workflow requirements. Their strong background in PyTorch, OpenCV and MLOps further supports end\u2011to\u2011end AI deployment across complex systems.",
+      "matched_skills": [
+        "LangGraph",
+        "Llama\u202f3.3",
+        "FastAPI",
+        "PostgreSQL",
+        "PyTorch"
+      ],
+      "missing_gaps": [
+        "Identity\u2011aware security integration",
+        "Enterprise data source integration across procurement, supply chain, legal, finance, HR and MES"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/48a6b2ac-0dcb-4481-ab26-386ce62decab",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_6916236",
+      "score": 90,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Software Engineer, ML Infrastructure, Optimization",
+      "location": "Mountain View, California (HQ)",
+      "summary": "The candidate\u2019s PyTorch\u2011based image classification and Llama\u20113.3 multi\u2011agent pipeline, coupled with FastAPI deployment and MLOps experience, directly align with Nuro\u2019s ML infrastructure and model deployment needs.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "MLOps",
+        "ROS",
+        "Llama\u00a03.3"
+      ],
+      "missing_gaps": [
+        "Quantization",
+        "Model compiler framework"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=6916236",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7703602",
+      "score": 90,
+      "region": "Remote",
+      "company": "Waymo",
+      "title": "Senior Software Engineer, Machine Learning Performance",
+      "location": "Taipei, Taiwan; Hsinchu, Taiwan",
+      "summary": "The candidate\u2019s extensive experience with PyTorch, OpenCV, and ROS-based multi-robot perception aligns with Waymo\u2019s focus on high-performance ML models for autonomous driving, while projects like Cutis Derm AI demonstrate expertise in deploying ML models at scale.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "Cutis Derm AI",
+        "Multi-Robot Hospital Hazard Detection"
+      ],
+      "missing_gaps": [
+        "Custom silicon design",
+        "Compiler optimization",
+        "Runtime performance profiling"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7703602",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8212626",
+      "score": 90,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Scenes, Traffic Controls",
+      "location": "Mountain View, California, United States, San Francisco, California, United States",
+      "summary": "Candidate\u2019s 6\u2011year background in 3D simulation, PyTorch\u2011based ML, and ROS/Gazebo aligns with Waymo\u2019s scene\u2011understanding and simulation needs, while FastAPI and Docker support deployment pipelines.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "FastAPI",
+        "synthetic dataset pipeline"
+      ],
+      "missing_gaps": [
+        "C++ integration into onboard stack",
+        "large multi\u2011task model training and calibration",
+        "PRT metrics and staging launch evaluation"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8212626",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8044534",
+      "score": 90,
+      "region": "US",
+      "company": "Waymo",
+      "title": "AI Enablement Lead",
+      "location": "Mountain View, CA, USA",
+      "summary": "Candidate\u2019s LLM\u2011based multi\u2011agent system (LedgerVi) and vision\u2011model prototyping (Cutis Derm AI) match Waymo\u2019s AI enablement focus, while ROS/Gazebo robotics work supports autonomous perception needs.",
+      "matched_skills": [
+        "LangGraph multi\u2011agent auditing (LedgerVi)",
+        "Cutis Derm AI VLM/XAI diagnostic app",
+        "ROS & Gazebo Multi\u2011Robot Hazard Detection",
+        "FastAPI + Docker + AWS deployment",
+        "PyTorch + OpenCV computer vision"
+      ],
+      "missing_gaps": [
+        "Business intelligence domain knowledge (finance, operations)",
+        "Enterprise AI governance and roadmap prioritization experience",
+        "Leadership/mentoring experience in AI teams"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8044534",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_4948430101",
+      "score": 90,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Simulation Engineer",
+      "location": "London",
+      "summary": "Candidate's 6-year background in 3D simulation, ROS & Gazebo robotics, and Unity procedural environments directly supports Helsing's need for robust simulation environments, while their Python-PyTorch-OpenCV stack aligns with the AI-driven aspects of the role.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "Unity 3D procedural environments",
+        "Python & PyTorch AI stack",
+        "OpenCV computer vision",
+        "FastAPI & Docker deployment"
+      ],
+      "missing_gaps": [
+        "C++/CUDA proficiency",
+        "Physics-based aerodynamics/structural simulation expertise",
+        "GNC systems integration knowledge"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4948430101?gh_jid=4948430101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_4516967101",
+      "score": 90,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Deployed AI Engineer",
+      "location": "Berlin; London; Munich; Paris; Stockholm",
+      "summary": "Candidate\u2019s 6\u202fyears as a 3D generalist with ROS/Gazebo, PyTorch, OpenCV and FastAPI, plus projects such as Multi\u2011Robot Hospital Hazard Detection and Cutis Derm AI, directly match Helsing\u2019s need for deploying AI in complex defence systems.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "Multi\u2011Robot Hazard Detection"
+      ],
+      "missing_gaps": [],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4516967101?gh_jid=4516967101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8881595002",
+      "score": 90,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Senior Machine Learning Engineer (Large Systems)",
+      "location": "Cambridge, UK",
+      "summary": "Candidate has extensive experience developing computer vision models for medical imaging (Cutis Derm AI) and robotics perception (Multi\u2011Robot Hospital Hazard Detection) using PyTorch and OpenCV, aligning with Graphcore\u2019s focus on scaling AI models across specialized hardware.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "Cutis Derm AI",
+        "Multi\u2011Robot Hospital Hazard Detection"
+      ],
+      "missing_gaps": [
+        "Experience with Graphcore IPU or similar accelerator hardware",
+        "Distributed training at scale",
+        "C++/CUDA programming"
+      ],
+      "red_flags": [
+        "Senior role may require 8+ years of experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8881595002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4648881101",
+      "score": 90,
+      "region": "UK",
+      "company": "PhysicsX",
+      "title": "Senior Machine Learning Engineer",
+      "location": "London, United Kingdom",
+      "summary": "Candidate has 6 years of experience building end\u2011to\u2011end ML pipelines with PyTorch, OpenCV and FastAPI, and has led 3D perception projects such as Multi\u2011Robot Hospital Hazard Detection in ROS/Gazebo and medical imaging diagnostics with Cutis Derm AI, aligning closely with PhysicsX\u2019s need for scalable 3D\u2011aware ML systems.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "Cutis Derm AI"
+      ],
+      "missing_gaps": [
+        "Leadership/mentoring experience not explicitly documented",
+        "Large\u2011scale production deployment (e.g., Kubernetes) not mentioned"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4648881101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4678291101",
+      "score": 90,
+      "region": "US",
+      "company": "PhysicsX",
+      "title": "Senior Machine Learning Engineer",
+      "location": "New York, United States ",
+      "summary": "Candidate's 6-year experience as a 3D generalist and technical artist, with projects such as Multi\u2011Robot Hospital Hazard Detection using ROS & Gazebo and Cutis Derm AI leveraging PyTorch and OpenCV, aligns with PhysicsX's need for end\u2011to\u2011end ML pipelines and 3D point\u2011cloud manipulation.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "3D synthetic dataset generation"
+      ],
+      "missing_gaps": [
+        "Kubernetes",
+        "C++/CUDA"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4678291101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4007375006",
+      "score": 88,
+      "region": "US",
+      "company": "Figure AI",
+      "title": "Helix AI Engineer, Perception",
+      "location": "San Jose, CA",
+      "summary": "Candidate\u2019s 5+ years in 3D production, digital twins, and ROS-based pipelines, combined with PyTorch/OpenCV computer vision projects (e.g., Parasite Egg Classification) align well with Figure\u2019s perception system and production\u2011level software requirements. FastAPI deployments and team leadership further demonstrate end\u2011to\u2011end product ownership.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS",
+        "FastAPI",
+        "3D Digital Twin Development"
+      ],
+      "missing_gaps": [
+        "VIO/SLAM or 3D Vision expertise",
+        "CUDA programming",
+        "Scalable data engineering (Spark/Ray)"
+      ],
+      "red_flags": [
+        "No publication record",
+        "No explicit CUDA experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/figureai/jobs/4007375006",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8039191",
+      "score": 88,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer, Driver Refinement & Validation",
+      "location": "Mountain View, CA, USA; San Francisco, CA, USA; Pittsburgh, PA, USA",
+      "summary": "Candidate has 6 years of ML and robotics experience, including ROS/Gazebo simulation, computer vision with PyTorch/OpenCV, and production deployment via FastAPI/Docker/AWS, aligning well with Waymo's need for ML systems in autonomous driving.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "FastAPI",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "Motion prediction & trajectory planning experience",
+        "JAX framework familiarity",
+        "C++ proficiency"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8039191",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_8564387002",
+      "score": 88,
+      "region": "EU",
+      "company": "Graphcore",
+      "title": "Senior Machine Learning Engineer (Large Systems)",
+      "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland",
+      "summary": "Candidate\u2019s CV showcases strong computer vision and 3D simulation expertise, including a multi\u2011spectral skin\u2011lesion VLM/XAI app and a multi\u2011robot hospital hazard detection system with ROS/Gazebo, directly aligning with Graphcore\u2019s focus on scaling AI models and optimizing performance across accelerators.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS/Gazebo 3D simulation",
+        "FastAPI",
+        "VLM/XAI"
+      ],
+      "missing_gaps": [
+        "Experience with Graphcore IPU hardware or accelerator\u2011specific optimisation",
+        "C++/CUDA proficiency",
+        "Kubernetes orchestration"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4744402005",
+      "score": 87,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "AI Safety Residency \u2014 Scale Labs Preparedness & Policy (SLPreP)",
+      "location": "United States",
+      "summary": "Candidate\u2019s LedgerVi multi\u2011agent LLM pipeline and Skin Disease Prediction model showcase experience with LLMs, multi\u2011agent systems, and safety\u2011oriented validation, aligning with Scale AI\u2019s focus on AI safety and multi\u2011agent risk assessment.",
+      "matched_skills": [
+        "Multi\u2011agent ledger system with LangGraph and Llama 3.3",
+        "Skin Disease Prediction with PyTorch and Grad\u2011CAM",
+        "Parasite Egg Classification with YOLOv8 and OpenCV",
+        "FastAPI deployment",
+        "Python automation and pipeline engineering"
+      ],
+      "missing_gaps": [
+        "Explicit AI safety research experience",
+        "Chain\u2011of\u2011thought monitoring expertise",
+        "Alignment red\u2011teaming methodology"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4744402005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4751081005",
+      "score": 82,
+      "region": "UK",
+      "company": "Scale AI",
+      "title": "Senior Applied AI Engineer",
+      "location": "London, UK",
+      "summary": "The candidate\u2019s LedgerVi multi\u2011agent pipeline and Skin Disease Prediction model demonstrate end\u2011to\u2011end AI production with FastAPI, PyTorch and evaluation mechanisms, matching Scale AI\u2019s need for reliable backend AI systems and risk\u2011aware design.",
+      "matched_skills": [
+        "FastAPI",
+        "PyTorch",
+        "YOLOv8",
+        "LangGraph",
+        "Llama 3.3",
+        "PostgreSQL",
+        "evaluation design",
+        "risk\u2011graded medical circuit breaker"
+      ],
+      "missing_gaps": [
+        "client\u2011facing communication experience",
+        "sovereign/on\u2011prem deployment experience",
+        "root\u2011cause analysis on production AI systems"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4751081005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4730306005",
+      "score": 82,
+      "region": "Global/Other",
+      "company": "Scale AI",
+      "title": "GenAI Compliance Operations & Programs Associate ",
+      "location": "Mexico City, MX",
+      "summary": "Candidate\u2019s LedgerVi multi\u2011agent compliance pipeline and risk\u2011graded medical circuit breaker align with the role\u2019s compliance review and risk triage responsibilities, while their team leadership at Schneider Electric and Shoppertainment demonstrates operational ownership across cross\u2011functional teams.",
+      "matched_skills": [
+        "LedgerVi compliance pipeline (LangGraph, Llama 3.3, FastAPI)",
+        "Risk\u2011graded medical circuit breaker",
+        "Python automation & FastAPI",
+        "Team leadership & technical pipeline management",
+        "SQL/PostgreSQL"
+      ],
+      "missing_gaps": [
+        "Legal coordination experience",
+        "Experience with GenAI compliance review workflows",
+        "Risk mitigation at customer level"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4730306005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_fd30da7a-d7ec-49a0-b4bd-ed3a193a1e07",
+      "score": 82,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Lead Data Platform Engineer - Enterprise, Data & AI",
+      "location": "Foster City, CA",
+      "summary": "The candidate\u2019s LedgerVi and Skin Disease Prediction projects demonstrate strong Python, FastAPI, SQL, and PyTorch skills, while his 5+ years of pipeline leadership and Docker/MLOps experience align well with Zoox\u2019s data platform needs.",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "SQL (PostgreSQL)",
+        "PyTorch",
+        "Docker",
+        "MLOps",
+        "AWS"
+      ],
+      "missing_gaps": [
+        "Large\u2011scale data platform architecture (e.g., Kafka, Spark, data lake design)",
+        "Data governance and ETL pipeline design"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/fd30da7a-d7ec-49a0-b4bd-ed3a193a1e07",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_5401358",
+      "score": 82,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Simulation",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate has 5+ years of 3D simulation and digital twin development, including Python and C++ work at Schneider Electric and VR systems at Tacnik, aligning with Nuro's simulation and sensor data synthesis needs.",
+      "matched_skills": [
+        "Python",
+        "C++",
+        "ROS",
+        "digital twin development",
+        "3D simulation"
+      ],
+      "missing_gaps": [
+        "Autonomous driving simulation experience",
+        "Sensor data synthesis",
+        "Scenario generation"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=5401358",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_5029174101",
+      "score": 82,
+      "region": "UK",
+      "company": "PhysicsX",
+      "title": "AI Engineer: Post-Training ",
+      "location": "London",
+      "summary": "Candidate brings 6 years of 3D/engineering experience and recent work on VLM-based diagnostic apps and synthetic data pipelines, matching PhysicsX\u2019s need for post\u2011training harnesses and data generation, though explicit RLHF, distillation and benchmark integration experience is missing.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "synthetic data pipelines",
+        "LangGraph multi\u2011agent auditing"
+      ],
+      "missing_gaps": [
+        "RLHF / preference optimisation",
+        "distillation",
+        "benchmark integration for open models"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/5029174101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4720478005",
+      "score": 78,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Senior Frontier Agents Engineer (Applied AI)",
+      "location": "San Francisco, CA",
+      "summary": "Candidate demonstrates multi\u2011agent LLM pipelines with LangGraph and Llama 3.3, retrieval\u2011augmented generation, and FastAPI/PostgreSQL deployment\u2014directly aligning with Scale AI\u2019s frontier agent requirements, though lacking explicit enterprise data integration and large\u2011scale production experience.",
+      "matched_skills": [
+        "LangGraph multi\u2011agent pipeline",
+        "LLM (Llama 3.3) with retrieval\u2011augmented generation",
+        "FastAPI + PostgreSQL deployment",
+        "YOLOv8 computer vision system",
+        "MLOps with Docker and AWS"
+      ],
+      "missing_gaps": [
+        "Enterprise data integration & structured knowledge representation",
+        "Memory systems for agents",
+        "Kubernetes for large\u2011scale deployment"
+      ],
+      "red_flags": [
+        "Senior role but candidate appears junior",
+        "Lack of enterprise customer experience",
+        "No explicit large\u2011scale production deployment experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4720478005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4660340005",
+      "score": 78,
+      "region": "UK",
+      "company": "Scale AI",
+      "title": "Machine Learning Fellow - Human Frontier Collective",
+      "location": "Canada; United Kingdom; United States",
+      "summary": "Candidate\u2019s PyTorch and OpenCV work on skin disease classification and a multi\u2011agent ledger system demonstrates strong ML and safety\u2011oriented pipeline skills that align with HFC\u2019s focus on AI safety and model optimisation.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "AWS",
+        "Docker",
+        "Skin Disease Prediction"
+      ],
+      "missing_gaps": [
+        "PhD or senior industry ML experience",
+        "TensorFlow experience",
+        "Published research in AI safety"
+      ],
+      "red_flags": [
+        "PhD required for role",
+        "Senior industry ML experience preferred"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4660340005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_8122477",
+      "score": 78,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, ML Infrastructure Platform",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate brings strong PyTorch, FastAPI, and MLOps experience from projects like Skin Disease Prediction and LedgerVi, and has built data pipelines and automation scripts in 3D production, aligning with Nuro\u2019s ML infrastructure needs.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "MLOps",
+        "Docker",
+        "AWS"
+      ],
+      "missing_gaps": [
+        "Distributed GPU training",
+        "Multi-cluster scheduling",
+        "Reinforcement learning",
+        "Observability & alerting",
+        "On-call incident response"
+      ],
+      "red_flags": [
+        "No experience with distributed GPU training or reinforcement learning",
+        "No explicit autonomous driving experience"
+      ],
+      "url": "https://nuro.ai/careersitem?gh_jid=8122477",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4972086101",
+      "score": 78,
+      "region": "EU",
+      "company": "Helsing",
+      "title": "Simulation Engineer",
+      "location": "Munich",
+      "summary": "The candidate\u2019s 6\u2011year background in 3D/Unity, ROS & Gazebo simulation, and procedural environment creation aligns well with the Simulation Engineer role\u2019s focus on modelling and simulation environments, while their Python/PyTorch/OpenCV stack supports AI\u2011driven analysis.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "Unity 3D modelling",
+        "Python & PyTorch",
+        "OpenCV image processing",
+        "Pipeline automation"
+      ],
+      "missing_gaps": [
+        "Aerodynamics/structural simulation expertise",
+        "C++/CUDA proficiency",
+        "Mechanical engineering domain knowledge"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4972086101?gh_jid=4972086101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_4972255101",
+      "score": 78,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Simulation Engineer - Space",
+      "location": "Munich - Berlin",
+      "summary": "The candidate\u2019s 6\u2011year background in ROS & Gazebo simulation, 3D pipeline automation, and Python\u2011based hardware\u2011in\u2011the\u2011loop rigs aligns well with building mission\u2011analysis environments for satellite constellations, while their synthetic dataset work supports realistic simulation scenarios.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "3D pipeline automation",
+        "Python & PyTorch",
+        "Docker & FastAPI",
+        "Hardware\u2011in\u2011the\u2011loop rigs"
+      ],
+      "missing_gaps": [
+        "Satellite domain knowledge",
+        "Large\u2011scale constellation simulation experience",
+        "Space\u2011specific hardware\u2011in\u2011the\u2011loop expertise"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4972255101?gh_jid=4972255101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_8902108002",
+      "score": 78,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Senior Software Engineer (ML QA)",
+      "location": "Cambridge, UK",
+      "summary": "The candidate\u2019s 6\u2011year background in Python, PyTorch, OpenCV, Docker and pipeline automation aligns well with Graphcore\u2019s need for production\u2011grade ML QA tooling, while their ROS/Gazebo work demonstrates low\u2011level C++ exposure. The upcoming MSc AI and Belfast location give a +7 UK\u2011regional boost.",
+      "matched_skills": [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "Docker",
+        "FastAPI",
+        "AWS",
+        "ROS",
+        "pipeline automation"
+      ],
+      "missing_gaps": [
+        "Explicit C/C++ debugging experience",
+        "Dedicated CI/CD pipeline design",
+        "Mentoring junior engineers"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8881587002",
+      "score": 78,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Senior Machine Learning Engineer (Large Systems)",
+      "location": "Bristol, UK",
+      "summary": "The candidate\u2019s 6\u2011year technical background and recent AI projects (Cutis Derm AI, Multi\u2011Robot Hazard Detection, LedgerVi) demonstrate strong PyTorch/OpenCV skills and pipeline automation, aligning well with Graphcore\u2019s focus on scalable AI models.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "Docker",
+        "AWS"
+      ],
+      "missing_gaps": [
+        "Distributed training/Kubernetes",
+        "CUDA/C++",
+        "Hardware\u2011specific optimisation (IPU)"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8632582002",
+      "score": 78,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "AI Research Engineer",
+      "location": "Bristol, UK",
+      "summary": "Candidate has strong 3D/engineering background and recent AI experience in computer vision, robotics simulation, and medical imaging, aligning with Graphcore's focus on hardware\u2011aware AI and efficient inference. However, lack of explicit lower\u2011level programming (C++/CUDA) and research publication record may limit fit for senior research roles.",
+      "matched_skills": [
+        "PyTorch",
+        "ONNX/WASM edge inference",
+        "ROS & Gazebo simulation",
+        "Medical imaging (Alzheimer's MRI detection)",
+        "VLM/XAI (Cutis Derm AI)"
+      ],
+      "missing_gaps": [
+        "Lower\u2011level programming (C++/CUDA)",
+        "Distributed training/inference",
+        "Research publication record"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8632582002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4732798005",
+      "score": 77,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Senior Machine Learning Engineer, Public Sector",
+      "location": "Denver, CO; Honolulu, HI; Washington, DC",
+      "summary": "Candidate has built an agentic compliance pipeline using LangGraph and Llama\u202f3.3, and a medical image classifier with PyTorch and Grad\u2011CAM, aligning with Scale AI\u2019s focus on agentic systems and computer vision.",
+      "matched_skills": [
+        "LangGraph & Llama\u202f3.3 agentic pipeline",
+        "PyTorch EfficientNet skin disease classifier",
+        "YOLOv8 parasite egg detection",
+        "FastAPI production APIs",
+        "OpenCV computer vision"
+      ],
+      "missing_gaps": [
+        "Reinforcement learning experience",
+        "Geospatial reasoning over maps",
+        "Large\u2011scale LLM evaluation tooling"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4732798005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_8188707",
+      "score": 77,
+      "region": "US",
+      "company": "Recursion Pharmaceuticals",
+      "title": "Senior AI Researcher",
+      "location": "Remote Opportunity - United States",
+      "summary": "Candidate\u2019s Skin Disease Prediction and Parasite Egg Classification projects showcase strong computer\u2011vision and medical\u2011imaging expertise, while LedgerVi demonstrates experience with multi\u2011agent pipelines and FastAPI\u2014directly aligning with Recursion\u2019s AI infrastructure and biomedical focus.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "YOLOv8",
+        "Medical Imaging (Skin Disease Prediction)"
+      ],
+      "missing_gaps": [
+        "PhD in ML/NLP/Computer Vision",
+        "Research publications",
+        "Experience in drug discovery or phenomics"
+      ],
+      "red_flags": [
+        "PhD required for Senior AI Researcher role",
+        "US remote position may require US work authorization"
+      ],
+      "url": "https://job-boards.greenhouse.io/recursionpharmaceuticals/jobs/8188707",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8614956002",
+      "score": 77,
+      "region": "US",
+      "company": "Wing (Alphabet)",
+      "title": "Hardware-in-the-loop Simulation Engineer ",
+      "location": "Palo Alto, California",
+      "summary": "The candidate\u2019s 5+ years in 3D production, digital twins, ROS, and Python\u2011based AI projects (PyTorch, OpenCV, FastAPI) align well with simulation and AI aspects of the role, while their MSc AI studies strengthen the fit.",
+      "matched_skills": [
+        "ROS",
+        "Digital Twin Development at Schneider Electric",
+        "PyTorch-based Skin Disease Prediction",
+        "OpenCV-based Parasite Egg Classification",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "Embedded systems development",
+        "Hardware\u2011in\u2011the\u2011loop testing",
+        "Sensor modeling"
+      ],
+      "red_flags": [],
+      "url": "https://wing.com/careers/8614956002?gh_jid=8614956002",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7389868",
+      "score": 77,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Perception ML",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate\u2019s 3D pipeline and computer vision work with PyTorch and OpenCV, plus experience building perception models (EfficientNet, YOLOv8) aligns with Nuro\u2019s focus on 3D scene understanding and model training, though lacking direct autonomous driving sensor data experience.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "YOLOv8",
+        "3D Digital Twin Development",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "LiDAR/sensor data processing",
+        "Autonomous driving perception experience",
+        "Real\u2011time inference optimization"
+      ],
+      "red_flags": [
+        "No autonomous driving perception experience"
+      ],
+      "url": "https://nuro.ai/careersitem?gh_jid=7389868",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8274710",
+      "score": 77,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Growth",
+      "location": "San Francisco, CA, USA; Mountain View, CA, USA",
+      "summary": "Candidate has built production ML pipelines with PyTorch, FastAPI, Docker, and AWS, and has experience generating synthetic datasets and automating pipelines, aligning with Waymo's need for feature pipelines, training data generation, and batch inference.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "synthetic dataset generation"
+      ],
+      "missing_gaps": [
+        "Feature engineering, model registry, production monitoring, feature drift detection"
+      ],
+      "red_flags": [
+        "Senior role may require >8 years experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8274710",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4938743101",
+      "score": 77,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Multimodal Sensing and Fusion Engineer ",
+      "location": "Berlin; London; Munich",
+      "summary": "Candidate\u2019s ROS & Gazebo work on Multi\u2011Robot Hospital Hazard Detection and synthetic dataset pipeline automation align with multimodal perception and simulation needs; Cutis Derm AI demonstrates handling diverse sensor modalities and XAI, matching the fusion and AI aspects of the role.",
+      "matched_skills": [
+        "ROS & Gazebo",
+        "OpenCV",
+        "PyTorch",
+        "Synthetic dataset pipeline automation",
+        "Multi\u2011modal VLM (Cutis Derm AI)"
+      ],
+      "missing_gaps": [
+        "LiDAR, radar, inertial sensor integration and calibration",
+        "Safety concepts for graceful degradation",
+        "C++/CUDA experience"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4938743101?gh_jid=4938743101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8881592002",
+      "score": 77,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Senior Machine Learning Engineer (Large Systems)",
+      "location": "London, UK",
+      "summary": "Candidate\u2019s PyTorch/OpenCV work on Cutis Derm AI and Multi\u2011Robot Hazard Detection aligns with Graphcore\u2019s focus on model optimisation, while Docker and AWS experience supports large\u2011scale system deployment. However, explicit hardware\u2011accelerator or IPU expertise is missing.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "Docker",
+        "AWS"
+      ],
+      "missing_gaps": [
+        "Graphcore IPU / accelerator optimisation",
+        "Large\u2011scale distributed training",
+        "Performance tuning for specialised hardware"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8881592002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4849382101",
+      "score": 77,
+      "region": "US",
+      "company": "PhysicsX",
+      "title": "Machine Learning Engineer",
+      "location": "New York, United States ",
+      "summary": "Candidate\u2019s 6\u2011year 3D technical artist background, ROS & Gazebo multi\u2011robot hazard detection, and synthetic dataset pipeline automation directly support PhysicsX\u2019s need for 3D point\u2011cloud manipulation and end\u2011to\u2011end ML system delivery.",
+      "matched_skills": [
+        "ROS & Gazebo multi\u2011robot hazard detection",
+        "synthetic dataset pipeline automation",
+        "FastAPI & Docker ML deployment",
+        "PyTorch & OpenCV 3D data processing",
+        "Cutis Derm AI multi\u2011spectral VLM/XAI"
+      ],
+      "missing_gaps": [
+        "Post\u2011Master\u2019s degree requirement",
+        "Explicit 3D point\u2011cloud processing experience",
+        "US export control (EAR/ITAR) compliance"
+      ],
+      "red_flags": [
+        "MSc AI not yet completed (future date)",
+        "Potential US export control compliance issue"
+      ],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4849382101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4513943005",
+      "score": 75,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Software Engineer, Enterprise AI",
+      "location": "New York, NY; San Francisco, CA",
+      "summary": "Candidate demonstrates strong Python, LLM, vector\u2011database, and FastAPI experience with Llama 3.3 and ChromaDB, aligning with Scale\u2019s AI platform needs, but lacks explicit Kubernetes and multi\u2011cloud scaling exposure.",
+      "matched_skills": [
+        "LangGraph & Llama 3.3 integration",
+        "FastAPI backend",
+        "PyTorch computer vision models",
+        "ChromaDB vector database",
+        "AWS deployment"
+      ],
+      "missing_gaps": [
+        "Kubernetes experience",
+        "Azure/GCP cloud experience",
+        "Hyper\u2011growth startup scaling experience"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4513943005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4720573005",
+      "score": 75,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Frontier Agents Engineer (Applied AI)",
+      "location": "San Francisco, CA",
+      "summary": "The candidate\u2019s LedgerVi project demonstrates experience building multi\u2011agent pipelines with LangGraph and Llama 3.3, while their Skin Disease Prediction and Parasite Egg Classification showcase strong PyTorch/OpenCV skills and FastAPI deployment\u2014directly aligning with Scale AI\u2019s focus on production AI agents and retrieval\u2011augmented systems.",
+      "matched_skills": [
+        "LangGraph",
+        "Llama 3.3",
+        "FastAPI",
+        "PyTorch",
+        "YOLOv8"
+      ],
+      "missing_gaps": [
+        "Kubernetes",
+        "advanced LLM reasoning/memory systems",
+        "enterprise data integration"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4720573005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_87877cf4-3ac8-45d5-90fb-2ef7f223c068",
+      "score": 75,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Data Scientist - Perception Verification and Validation",
+      "location": "Boston, MA",
+      "summary": "Candidate demonstrates strong computer vision skills with YOLOv8, OpenCV, and PyTorch, and has built perception pipelines and metrics in projects such as Skin Disease Prediction and Parasite Egg Classification, aligning with perception verification tasks.",
+      "matched_skills": [
+        "YOLOv8",
+        "OpenCV",
+        "PyTorch",
+        "FastAPI",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Autonomous driving perception stack experience",
+        "Driving scenario dataset creation",
+        "Performance metrics definition for perception"
+      ],
+      "red_flags": [
+        "No autonomous driving perception stack experience"
+      ],
+      "url": "https://jobs.lever.co/zoox/87877cf4-3ac8-45d5-90fb-2ef7f223c068",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8122537",
+      "score": 75,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Software Engineer, ML Inference Platform",
+      "location": "Mountain View, California (HQ)",
+      "summary": "The candidate\u2019s PyTorch\u2011based Skin Disease Prediction and LedgerVi FastAPI pipelines demonstrate strong ML workflow design, while their MLOps, Docker, and AWS experience aligns with Nuro\u2019s infrastructure needs. However, they lack explicit work on model compilation, hardware deployment, and continuous monitoring required for autonomous driving platforms.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "MLOps",
+        "Docker",
+        "Python"
+      ],
+      "missing_gaps": [
+        "Model compilation for hardware platforms",
+        "Continuous testing & monitoring systems",
+        "Observability for ML lifecycle"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=8122537",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8211608",
+      "score": 75,
+      "region": "UK",
+      "company": "Waymo",
+      "title": "Senior Software Engineer - ML/ Fraud Prevention ",
+      "location": "Warsaw, Poland ",
+      "summary": "Candidate has 6 years of Python\u2011based ML experience, built real\u2011time inference pipelines with FastAPI and Docker, and has production model serving experience on AWS, aligning with Waymo\u2019s need for low\u2011latency ML serving.",
+      "matched_skills": [
+        "Python",
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS"
+      ],
+      "missing_gaps": [
+        "8+ years of software engineering experience",
+        "distributed backend systems experience",
+        "fraud prevention domain knowledge",
+        "payment/trip/identity event pipeline experience"
+      ],
+      "red_flags": [
+        "8+ years of experience required",
+        "domain mismatch (fraud prevention)",
+        "lack of distributed backend experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8211608",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_5037050101",
+      "score": 75,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Simulation Architect \u2013 Defence & Combat Systems ",
+      "location": "Munich - Berlin - London - Paris",
+      "summary": "Candidate has 6 years of 3D simulation and robotics experience with ROS & Gazebo, Unity, and a Python/PyTorch/OpenCV stack, aligning with simulation architecture needs, but lacks explicit kill\u2011chain architecture and defense domain expertise.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "Unity 3D environment creation",
+        "Python/PyTorch/OpenCV stack",
+        "Docker & AWS deployment",
+        "Synthetic dataset pipeline automation"
+      ],
+      "missing_gaps": [
+        "Interface Control Documents (ICDs)",
+        "Multi\u2011fidelity kill\u2011chain contracts",
+        "Domain integration patterns for sensors, C2, communications, datalinks, effectors"
+      ],
+      "red_flags": [
+        "No explicit kill\u2011chain architecture experience",
+        "No defense domain experience"
+      ],
+      "url": "https://helsing.ai/jobs/5037050101?gh_jid=5037050101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_5028848101",
+      "score": 75,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "AI Research Engineer - Robotics",
+      "location": "Barcelona; London",
+      "summary": "Candidate\u2019s 6 years of 3D/robotics simulation work with ROS/Gazebo, Python/PyTorch and OpenCV align with the role\u2019s perception and simulation focus, though no explicit reinforcement learning experience is shown.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "PyTorch",
+        "OpenCV",
+        "Python",
+        "3D environment generation"
+      ],
+      "missing_gaps": [
+        "Reinforcement learning",
+        "C++/CUDA",
+        "Robotics control theory"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/5028848101?gh_jid=5028848101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_5032627101",
+      "score": 75,
+      "region": "UK",
+      "company": "PolyAI",
+      "title": "Forward Deployed Engineer, Agentic AI",
+      "location": "United Kingdom",
+      "summary": "Candidate has strong 3D, VLM, and agentic experience (PyTorch, OpenCV, LangGraph, FastAPI) that aligns with PolyAI\u2019s tech stack, but lacks direct LLM production deployment and real\u2011time voice integration in enterprise settings.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "LangGraph",
+        "FastAPI",
+        "ROS/Gazebo"
+      ],
+      "missing_gaps": [
+        "LLM production deployment",
+        "real\u2011time voice integration",
+        "enterprise system integration"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/polyai/jobs/5032627101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8632583002",
+      "score": 75,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "AI Research Engineer",
+      "location": "Cambridge, UK",
+      "summary": "Candidate has strong AI/CV and robotics experience with PyTorch, OpenCV, and simulation, aligning well with Graphcore\u2019s applied research focus, but lacks explicit hardware\u2011aware optimisation and lower\u2011level programming expertise.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "Cutis Derm AI (medical imaging)",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "lower\u2011level programming (C++/CUDA)",
+        "performance optimisation for hardware efficiency"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "lv_887c7590-e98d-4997-b85d-e3956381fd57",
+      "score": 72,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Sensing and Perception System Safety Engineer",
+      "location": "Foster City, CA",
+      "summary": "Candidate demonstrates strong perception expertise with YOLOv8/OpenCV and medical safety pipeline work, aligning with Zoox\u2019s focus on sensing/perception safety, though lacking formal safety case experience.",
+      "matched_skills": [
+        "YOLOv8",
+        "OpenCV",
+        "PyTorch",
+        "FastAPI",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Safety case development",
+        "ISO 26262 knowledge",
+        "Fail-operational design",
+        "System safety analysis"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/887c7590-e98d-4997-b85d-e3956381fd57",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_5434059",
+      "score": 72,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Machine Learning Research Scientist, Behavior Planning and Prediction ",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate has strong PyTorch, OpenCV, FastAPI, and 3D pipeline experience, but lacks specific autonomous\u2011driving trajectory prediction, reinforcement learning, and generative sequence modeling skills required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "ROS",
+        "MLOps"
+      ],
+      "missing_gaps": [
+        "Reinforcement learning",
+        "Trajectory prediction",
+        "Generative sequence modeling",
+        "Self\u2011supervised learning",
+        "Out\u2011of\u2011distribution detection"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=5434059",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8604818002",
+      "score": 68,
+      "region": "US",
+      "company": "Wing (Alphabet)",
+      "title": "Machine Learning Engineer, Perception",
+      "location": "Palo Alto, California",
+      "summary": "Candidate demonstrates strong PyTorch/OpenCV expertise through Skin Disease Prediction and Parasite Egg Classification projects, and 5+ years of 3D pipeline and ROS experience that support perception and real\u2011time deployment, aligning with Wing\u2019s ML perception needs.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "YOLOv8",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Real\u2011time resource\u2011constrained deployment experience",
+        "Flight data sensor fusion and integration",
+        "C++/CUDA for embedded systems"
+      ],
+      "red_flags": [],
+      "url": "https://wing.com/careers/8604818002?gh_jid=8604818002",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4880947101",
+      "score": 68,
+      "region": "US",
+      "company": "PhysicsX",
+      "title": "Machine Learning Engineer",
+      "location": "San Francisco, CA",
+      "summary": "The candidate\u2019s 6\u2011year 3D and ML pipeline experience (e.g., ROS & Gazebo simulation, FastAPI services, PyTorch/OpenCV models) aligns with PhysicsX\u2019s need for end\u2011to\u2011end ML systems and 3D data manipulation, while their Cutis Derm AI project demonstrates practical deployment of AI models.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "3D pipeline automation"
+      ],
+      "missing_gaps": [
+        "MSc or PhD completed",
+        "Physics simulation expertise",
+        "Point\u2011cloud/mesh data manipulation"
+      ],
+      "red_flags": [
+        "MSc not yet completed",
+        "No explicit physics simulation experience",
+        "No point\u2011cloud data handling"
+      ],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4880947101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_7698498",
+      "score": 67,
+      "region": "UK",
+      "company": "Waymo",
+      "title": "Software Engineer, Machine Learning Tooling",
+      "location": "Taipei, Taiwan; Hsinchu, Taiwan",
+      "summary": "The candidate brings 6\u202fyears of software development, Python, PyTorch, FastAPI, Docker and PostgreSQL experience, but lacks explicit data\u2011visualisation tooling and ML performance\u2011monitoring expertise required for Waymo\u2019s compute\u2011platform tooling role.",
+      "matched_skills": [
+        "Python 3.12",
+        "PyTorch",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "Data visualization tools experience",
+        "ML model performance monitoring tooling",
+        "Experience with compute platform or custom silicon"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7698498",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7939542",
+      "score": 67,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Fleet Monitoring & Response",
+      "location": "San Francisco, CA; Mountain  View, CA, USA",
+      "summary": "Candidate has 6 years of experience building production ML pipelines with PyTorch, FastAPI and Docker, and has deployed models such as Cutis Derm AI and Multi\u2011Robot Hazard Detection, matching Waymo\u2019s need for scalable ML infrastructure.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "Cutis Derm AI",
+        "Multi\u2011Robot Hazard Detection"
+      ],
+      "missing_gaps": [
+        "Java/C++ backend experience",
+        "Ride\u2011hailing or marketplace domain experience",
+        "Experience with spatial\u2011temporal anomaly detection models"
+      ],
+      "red_flags": [
+        "Java/C++ backend experience missing",
+        "Ride\u2011hailing domain experience missing"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7939542",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "ab_871060f5-e968-4c3d-92a7-33293fa88a1e",
+      "score": 67,
+      "region": "UK",
+      "company": "Relation Therapeutics",
+      "title": "Machine Learning Research Engineer",
+      "location": "London",
+      "summary": "The candidate has strong PyTorch and OpenCV experience and has built a multi-spectral skin lesion diagnostic app (Cutis Derm AI) and performed MRI research, aligning with the need for deep learning on biological data, but lacks explicit experience with large-scale distributed training and multi-omics datasets.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "Cutis Derm AI",
+        "Parasite Egg Detection & OASIS MRI research"
+      ],
+      "missing_gaps": [
+        "Distributed multi-GPU training",
+        "Multi-omics data expertise",
+        "Generative model development"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.ashbyhq.com/relationrx/871060f5-e968-4c3d-92a7-33293fa88a1e",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "ab_1db31fb2-675a-4884-a4f4-6aa5d0a7e69f",
+      "score": 67,
+      "region": "UK",
+      "company": "Relation Therapeutics",
+      "title": "Senior Data Scientist (Imaging)",
+      "location": "London",
+      "summary": "The candidate brings strong imaging and ML experience with PyTorch and OpenCV, demonstrated in projects like Cutis Derm AI and Parasite Egg Detection, and has agentic workflow experience via LangGraph, aligning with the role\u2019s focus on imaging data science and model evaluation. However, the CV lacks explicit experience with high\u2011content cellular imaging, generative modeling of cellular behavior, and wet\u2011lab assay collaboration, which are key aspects of the Senior Data Scientist position.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "Grad-CAM XAI",
+        "Multi-Robot Hospital Hazard Detection (ROS & Gazebo)"
+      ],
+      "missing_gaps": [
+        "High\u2011content imaging expertise (cell painting/brightfield assays)",
+        "Generative modeling of cellular behavior",
+        "Wet\u2011lab assay collaboration experience"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.ashbyhq.com/relationrx/1db31fb2-675a-4884-a4f4-6aa5d0a7e69f",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "lv_2d73563c-8039-4d1b-844c-3953259ba6b1",
+      "score": 65,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Machine Learning Engineer, 3D Simulation",
+      "location": "Foster City, CA",
+      "summary": "Candidate has 5+ years of 3D pipeline and digital twin experience, plus computer vision work with YOLOv8 and EfficientNet, aligning with 3D simulation and vision tasks at Zoox.",
+      "matched_skills": [
+        "3D pipeline development",
+        "Digital twin creation",
+        "YOLOv8 computer vision",
+        "ROS robotics",
+        "PyTorch deep learning"
+      ],
+      "missing_gaps": [
+        "Generative 3D models (GANs/diffusion)",
+        "Sensor data integration",
+        "Experience with 3D reconstruction"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/2d73563c-8039-4d1b-844c-3953259ba6b1",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_5028731101",
+      "score": 65,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "AI Research Engineer - Reinforcement Learning",
+      "location": "Munich - Berlin - London - Paris",
+      "summary": "The candidate brings strong 3D simulation, ROS/Gazebo, and PyTorch/OpenCV expertise, matching the company\u2019s focus on perception and simulation, but lacks explicit reinforcement\u2011learning and UAV autonomy experience.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS",
+        "Gazebo",
+        "3D simulation"
+      ],
+      "missing_gaps": [
+        "Reinforcement Learning",
+        "UAV autonomy",
+        "Adversarial robustness",
+        "Defence domain knowledge"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/5028731101?gh_jid=5028731101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4953387101",
+      "score": 65,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "AI Research Engineer - GPU Simulation",
+      "location": "Munich - Berlin - London - Paris",
+      "summary": "Candidate has ROS & Gazebo simulation experience and a strong Python/PyTorch stack, but lacks explicit GPU\u2011based reinforcement\u2011learning simulation and flight\u2011physics modeling required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "ROS & Gazebo",
+        "Python",
+        "3D procedural environments",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "GPU\u2011based simulation for RL",
+        "Physics\u2011based flight model fidelity",
+        "Scaling to thousands of parallel environments",
+        "Reinforcement\u2011learning tooling"
+      ],
+      "red_flags": [],
+      "url": "https://helsing.ai/jobs/4953387101?gh_jid=4953387101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4789202101",
+      "score": 65,
+      "region": "UK",
+      "company": "PhysicsX",
+      "title": "Senior Research Machine Learning Engineer ",
+      "location": "London, United Kingdom",
+      "summary": "The candidate\u2019s 6\u2011year background in 3D simulation and ML (e.g., ROS/Gazebo hazard detection, PyTorch\u2011based Cutis Derm AI) aligns with PhysicsX\u2019s focus on physics\u2011driven simulation and ML pipelines, while their AWS and Docker experience supports scalable cloud infrastructure.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "AWS (EC2, Lambda)",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "Multi\u2011GPU/multi\u2011node distributed training",
+        "GPU kernel optimisation",
+        "TensorFlow/JAX experience",
+        "CI/CD & MLOps best practices"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4789202101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "ab_9fbd9227-57e0-4221-9255-1a1d967be8ed",
+      "score": 65,
+      "region": "UK",
+      "company": "ElevenLabs",
+      "title": "Research Engineer - Data Infrastructure",
+      "location": "United Kingdom",
+      "summary": "The candidate brings solid AI/ML and data\u2011engineering skills (Python, FastAPI, Docker, PostgreSQL, AWS) that align with a research\u2011engineer data\u2011infrastructure role, but lacks explicit audio\u2011data or large\u2011scale streaming experience required for ElevenLabs\u2019 voice\u2011model platform.",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "PostgreSQL",
+        "AWS",
+        "PyTorch"
+      ],
+      "missing_gaps": [
+        "Audio data processing",
+        "Large\u2011scale streaming/real\u2011time pipelines",
+        "Kubernetes",
+        "GCP"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.ashbyhq.com/ElevenLabs/9fbd9227-57e0-4221-9255-1a1d967be8ed",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4599700005",
+      "score": 62,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Senior Infrastructure Software Engineer, Enterprise AI",
+      "location": "New York, NY; San Francisco, CA",
+      "summary": "Candidate has built AI pipelines with FastAPI, PostgreSQL, and LangGraph, and led technical teams, aligning with Scale AI's need for infrastructure and multi-agent workflow support, though lacks explicit multi-cloud IaC experience.",
+      "matched_skills": [
+        "FastAPI",
+        "Python automation",
+        "Docker",
+        "AWS",
+        "Team leadership"
+      ],
+      "missing_gaps": [
+        "Multi-cloud architecture (GCP/Azure)",
+        "Infrastructure-as-Code (IaC)",
+        "CI/CD pipelines",
+        "Observability (logging, metrics, tracing)",
+        "Compliance & security standards"
+      ],
+      "red_flags": [
+        "Limited multi-cloud infrastructure experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4599700005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4528009005",
+      "score": 62,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Machine Learning Research Scientist, Post-Training",
+      "location": "San Francisco, CA; Seattle, WA; New York, NY",
+      "summary": "Candidate has built an LLM\u2011based compliance pipeline with LangGraph and Llama\u202f3.3 and developed PyTorch models for medical imaging, showing familiarity with large\u2011scale models, but lacks explicit RLHF, SFT or reward\u2011modeling experience required for the role.",
+      "matched_skills": [
+        "LangGraph & Llama\u202f3.3 pipeline",
+        "FastAPI integration",
+        "PyTorch model development",
+        "OpenCV computer\u2011vision",
+        "Python automation"
+      ],
+      "missing_gaps": [
+        "RLHF / preference modeling",
+        "Large\u2011scale model fine\u2011tuning (SFT)",
+        "Published research in top conferences"
+      ],
+      "red_flags": [
+        "PhD required",
+        "Published research required"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4528009005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_8122483",
+      "score": 62,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Software Engineer, ML Infrastructure Platform",
+      "location": "Mountain View, California (HQ)",
+      "summary": "The candidate\u2019s PyTorch-based skin disease classifier and FastAPI-driven LedgerVi pipeline demonstrate ML pipeline experience, but lack explicit distributed GPU training and reinforcement learning exposure required for Nuro\u2019s autonomy platform.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "MLOps",
+        "Python"
+      ],
+      "missing_gaps": [
+        "Distributed GPU training",
+        "Reinforcement learning",
+        "Large-scale data pipelines",
+        "Orchestration",
+        "Cost management"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=8122483",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8011527",
+      "score": 62,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, ML Infrastructure",
+      "location": "Mountain View, California (HQ)",
+      "summary": "The CV shows strong Python, PyTorch, FastAPI, Docker, and AWS experience with ML projects, but lacks explicit large\u2011scale IaC, Kubernetes, and petabyte\u2011scale data pipeline expertise required for Nuro\u2019s ML infrastructure role.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "SQL"
+      ],
+      "missing_gaps": [
+        "Infrastructure\u2011as\u2011Code (Terraform, CloudFormation)",
+        "Kubernetes or similar orchestration",
+        "Distributed training and scheduling",
+        "Petabyte\u2011scale data ETL"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=8011527",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4685172006",
+      "score": 62,
+      "region": "US",
+      "company": "Figure AI",
+      "title": "Helix AI Engineer, Backend ",
+      "location": "San Jose, CA",
+      "summary": "Candidate has strong Python backend experience with FastAPI, PostgreSQL, Docker and AWS, but lacks key requirements such as React, B2B SaaS integration, and payment processing experience.",
+      "matched_skills": [
+        "FastAPI",
+        "Python backend",
+        "PostgreSQL",
+        "Docker",
+        "AWS"
+      ],
+      "missing_gaps": [
+        "React or similar frontend framework",
+        "B2B SaaS integration experience",
+        "Payment processing (Stripe, invoicing)"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/figureai/jobs/4685172006",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7845732",
+      "score": 62,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Runtime and Serving",
+      "location": "Mountain View, CA, USA",
+      "summary": "Candidate has PyTorch, ONNX edge inference and FastAPI experience, and ROS/Gazebo simulation work that aligns with Waymo\u2019s runtime and serving needs, but lacks JAX, XLA, Triton and CUDA expertise.",
+      "matched_skills": [
+        "PyTorch",
+        "ONNX edge inference",
+        "FastAPI",
+        "Docker",
+        "ROS & Gazebo simulation"
+      ],
+      "missing_gaps": [
+        "JAX",
+        "XLA",
+        "Triton",
+        "CUDA",
+        "model compression",
+        "real\u2011time embedded inference"
+      ],
+      "red_flags": [
+        "Missing JAX/CUDA experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7845732",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8157152",
+      "score": 62,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Multimodal Perception",
+      "location": "Mountain View, California, USA",
+      "summary": "Candidate has 6 years of experience with PyTorch, OpenCV and pipeline automation, demonstrated by the Cutis Derm AI multi\u2011spectral VLM and synthetic dataset projects, aligning with Waymo\u2019s need for multi\u2011modal perception and data pipelines.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "Cutis Derm AI multi\u2011spectral VLM",
+        "synthetic dataset pipeline automation",
+        "ONNX/WASM edge inference"
+      ],
+      "missing_gaps": [
+        "Multi\u2011modal sensor fusion (Camera+LiDAR+Audio)",
+        "Transformer architectures",
+        "Active learning loops and auto\u2011labeling",
+        "Large\u2011scale data curation pipelines",
+        "JAX"
+      ],
+      "red_flags": [
+        "No autonomous driving domain experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8157152",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7456936",
+      "score": 62,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Driver Refinement & Validation",
+      "location": "Mountain View, CA, USA; San Francisco, CA, USA; Pittsburgh, PA, USA",
+      "summary": "Candidate has 6 years of experience deploying ML pipelines and simulation using PyTorch, OpenCV, ROS & Gazebo, and FastAPI, matching Waymo\u2019s need for production ML systems, but lacks direct autonomous driving or vehicle perception experience.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "FastAPI",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "Experience with autonomous vehicle perception, motion prediction, trajectory planning",
+        "C++ or JAX proficiency",
+        "5+ years deploying ML in production environments",
+        "Domain-specific autonomous driving knowledge"
+      ],
+      "red_flags": [
+        "No direct autonomous driving experience",
+        "No C++ or JAX experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7456936",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7309064",
+      "score": 62,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer / Applied Scientist, Prediction & Planning ",
+      "location": "Mountain View, CA USA; San Francisco, CA USA",
+      "summary": "Candidate has strong 3D/ROS experience and PyTorch/OpenCV skills, but lacks a PhD, top\u2011tier publications, and autonomous\u2011driving specific generative or reinforcement\u2011learning work required by Waymo.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS",
+        "Gazebo",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "PhD in CS/ML/Robotics",
+        "Top\u2011tier conference publications",
+        "Generative models for planning",
+        "Reinforcement learning experience"
+      ],
+      "red_flags": [
+        "PhD required",
+        "No autonomous driving experience",
+        "No evidence of large\u2011scale simulation work"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7309064",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "ab_bd117c7e-ca88-4371-8cfb-dbfb15d5d5da",
+      "score": 62,
+      "region": "UK",
+      "company": "Relation Therapeutics",
+      "title": "Machine Learning Scientist, Generative Modelling",
+      "location": "London",
+      "summary": "Candidate has PyTorch, OpenCV, FastAPI and synthetic dataset experience (Cutis Derm AI) and multi\u2011agent workflow expertise (LedgerVi), matching the need for advanced ML tooling, but lacks direct generative modelling and single\u2011cell multi\u2011omics experience.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "synthetic dataset generation",
+        "multi\u2011agent workflows"
+      ],
+      "missing_gaps": [
+        "generative modelling expertise",
+        "single\u2011cell multi\u2011omics data handling",
+        "causal inference and experimental design in biology"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.ashbyhq.com/relationrx/bd117c7e-ca88-4371-8cfb-dbfb15d5d5da",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8894177002",
+      "score": 62,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Graduate Software Engineer, AI Compute Libraries & Performance 2027 ",
+      "location": "Bristol, UK",
+      "summary": "Strong AI/ML and simulation background, but lacks explicit C++ compute kernel development required for Graphcore's AI Compute Libraries role.",
+      "matched_skills": [
+        "ONNX Runtime / WASM edge inference",
+        "Custom CNN from scratch in NumPy",
+        "Multi-Robot Hospital Hazard Detection (ROS & Gazebo)",
+        "Cutis Derm AI (VLM/XAI diagnostic web app)",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "C++ compute kernel development",
+        "Experience with Graphcore IPU hardware",
+        "Profiling and microbenchmarking of ML workloads"
+      ],
+      "red_flags": [
+        "Candidate has 6 years of experience, potentially overqualified for a graduate program",
+        "Lacks explicit C++ compute kernel development experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894177002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4675684005",
+      "score": 60,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Research Scientist, AI Safety and Alignment",
+      "location": "San Francisco, CA",
+      "summary": "Candidate has strong PyTorch/OpenCV/ FastAPI experience and a multi-agent ledger system, but lacks direct AI safety research, policy work, and advanced multi-agent risk modeling required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "OpenCV",
+        "LedgerVi multi-agent system",
+        "Grad-CAM"
+      ],
+      "missing_gaps": [
+        "AI safety research experience",
+        "policy research experience",
+        "advanced multi-agent safety protocols"
+      ],
+      "red_flags": [
+        "PhD required"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4675684005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4534631005",
+      "score": 60,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "ML Research Engineer, ML Systems",
+      "location": "San Francisco, CA; Seattle, WA; New York, NY",
+      "summary": "Candidate demonstrates strong PyTorch and FastAPI experience with LLM integration (LangGraph, Llama\u202f3.3) and computer\u2011vision projects, but lacks explicit multi\u2011node LLM training, distributed system design, CUDA, and transformer optimisation required for Scale\u2019s ML platform.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "LangGraph",
+        "Llama\u202f3.3",
+        "YOLOv8"
+      ],
+      "missing_gaps": [
+        "multi\u2011node LLM training",
+        "distributed ML system design",
+        "CUDA",
+        "flash attention",
+        "transformers"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4534631005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4665557005",
+      "score": 60,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Infrastructure Software Engineer, Enterprise GenAI",
+      "location": "San Francisco, CA; New York, NY",
+      "summary": "Candidate has strong Python, SQL, Docker, AWS, LLM integration and vector DB experience, but lacks Kubernetes, Azure/GCP, and explicit hyper\u2011growth scaling experience.",
+      "matched_skills": [
+        "Python",
+        "SQL (PostgreSQL)",
+        "Docker",
+        "AWS",
+        "LLM integration (LangGraph, Llama 3.3)"
+      ],
+      "missing_gaps": [
+        "Kubernetes",
+        "Azure",
+        "GCP",
+        "Experience scaling products at hyper\u2011growth startups"
+      ],
+      "red_flags": [
+        "No Kubernetes experience",
+        "No Azure/GCP experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4665557005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "gh_4750929005",
+      "score": 60,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Data Quality & Operations Lead, Gen AI",
+      "location": "San Francisco, CA; New York, NY",
+      "summary": "Candidate has led a technical pipeline team and built data pipelines with FastAPI and PostgreSQL, aligning with QC system management, but lacks explicit experience in large\u2011scale data quality operations and budget control.",
+      "matched_skills": [
+        "Python automation",
+        "FastAPI",
+        "PostgreSQL",
+        "Team leadership",
+        "MLOps"
+      ],
+      "missing_gaps": [
+        "Data quality operations experience",
+        "Budget management",
+        "Experience with RL or multilingual data"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4750929005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_91ff6263-49fb-421e-860f-36e7b9bae784",
+      "score": 60,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Software Engineer, ML Training Optimization",
+      "location": "Foster City, CA",
+      "summary": "Candidate has solid PyTorch and FastAPI experience with Llama 3.3 and LangGraph, but lacks key ML training optimisation skills such as distributed training, mixed\u2011precision, RL and large\u2011scale foundation model work required by Zoox.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Llama 3.3",
+        "LangGraph",
+        "YOLOv8",
+        "OpenCV"
+      ],
+      "missing_gaps": [
+        "Distributed training",
+        "Mixed\u2011precision training",
+        "Reinforcement learning",
+        "Large\u2011scale foundation models (VLMs/VLAs)",
+        "SOTA accelerator experience"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/91ff6263-49fb-421e-860f-36e7b9bae784",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "lv_9176aa65-14e3-4f9d-98f9-e755e9777d67",
+      "score": 60,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Software Engineer - Learned Trajectory Machine Learning Engineer",
+      "location": "Foster City, CA",
+      "summary": "Candidate has strong deep learning experience with PyTorch and FastAPI, and simulation expertise from 3D digital twin work, but lacks direct vehicle trajectory prediction or motion planning experience.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "ROS",
+        "simulation",
+        "digital twins"
+      ],
+      "missing_gaps": [
+        "trajectory prediction",
+        "motion planning",
+        "vehicle dynamics"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/9176aa65-14e3-4f9d-98f9-e755e9777d67",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "lv_2f65fc0e-16f1-48a9-b34d-5ca5dcf76800",
+      "score": 60,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Senior Machine Learning Engineer - Perception",
+      "location": "Foster City, CA",
+      "summary": "The candidate demonstrates strong computer\u2011vision skills with YOLOv8, PyTorch and OpenCV, and has experience building detection pipelines, but lacks specific autonomous\u2011vehicle perception experience such as sensor fusion, LiDAR/radar integration, joint detection\u2011tracking, and uncertainty modeling required by Zoox.",
+      "matched_skills": [
+        "YOLOv8",
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Sensor fusion (LiDAR/camera/radar)",
+        "Joint detection & tracking models",
+        "Rich embedding generation for downstream models",
+        "Uncertainty modeling",
+        "Real\u2011time inference / C++/CUDA expertise"
+      ],
+      "red_flags": [
+        "No autonomous driving perception experience",
+        "No sensor fusion background",
+        "No real\u2011time inference or C++/CUDA work"
+      ],
+      "url": "https://jobs.lever.co/zoox/2f65fc0e-16f1-48a9-b34d-5ca5dcf76800",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "lv_240ae92f-51ec-4d32-a0a4-3d4669508e3d",
+      "score": 60,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Senior Machine Learning  Engineer - Perception 3D Segmentation",
+      "location": "Foster City, CA",
+      "summary": "The candidate brings strong 3D pipeline and ML experience with PyTorch and OpenCV, but lacks direct work on Lidar/Radar fusion, 3D occupancy segmentation, and voxel\u2011based perception required by Zoox.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "YOLOv8",
+        "FastAPI",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Lidar",
+        "Radar",
+        "3D occupancy segmentation",
+        "Voxel representation",
+        "Deep learning for 3D segmentation"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.lever.co/zoox/240ae92f-51ec-4d32-a0a4-3d4669508e3d",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_6909931",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Software Engineer, ML Infrastructure",
+      "location": "Mountain View, California (HQ)",
+      "summary": "The candidate demonstrates strong Python, PyTorch, FastAPI, Docker and MLOps experience through projects like Skin Disease Prediction and LedgerVi, but lacks explicit large\u2011scale GPU provisioning, IaC, and distributed training expertise required for Nuro\u2019s ML infrastructure role.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "MLOps",
+        "SQL"
+      ],
+      "missing_gaps": [
+        "Infrastructure\u2011as\u2011Code (IaC)",
+        "Kubernetes or similar orchestration",
+        "Distributed training and scheduling",
+        "Petabyte\u2011scale ETL pipelines"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=6909931",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7351066",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Software Engineer, AI Platform - New Grad",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate has strong ML infrastructure experience with FastAPI, PyTorch, and PostgreSQL, and has built perception models using YOLOv8 and OpenCV, aligning with Nuro's data platform and ML infrastructure needs, but lacks direct autonomous driving or mapping experience and does not meet the graduation deadline.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "YOLOv8",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Graduating by Dec 2026",
+        "Experience with autonomous driving data pipelines and perception",
+        "Experience with evaluation infrastructure"
+      ],
+      "red_flags": [
+        "Not graduating by Dec 2026",
+        "No autonomous driving experience"
+      ],
+      "url": "https://nuro.ai/careersitem?gh_jid=7351066",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_6516915",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Perception, Machine Learning/Computer Vision",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate demonstrates strong computer vision skills with YOLOv8 and PyTorch, and has experience deploying models via FastAPI, aligning with Nuro\u2019s perception stack, though lacks autonomous driving and sensor fusion experience.",
+      "matched_skills": [
+        "YOLOv8 object detection",
+        "PyTorch deep learning",
+        "OpenCV computer vision",
+        "C++ programming",
+        "FastAPI deployment"
+      ],
+      "missing_gaps": [
+        "Autonomous driving experience",
+        "Sensor fusion",
+        "Large-scale data training and deployment"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=6516915",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7736012",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Perception Data Infrastructure",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate has strong 3D pipeline, ROS, C++ and computer\u2011vision experience, but lacks direct lidar/radar and high\u2011performance C++ work required for Nuro\u2019s perception data platform.",
+      "matched_skills": [
+        "C++",
+        "ROS",
+        "3D pipeline",
+        "Python",
+        "Computer Vision (YOLOv8/OpenCV)"
+      ],
+      "missing_gaps": [
+        "Lidar and radar data processing",
+        "High\u2011performance C++ for point\u2011cloud rendering",
+        "Real\u2011time sensor data ingestion pipelines"
+      ],
+      "red_flags": [
+        "No direct autonomous vehicle or lidar/radar experience",
+        "No mention of large\u2011scale data ingestion or performance constraints"
+      ],
+      "url": "https://nuro.ai/careersitem?gh_jid=7736012",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_7439020",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Machine Learning Research Scientist, Prediction & Smart Agents",
+      "location": "Mountain View, California (HQ)",
+      "summary": "The candidate brings strong PyTorch, OpenCV, FastAPI, and simulation experience, but lacks direct autonomous\u2011driving perception, trajectory prediction, and sequence\u2011modeling work required by the role.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "ROS",
+        "MLOps"
+      ],
+      "missing_gaps": [
+        "Autonomous driving perception",
+        "Trajectory prediction",
+        "Generative sequence modeling",
+        "Multi\u2011modal traffic data handling"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=7439020",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_5416913",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Machine Learning Research Scientist: Generative Modeling for Planning",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Strong PyTorch, OpenCV, FastAPI, and 3D pipeline experience, but lacks direct generative modeling, diffusion, RL, and large\u2011language\u2011model planning expertise required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "3D pipeline",
+        "LLM integration (LangGraph, Llama)"
+      ],
+      "missing_gaps": [
+        "Generative modeling (diffusion, flow\u2011matching, energy\u2011based)",
+        "Reinforcement learning for planning",
+        "Advanced large\u2011language\u2011model reasoning for autonomous planning"
+      ],
+      "red_flags": [
+        "PhD preferred"
+      ],
+      "url": "https://nuro.ai/careersitem?gh_jid=5416913",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8341046",
+      "score": 60,
+      "region": "US",
+      "company": "Nuro",
+      "title": "Machine Learning Research Scientist, Active Learning",
+      "location": "Mountain View, California (HQ)",
+      "summary": "Candidate has strong PyTorch and FastAPI experience building data pipelines (Skin Disease Prediction, LedgerVi) and LLM integration (LangGraph, Llama\u202f3.3), aligning with Nuro\u2019s focus on ML pipelines and foundation models, though lacks explicit active learning or autonomous driving research.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "LangGraph/Llama\u202f3.3",
+        "Data pipeline development",
+        "ROS"
+      ],
+      "missing_gaps": [
+        "Active learning methods",
+        "Data curation & anomaly detection",
+        "Out-of-distribution handling",
+        "Autonomous driving domain experience"
+      ],
+      "red_flags": [],
+      "url": "https://nuro.ai/careersitem?gh_jid=8341046",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8003626",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Research Scientist, Perception",
+      "location": "Mountain View, CA, USA ; San Francisco, CA, USA ; Kirkland, WA, USA ; New York City, NY, USA",
+      "summary": "Candidate has strong 3D and perception experience with PyTorch and OpenCV, but lacks direct autonomous driving sensor experience (LiDAR/Radar) and advanced RL/ML research typical for Waymo.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "Synthetic dataset pipeline"
+      ],
+      "missing_gaps": [
+        "LiDAR",
+        "Radar",
+        "Reinforcement learning"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8003626",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8049986",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior ML Compiler Engineer, Compute",
+      "location": "Mountain View, CA, US; New York, NY, US",
+      "summary": "Candidate has 6 years of ML experience with PyTorch, ONNX inference, and ROS, but lacks direct compiler or hardware-software codesign experience required for Waymo's ML compiler role.",
+      "matched_skills": [
+        "PyTorch",
+        "ONNX/WASM inference",
+        "ROS & Gazebo",
+        "FastAPI",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "ML compiler development",
+        "performance profiling of compiled code",
+        "hardware-software codesign",
+        "neural network inference platform tuning",
+        "low-level optimization"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8049986",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8157298",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Vehicle Interaction & Behavior Policy ML",
+      "location": "Mountain View, California, USA",
+      "summary": "The candidate brings 6\u202fyears of Python/PyTorch and robotics simulation experience (ROS/Gazebo) with a strong 3D/vision background, but lacks direct autonomous\u2011driving or RL policy work and production\u2011release experience required by Waymo.",
+      "matched_skills": [
+        "PyTorch",
+        "ROS & Gazebo simulation",
+        "Python 3.12",
+        "OpenCV",
+        "3D/Procedural environments"
+      ],
+      "missing_gaps": [
+        "Reinforcement or imitation\u2011learning policy training",
+        "Autonomous driving perception\u2011planning integration",
+        "Closed\u2011loop simulation evaluation for driving",
+        "Production\u2011ready model deployment"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8157298",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8191840",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Predictive Planner, Systems Arch",
+      "location": "Mountain View, CA, USA; San Francisco, CA, USA",
+      "summary": "The candidate\u2019s 6\u2011year background in 3D/robotics and projects such as Multi\u2011Robot Hospital Hazard Detection (ROS/Gazebo) and Cutis Derm AI (PyTorch/Grad\u2011CAM) demonstrate relevant ML and simulation experience, but lack direct work on predictive planning, large\u2011scale data pipelines or vehicle kinematics required by Waymo.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS",
+        "Gazebo",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "C++/CUDA",
+        "Large\u2011scale data infrastructure (Google Cloud)",
+        "Predictive planning algorithms",
+        "Vehicle kinematics & system architecture"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8191840",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8380137",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Senior Machine Learning Engineer, Driver Refinement & Validation",
+      "location": "Mountain View, CA, USA; San Francisco, CA, USA",
+      "summary": "Candidate brings strong PyTorch, OpenCV, ROS/Gazebo, and synthetic dataset pipeline skills, but lacks direct autonomous driving, reinforcement learning, and large\u2011scale driving data experience required by Waymo.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "synthetic dataset generation"
+      ],
+      "missing_gaps": [
+        "Autonomous driving data experience",
+        "Reinforcement learning",
+        "Model evaluation metrics for driving models",
+        "Large\u2011scale driving data mining",
+        "LLM reasoning for driving"
+      ],
+      "red_flags": [
+        "No direct autonomous driving or reinforcement learning experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8380137",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_6499165",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer, Simulation Realism",
+      "location": "Mountain View, CA, USA",
+      "summary": "Candidate has 6 years of ML and simulation experience with PyTorch, ROS/Gazebo, and OpenCV, but lacks the 7+ years and specific AV simulation or large foundation model expertise required.",
+      "matched_skills": [
+        "PyTorch",
+        "ROS & Gazebo",
+        "OpenCV",
+        "FastAPI",
+        "LangChain"
+      ],
+      "missing_gaps": [
+        "7+ years applied deep learning experience",
+        "Large foundation models and diffusion technology",
+        "Autonomous vehicle simulation domain knowledge"
+      ],
+      "red_flags": [
+        "Job requires 7+ years experience",
+        "Missing AV simulation experience",
+        "No evidence of large foundation model or diffusion work"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=6499165",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_6506689",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer, Prediction & Planning",
+      "location": "Mountain View, CA, USA; San Francisco, CA, USA",
+      "summary": "Candidate has 6 years of ML and robotics experience, including ROS & Gazebo simulation and PyTorch-based models, aligning with Waymo's need for ML modeling and simulation, but lacks direct autonomous vehicle or reinforcement learning experience.",
+      "matched_skills": [
+        "PyTorch",
+        "ROS & Gazebo simulation",
+        "OpenCV",
+        "FastAPI",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "Reinforcement learning",
+        "Large model training",
+        "Autonomous vehicle domain knowledge"
+      ],
+      "red_flags": [
+        "No autonomous vehicle experience",
+        "No publications or community contributions",
+        "No reinforcement learning experience"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=6506689",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_7905643",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer, Marketplace Pricing",
+      "location": "MountainView, CA, United States  ",
+      "summary": "Candidate has strong Python, PyTorch, FastAPI, Docker, and AWS experience and has built ML pipelines for medical imaging and robotics, but lacks direct experience in dynamic pricing, demand forecasting, or ride\u2011hailing data required for Waymo's marketplace pricing.",
+      "matched_skills": [
+        "Python 3.12",
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS (EC2, Lambda, RDS)"
+      ],
+      "missing_gaps": [
+        "Dynamic pricing model development",
+        "Demand forecasting",
+        "Optimization algorithms for supply\u2011demand balancing"
+      ],
+      "red_flags": [],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=7905643",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_8212478",
+      "score": 60,
+      "region": "US",
+      "company": "Waymo",
+      "title": "Machine Learning Engineer, Driver Refinement & Validation, Perception",
+      "location": "Mountain View, CA, USA; San Francisco, CA, USA",
+      "summary": "Candidate demonstrates strong PyTorch, OpenCV, ROS & Gazebo simulation, and synthetic dataset skills that align with perception and simulation work, but lacks direct autonomous\u2011driving data experience, large\u2011scale distributed training, and production\u2011level model monitoring required by Waymo.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "synthetic dataset generation",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "large\u2011scale distributed training/fine\u2011tuning",
+        "autonomous\u2011driving perception data",
+        "model monitoring & debugging tooling",
+        "real\u2011world driving data analysis"
+      ],
+      "red_flags": [
+        "No explicit autonomous driving experience",
+        "No mention of distributed training or production monitoring",
+        "Candidate still completing MSc"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8212478",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_5030588101",
+      "score": 60,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Robotics Mechanical Engineer",
+      "location": "Barcelona",
+      "summary": "Candidate has robotics and 3D pipeline experience (ROS, Gazebo, procedural 3D) but lacks core mechanical engineering skills such as CAD design, FEA, and electromechanical integration required for the role.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "Procedural 3D environment creation",
+        "Python & PyTorch AI development",
+        "OpenCV image processing",
+        "FastAPI API development"
+      ],
+      "missing_gaps": [
+        "Mechanical CAD design",
+        "FEA and stress analysis",
+        "Electromechanical system integration"
+      ],
+      "red_flags": [
+        "No mechanical engineering background",
+        "No CAD/FEA experience",
+        "No experience with actuators or thermal analysis"
+      ],
+      "url": "https://helsing.ai/jobs/5030588101?gh_jid=5030588101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_5030565101",
+      "score": 60,
+      "region": "EU",
+      "company": "Helsing",
+      "title": "Robotics DFM Engineer",
+      "location": "Barcelona",
+      "summary": "Candidate has robotics simulation experience with ROS & Gazebo and pipeline automation, but lacks direct DFM/DFA and manufacturing process expertise required for the role.",
+      "matched_skills": [
+        "ROS & Gazebo",
+        "Python",
+        "OpenCV",
+        "Docker",
+        "Pipeline automation"
+      ],
+      "missing_gaps": [
+        "DFM/DFA knowledge",
+        "Manufacturing process design (CNC, sheet metal, injection moulding, additive manufacturing)",
+        "Mechanical design collaboration"
+      ],
+      "red_flags": [
+        "No DFM/DFA experience",
+        "No manufacturing process design experience",
+        "No mechanical engineering background"
+      ],
+      "url": "https://helsing.ai/jobs/5030565101?gh_jid=5030565101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_5028719101",
+      "score": 60,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "AI Research Engineer - ML & Signal Processing",
+      "location": "Munich - Berlin - London - Paris",
+      "summary": "Strong CV in computer vision and robotics with PyTorch/OpenCV stack, but lacks RF signal processing and embedded hardware experience required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "FastAPI",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "RF signal processing experience",
+        "Embedded hardware deployment experience",
+        "PhD or equivalent research track record"
+      ],
+      "red_flags": [
+        "PhD required",
+        "No RF signal processing experience"
+      ],
+      "url": "https://helsing.ai/jobs/5028719101?gh_jid=5028719101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8902107002",
+      "score": 60,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Senior Software Engineer (ML QA)",
+      "location": "London, UK",
+      "summary": "Candidate demonstrates strong Python, PyTorch, OpenCV and CI/CD skills through projects like Cutis Derm AI and Docker\u2011based pipelines, but lacks explicit C/C++ experience and test\u2011infrastructure design for an ML stack.",
+      "matched_skills": [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "C/C++ familiarity",
+        "Test infrastructure design for ML stack",
+        "Hardware stack knowledge"
+      ],
+      "red_flags": [
+        "No C/C++ experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8902107002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4996448101",
+      "score": 60,
+      "region": "UK",
+      "company": "Speechmatics",
+      "title": "Senior Machine Learning Engineer",
+      "location": "London, England, United Kingdom",
+      "summary": "Candidate has strong PyTorch, FastAPI, Docker, AWS, and OpenCV experience from projects like Cutis Derm AI and LedgerVi, but lacks direct speech AI or transformer architecture experience required for Speechmatics.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "OpenCV"
+      ],
+      "missing_gaps": [
+        "Speech recognition experience",
+        "Transformer architecture knowledge",
+        "Distributed training experience"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/speechmatics/jobs/4996448101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_5018019101",
+      "score": 60,
+      "region": "UK",
+      "company": "PhysicsX",
+      "title": "Simulation Engineer (CFD) - Large Physics Models ",
+      "location": "London, United Kingdom",
+      "summary": "Candidate has solid simulation experience with ROS & Gazebo and ML collaboration, but lacks direct CFD, JAX, or Nvidia Warp expertise required for large physics model data generation.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "CFD tools",
+        "JAX",
+        "Nvidia Warp",
+        "deep physics\u2011based simulation"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/5018019101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8894364002",
+      "score": 60,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "Graduate Software Engineer, AI/ ML Test Systems 2027",
+      "location": "Bristol, UK",
+      "summary": "Candidate has strong Python, PyTorch, ONNX, Docker, and simulation experience, but lacks explicit Graphcore IPU and performance profiling expertise required for AI/ML test systems. Their CI/CD pipeline experience and ROS simulation work provide a solid foundation, yet key Graphcore-specific knowledge is missing.",
+      "matched_skills": [
+        "PyTorch",
+        "ONNX",
+        "Docker",
+        "ROS & Gazebo simulation",
+        "CI/CD pipeline automation"
+      ],
+      "missing_gaps": [
+        "Graphcore IPU/Poplar/PopTorch knowledge",
+        "Performance profiling and numerical accuracy analysis",
+        "Test strategy design for AI/ML workloads"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894364002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8894738002",
+      "score": 60,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "AI Technology PhD Research Internship",
+      "location": "Bristol, UK; Cambridge, UK; London, UK",
+      "summary": "Candidate has strong AI/CV background and relevant projects, but lacks a PhD and experience in large-scale LLM research, making them a partial fit for the PhD internship.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "Grad-CAM explainability",
+        "FastAPI",
+        "Multi-robot hazard detection (ROS & Gazebo)"
+      ],
+      "missing_gaps": [
+        "PhD degree",
+        "Experience with large-scale LLM pretraining",
+        "Research publication record"
+      ],
+      "red_flags": [
+        "PhD required"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894738002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_6184829004",
+      "score": 60,
+      "region": "UK",
+      "company": "Isomorphic Labs",
+      "title": "Research Engineer (LLM Performance), London",
+      "location": "London",
+      "summary": "Candidate has strong PyTorch and AI stack experience, but lacks direct LLM performance and scaling expertise required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "LangChain",
+        "LangGraph"
+      ],
+      "missing_gaps": [
+        "Large Language Model training and scaling",
+        "Distributed inference optimization",
+        "Experience with transformer architectures"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/isomorphiclabs/jobs/6184829004",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_5578430004",
+      "score": 60,
+      "region": "UK",
+      "company": "Isomorphic Labs",
+      "title": "ML Research Engineer, London",
+      "location": "London",
+      "summary": "Candidate has strong AI/CV background and medical imaging projects, but lacks direct drug discovery or computational biology experience required for Isomorphic Labs' research focus.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "ROS & Gazebo simulation",
+        "Medical imaging (dermatology, MRI)"
+      ],
+      "missing_gaps": [
+        "Drug discovery ML experience",
+        "Generative molecular modeling",
+        "Advanced research background (PhD/AlphaFold)"
+      ],
+      "red_flags": [
+        "Senior/Staff/Principal level required",
+        "PhD or advanced research experience expected",
+        "Experience with AlphaFold-like models"
+      ],
+      "url": "https://job-boards.greenhouse.io/isomorphiclabs/jobs/5578430004",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "ab_a89a7892-3d9d-40ab-a3f1-1c6ed1f7b84f",
+      "score": 60,
+      "region": "UK",
+      "company": "ElevenLabs",
+      "title": "Research Engineer - Web Crawlers",
+      "location": "United Kingdom",
+      "summary": "The candidate has strong AI/ML and Python engineering skills that could transfer to building web crawlers, but lacks explicit experience in web crawling, scraping, and large\u2011scale data ingestion required for the role.",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "LangChain"
+      ],
+      "missing_gaps": [
+        "Web crawling and scraping experience",
+        "Knowledge of large\u2011scale distributed data ingestion",
+        "Experience with HTTP protocols and concurrency"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.ashbyhq.com/ElevenLabs/a89a7892-3d9d-40ab-a3f1-1c6ed1f7b84f",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8632581002",
+      "score": 58,
+      "region": "UK",
+      "company": "Graphcore",
+      "title": "AI Research Engineer",
+      "location": "London, UK",
+      "summary": "Candidate has solid AI/CV and robotics simulation experience, but lacks lower\u2011level programming, hardware\u2011optimization expertise and research publication record required for Graphcore\u2019s research focus.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "ONNX/WASM inference",
+        "FastAPI"
+      ],
+      "missing_gaps": [
+        "Lower\u2011level programming (C++/CUDA)",
+        "Hardware\u2011aware performance optimisation",
+        "Research publications"
+      ],
+      "red_flags": [
+        "No hardware optimisation experience",
+        "No research publication record"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8632581002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4728014005",
+      "score": 55,
+      "region": "US",
+      "company": "Scale AI",
+      "title": "Machine Learning Research Scientist, Evaluations",
+      "location": "San Francisco, CA; Seattle, WA; New York, NY",
+      "summary": "Candidate has built LLM\u2011based pipelines using Llama\u202f3.3 and LangGraph and developed ML models with PyTorch and FastAPI, but lacks direct experience in RLHF, LLM evaluation/benchmark development, and published research required for the role.",
+      "matched_skills": [
+        "Llama\u202f3.3",
+        "LangGraph",
+        "FastAPI",
+        "PyTorch",
+        "Grad\u2011CAM"
+      ],
+      "missing_gaps": [
+        "RLHF or preference modeling experience",
+        "LLM evaluation/benchmark development",
+        "Published research in major conferences"
+      ],
+      "red_flags": [
+        "MSc AI not yet completed",
+        "No RLHF or LLM evaluation experience",
+        "No published research"
+      ],
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4728014005",
+      "date": "2026-11-24"
+    },
+    {
+      "id": "lv_17b2714f-5454-48a4-bb76-d14157575498",
+      "score": 55,
+      "region": "US",
+      "company": "Zoox",
+      "title": "Lead Analytics Engineer \u2013 Enterprise, Data & AI",
+      "location": "Foster City, CA",
+      "summary": "Candidate has strong Python, SQL, FastAPI, MLOps, and leadership experience, but lacks direct exposure to SAP, Workday, Salesforce, Anaplan and semantic\u2011layer data modeling required for the role.",
+      "matched_skills": [
+        "Python",
+        "SQL (PostgreSQL)",
+        "FastAPI",
+        "MLOps",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "SAP (S/4HANA, Ariba, BRIM, ME)",
+        "Workday",
+        "Salesforce",
+        "Anaplan",
+        "semantic layer data modeling",
+        "enterprise data pipeline experience"
+      ],
+      "red_flags": [
+        "No demonstrated experience with enterprise data sources or data\u2011engineering pipelines"
+      ],
+      "url": "https://jobs.lever.co/zoox/17b2714f-5454-48a4-bb76-d14157575498",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4671703006",
+      "score": 55,
+      "region": "US",
+      "company": "Figure AI",
+      "title": "Helix AI Engineer, Video Pretraining",
+      "location": "San Jose, CA",
+      "summary": "Candidate has strong PyTorch and computer vision experience from projects like Skin Disease Prediction and Parasite Egg Classification, but lacks direct experience with large-scale video pretraining, distributed training, and transformer/diffusion architectures required for the Helix AI Engineer role.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "Python",
+        "FastAPI",
+        "MLOps"
+      ],
+      "missing_gaps": [
+        "Video pretraining experience",
+        "Distributed training on large GPU clusters",
+        "Transformer-based video architectures"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/figureai/jobs/4671703006",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4705296006",
+      "score": 55,
+      "region": "US",
+      "company": "Figure AI",
+      "title": "Helix AI Engineer, Training Performance",
+      "location": "San Jose, CA",
+      "summary": "Candidate has solid PyTorch, C++ and MLOps experience, but lacks key skills in CUDA/Triton kernel development, large\u2011scale distributed training, and GPU performance optimisation required for the Helix AI Engineer role.",
+      "matched_skills": [
+        "PyTorch",
+        "C++",
+        "Python",
+        "MLOps",
+        "Docker"
+      ],
+      "missing_gaps": [
+        "CUDA",
+        "Triton",
+        "distributed training frameworks (e.g., FSDP)",
+        "large\u2011scale GPU optimisation",
+        "kernel writing",
+        "checkpointing & fault tolerance",
+        "model parallelism"
+      ],
+      "red_flags": [],
+      "url": "https://job-boards.greenhouse.io/figureai/jobs/4705296006",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_8095684",
+      "score": 55,
+      "region": "UK",
+      "company": "Waymo",
+      "title": "Senior Research Scientist, AI Foundations Recipes",
+      "location": "Oxford, UK ; London, UK",
+      "summary": "The candidate brings PyTorch, OpenCV, and 3D simulation experience, including a multi-robot hazard detection system and a VLM/XAI skin lesion app, but lacks foundation model training, reinforcement learning, and large-scale empirical study experience required for the role.",
+      "matched_skills": [
+        "PyTorch",
+        "OpenCV",
+        "ROS & Gazebo",
+        "VLM/XAI diagnostic app",
+        "3D simulation"
+      ],
+      "missing_gaps": [
+        "Foundation model training experience",
+        "Reinforcement learning expertise",
+        "Large-scale data-selection algorithms",
+        "Academic publication record"
+      ],
+      "red_flags": [
+        "MSc not yet completed",
+        "No academic publications"
+      ],
+      "url": "https://careers.withwaymo.com/jobs?gh_jid=8095684",
+      "date": "2026-11-23"
+    },
+    {
+      "id": "gh_4961556101",
+      "score": 55,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Robotics Senior Mechanical Engineer",
+      "location": "Barcelona",
+      "summary": "Candidate has robotics simulation experience (ROS & Gazebo) and strong AI/vision skills, but lacks mechanical design, FEA, and electromechanical integration required for a senior mechanical engineer role.",
+      "matched_skills": [
+        "ROS & Gazebo simulation",
+        "Python & PyTorch AI",
+        "FastAPI deployment"
+      ],
+      "missing_gaps": [
+        "Mechanical design and CAD expertise",
+        "Finite Element Analysis (FEA) experience",
+        "Electromechanical integration and thermal management"
+      ],
+      "red_flags": [
+        "No mechanical engineering background",
+        "No FEA or structural analysis experience",
+        "Senior mechanical engineer role requires hands\u2011on mechanical design skills"
+      ],
+      "url": "https://helsing.ai/jobs/4961556101?gh_jid=4961556101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_4961559101",
+      "score": 55,
+      "region": "UK",
+      "company": "Helsing",
+      "title": "Robotics Senior Manufacturing Engineer",
+      "location": "Barcelona",
+      "summary": "Candidate has robotics and 3D pipeline experience (ROS & Gazebo, 3D automation) but lacks explicit manufacturing process design, DFM/DFA, and CNC/additive manufacturing expertise required for the role.",
+      "matched_skills": [
+        "ROS & Gazebo",
+        "3D pipeline automation",
+        "Python",
+        "PyTorch",
+        "OpenCV"
+      ],
+      "missing_gaps": [
+        "DFM/DFA principles",
+        "CNC machining",
+        "additive manufacturing"
+      ],
+      "red_flags": [
+        "No manufacturing process experience"
+      ],
+      "url": "https://helsing.ai/jobs/4961559101?gh_jid=4961559101",
+      "date": "2026-11-22"
+    },
+    {
+      "id": "gh_8870170002",
+      "score": 55,
+      "region": "US",
+      "company": "Graphcore",
+      "title": "Senior AI Performance Engineer",
+      "location": "Austin, Texas, United States",
+      "summary": "The candidate has solid Python, PyTorch, OpenCV and AI project experience, but lacks explicit HPC, MPI/NCCL/UCX, C++ and performance\u2011profiling expertise required for the Senior AI Performance Engineer role.",
+      "matched_skills": [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "ROS",
+        "Gazebo"
+      ],
+      "missing_gaps": [
+        "MPI",
+        "NCCL",
+        "UCX",
+        "RDMA",
+        "C++",
+        "HPC profiling",
+        "MLPerf"
+      ],
+      "red_flags": [
+        "No C++ or HPC experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8870170002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_4996455101",
+      "score": 55,
+      "region": "UK",
+      "company": "Speechmatics",
+      "title": "Senior Machine Learning Engineer",
+      "location": "Cambridge, England, United Kingdom",
+      "summary": "Candidate has strong Python/PyTorch and FastAPI experience and has built AI pipelines for medical imaging and robotics, but lacks direct speech AI or transformer architecture experience required for Speechmatics.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "OpenCV"
+      ],
+      "missing_gaps": [
+        "Speech recognition experience",
+        "Transformer architecture knowledge",
+        "Distributed training",
+        "Model inference optimisation",
+        "Publications in top-tier conferences"
+      ],
+      "red_flags": [
+        "No speech AI experience"
+      ],
+      "url": "https://job-boards.eu.greenhouse.io/speechmatics/jobs/4996455101",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_8949698002",
+      "score": 55,
+      "region": "US",
+      "company": "Graphcore",
+      "title": "AI Platform Architect",
+      "location": "Austin, Texas, United States",
+      "summary": "Candidate has solid AI engineering experience but lacks key platform architecture and distributed training expertise required for the AI Platform Architect role.",
+      "matched_skills": [
+        "PyTorch",
+        "Docker",
+        "FastAPI",
+        "ROS & Gazebo",
+        "OpenCV"
+      ],
+      "missing_gaps": [
+        "Kubernetes",
+        "Slurm",
+        "HPC cluster design",
+        "RDMA",
+        "NVMe",
+        "PCIe"
+      ],
+      "red_flags": [
+        "No experience with distributed training frameworks",
+        "No hardware-software integration experience",
+        "No large-scale LLM training"
+      ],
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8949698002",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "gh_6100340004",
+      "score": 55,
+      "region": "UK",
+      "company": "Isomorphic Labs",
+      "title": "Senior Security Engineer (AI Safety), London, Lausanne",
+      "location": "Lausanne; London",
+      "summary": "The candidate has strong AI/CV and multi\u2011agent experience that aligns with the autonomous workflows, but lacks explicit AI safety, security, and drug\u2011discovery domain expertise required for a senior security engineer role.",
+      "matched_skills": [
+        "Python 3.12, PyTorch, OpenCV",
+        "FastAPI, Docker, AWS",
+        "LangGraph, multi\u2011agent RAG workflows"
+      ],
+      "missing_gaps": [
+        "AI safety and adversarial robustness expertise",
+        "Security risk\u2011management framework design",
+        "Drug\u2011discovery domain knowledge"
+      ],
+      "red_flags": [
+        "Senior role may require more extensive AI safety/security experience"
+      ],
+      "url": "https://job-boards.greenhouse.io/isomorphiclabs/jobs/6100340004",
+      "date": "2026-11-21"
+    },
+    {
+      "id": "ab_3d650946-5ac2-4729-9ae4-129c43fcd0b5",
+      "score": 55,
+      "region": "EU",
+      "company": "ElevenLabs",
+      "title": "Research Engineer",
+      "location": "Poland",
+      "summary": "Candidate has strong AI/ML and 3D/robotics background but lacks audio AI experience required for ElevenLabs research role.",
+      "matched_skills": [
+        "PyTorch",
+        "FastAPI",
+        "OpenCV",
+        "ROS & Gazebo simulation",
+        "LangChain/LangGraph"
+      ],
+      "missing_gaps": [
+        "Audio AI experience",
+        "Speech signal processing",
+        "Deep learning for audio",
+        "Audio dataset familiarity"
+      ],
+      "red_flags": [],
+      "url": "https://jobs.ashbyhq.com/ElevenLabs/3d650946-5ac2-4729-9ae4-129c43fcd0b5",
+      "date": "2026-11-21"
+    }
+  ]
+}
